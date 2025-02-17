@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebooks Summary</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a:link {
+            color: green;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: brown;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellow;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            /* Verde oscuro */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Gris claro */
+        }
+
+        td {
+            color: #333;
+            /* Gris oscuro para texto */
+        }
+
+        td:nth-child(2) {
+            background-color: #e6f7ff;
+            /* Azul claro para la segunda columna */
+        }
+
+        .hoverTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hoverTable td {
+            padding: 7px;
+            border: #4e95f4 1px solid;
+        }
+
+        /* Define the default color for all the table rows */
+        .hoverTable tr {
+            background: #b8d1f3;
+        }
+
+        /* Define the hover highlight color for the table row */
+        .hoverTable tr:hover {
+            background-color: #ffff99;
+        }
+
+        .hoverTable tr:hover td:nth-child(2) {
+            background-color: #ffff99;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ebooks summaries.</h1>
+    <table class="hoverTable" style="border-color: #bcadec;" border="2"><caption style="align: right;"></caption>
+    <tbody>
+    <tr>
+    <th style="width: 50%;">EBook Summary</th>
+    <th>Amazon link</th>
+    </tr>
+
+    <tr>
+        <td><a href="https://learnasyoucode.w3spaces.com/ebooks/Brief_by_Joseph_McCormack.html">Brief by Joseph McCormack</a></td>
+        <td><a href="https://amzn.in/d/amZsWoH">Purchase link</a></td>
+    </tr>
+    <tr>
+        <td><a href="https://learnasyoucode.w3spaces.com/ebooks/it_didnt_start_with_you_mark_wolynn.html">It Didn't Start With You by Mark Wolynn</a></td>
+        <td><a href="https://amzn.in/d/5zHf7IR">Purchase link</a></td>
+    </tr>
+    <tr>
+        <td><a href="./thinking_fast_and_slow.html">Thinking fast and slow -- Daniel Kahneman</a></td>
+        <td><a href="https://amzn.in/d/iEz6Uh4">Purchase link</a></td>
+    </tr>
+    </tbody>
+    </table>
+</body>
+
+</html>

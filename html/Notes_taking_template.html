@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+html,
+body {
+  background: #f2f2f2;
+}
+
+* {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+ul.parent {
+  background: #fafafa;
+  padding: 10px;
+  margin: 2em;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  border-left: 0;
+}
+
+ul {
+  padding-left: 0.5em;
+  margin-left: 0.3em;
+  border-left: 3px solid #c0d1d1;
+  margin-bottom: 1em;
+  color: #212b2b;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+details summary {
+  color: #4C74B9;
+}
+
+details summary::-webkit-details-marker {
+  color: #4C74B9;
+  font-size: 18px;
+}
+
+details[open]>summary::-webkit-details-marker {
+  color: #2b4b82;
+}
+
+details[open]>summary {
+  color: #2b4b82;
+}
+
+</style>
+		</head>
+		<body>
+			<h2>Course Details</h2>
+			<ul class="parent">
+				<li>
+					<details>
+						<summary>Chapter 1</summary>
+						<ul>
+							<li>
+								<details>
+									<summary>Section 1.1</summary>
+									<ul>
+										<li>These are bullet points to be noted in section 1.1.1</li>
+										<li>These are bullet points to be noted in section 1.1.2</li>
+										<li>These are bullet points to be noted in section 1.1.3</li>
+										<li>These are bullet points to be noted in section 1.1.4</li>
+										<li>These are bullet points to be noted in section 1.1.5</li>
+									</ul>
+								</details>
+								<details>
+									<summary>Section 1.2</summary>
+									<ul>
+										<li>Points to be noted 1.2.1</li>
+										<li>Points to be noted 1.2.2</li>
+										<li>Points to be noted 1.2.3</li>
+										<li>Points to be noted 1.2.4</li>
+										<li>Points to be noted 1.2.5</li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</details>
+				</li>
+				<li>
+					<details>
+						<summary>Chapter 2</summary>
+						<ul>
+							<li>
+								<details>
+									<summary>Section 1.2</summary>
+									<ul>
+										<li>Main points to be noted 2.1.1</li>
+										<li>Main points to be noted 2.1.2</li>
+										<li>Main points to be noted 2.1.3</li>
+										<li>Main points to be noted 2.1.4</li>
+										<li>Main points to be noted 2.1.5</li>
+									</ul>
+								</details>
+								<details>
+									<summary>Section 1.2</summary>
+									<ul>
+										<li>Main points to be noted 2.2.1</li>
+										<li>Main points to be noted 2.2.2</li>
+										<li>Main points to be noted 2.2.3</li>
+										<li>Main points to be noted 2.2.4</li>
+										<li>Main points to be noted 2.2.5</li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</details>
+				</li>
+			</ul>
+		</body>
+	</html>

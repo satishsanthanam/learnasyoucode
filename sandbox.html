@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.collapsible2 {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Project Management Foundations</h2>
+
+
+<button class="collapsible">Introduction</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible2" style="max-height=20px">1. Make a Bigger Impact by Saying Less</button>
+  <button class="collapsible" style="max-height=20px">Challenges of Being Brief</button>
+    <div class="content" style="max-height=20px">
+      <ul>
+        <li>Long-winded Emails.</li>
+        <li>Unfocused Meetings.</li>
+        <li>Forgettable Information.</li>
+      </ul>
+    </div>
+  <button class="collapsible" style="max-height=20px">Challenges of Being Brief2</button>
+    <div class="content" style="max-height=90px">
+      <ul>
+        <li>Long-winded Emails2.</li>
+        <li>Unfocused Meetings2.</li>
+        <li>Forgettable Information2.</li>
+      </ul>
+    </div>
+
+<button class="collapsible2" style="max-height=20px">1. Get to Know Project Management</button>
+<div class="content">
+  <button class="collapsible" style="max-height=20px">What is a project?
+</button>
+        <div class="content" style="max-height=20px">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">What is project management?
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">What it takes to be a project manager
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">The waterfall project management lifecycle
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">The agile project management lifecycle
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">How organizational structure affects projects
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">How organizational culture affects projects
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ <div class="content">
+  <button class="collapsible">Project management software options
+</button>
+        <div class="content">ok ea commodo consequat.</div>
+ </div>
+ 
+<button class="collapsible">2. First Things First</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">3. Develop a Project Plan</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">4. Build a Project Schedule</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">5. An Overview of Agile Project Management</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">6. While You Run the Project</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">7. Work with Teams</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">8. Monitoring and Controlling Processes and Performance</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">9. Close the Project</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">10. Changes to PMBOK® Guide – Seventh Edition</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+<button class="collapsible">Conclusion</button>
+<div class="content">
+  <p>ok ea commodo consequat.</p>
+</div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 200 + "px";
+    } 
+  });
+}
+
+var coll = document.getElementsByClassName("collapsible2");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight+content.scrollHeight+content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

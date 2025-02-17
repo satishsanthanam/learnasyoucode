@@ -1,0 +1,4769 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+html,
+body {
+  background: #f2f2f2;
+}
+
+* {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+}
+
+ul.parent {
+  background: #fafafa;
+  padding: 10px;
+  margin: 2em;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  border-left: 0;
+}
+
+ul {
+  padding-left: 0.5em;
+  margin-left: 0.3em;
+  border-left: 3px solid #c0d1d1;
+  margin-bottom: 1em;
+  color: #212b2b;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+details summary {
+  color: #4C74B9;
+}
+
+details summary::-webkit-details-marker {
+  color: #4C74B9;
+  font-size: 18px;
+}
+
+details[open]>summary::-webkit-details-marker {
+  color: #2b4b82;
+}
+
+details[open]>summary {
+  color: #2b4b82;
+}
+
+</style>
+  </head>
+  <body>
+   <h2>ACM - Computer Classification System - 2012</h2>
+   <ul class="parent">
+    <li>
+     <details>
+      <summary>General and reference</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Document types</summary>
+         <ul>
+          <li>Surveys and overviews</li>
+          <li>Reference works</li>
+          <li>General conference proceedings</li>
+          <li>Biographies</li>
+          <li>General literature</li>
+          <li>Computing standards, RFCs and guidelines</li>
+         </ul>
+        </details>
+        <details>
+         <summary>Cross-computing tools and techniques</summary>
+         <ul>
+          <li>Reliability</li>
+          <li>Empirical studies</li>
+          <li>Measurement</li>
+          <li>Metrics</li>
+          <li>Evaluation</li>
+          <li>Experimentation</li>
+          <li>Estimation</li>
+          <li>Design</li>
+          <li>Performance</li>
+          <li>Validation</li>
+          <li>Verification</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Hardware</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Printed circuit boards</summary>
+         <ul>
+          <li>Electromagnetic interference and compatibility</li>
+          <li>PCB design and layout</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Communication hardware, interfaces and storage</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Signal processing systems</summary>
+            <ul>
+             <li>Digital signal processing</li>
+             <li>Beamforming</li>
+             <li>Noise reduction</li>
+            </ul>
+           </details>
+          </li>
+          <li>Sensors and actuators</li>
+          <li>Buses and high-speed links</li>
+          <li>Displays and imagers</li>
+          <li>External storage</li>
+          <li>Networking hardware</li>
+          <li>Printers</li>
+          <li>Sensor applications and deployments</li>
+          <li>Sensor devices and platforms</li>
+          <li>Sound-based input / output</li>
+          <li>
+           <details>
+            <summary>Tactile and hand-based interfaces</summary>
+            <ul>
+             <li>Touch screens</li>
+             <li>Haptic devices</li>
+            </ul>
+           </details>
+          </li>
+          <li>Scanners</li>
+          <li>Wireless devices</li>
+          <li>Wireless integrated network sensors</li>
+          <li>Electro-mechanical devices</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Integrated circuits</summary>
+         <ul>
+          <li>3D integrated circuits</li>
+          <li>
+           <details>
+            <summary>Interconnect</summary>
+            <ul>
+             <li>Input / output circuits</li>
+             <li>Metallic interconnect</li>
+             <li>Photonic and optical interconnect</li>
+             <li>Radio frequency and wireless interconnect</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Semiconductor memory</summary>
+            <ul>
+             <li>Dynamic memory</li>
+             <li>Static memory</li>
+             <li>Non-volatile memory</li>
+             <li>Read-only memory</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Digital switches</summary>
+            <ul>
+             <li>Transistors</li>
+             <li>Logic families</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Logic circuits</summary>
+            <ul>
+             <li>Arithmetic and datapath circuits</li>
+             <li>Asynchronous circuits</li>
+             <li>Combinational circuits</li>
+             <li>Design modules and hierarchy</li>
+             <li>Finite state machines</li>
+             <li>Sequential circuits</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Reconfigurable logic and FPGAs</summary>
+            <ul>
+             <li>Hardware accelerators</li>
+             <li>High-speed input / output</li>
+             <li>Programmable logic elements</li>
+             <li>Programmable interconnect</li>
+             <li>Reconfigurable logic applications</li>
+             <li>Evolvable hardware</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Very large scale integration design</summary>
+         <ul>
+          <li>3D integrated circuits</li>
+          <li>
+           <details>
+            <summary>Analog and mixed-signal circuits</summary>
+            <ul>
+             <li>Data conversion</li>
+             <li>Clock generation and timing</li>
+             <li>Analog and mixed-signal circuit optimization</li>
+             <li>Radio frequency and wireless circuits</li>
+             <li>Wireline communication</li>
+             <li>Analog and mixed-signal circuit synthesis</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Application-specific VLSI designs</summary>
+            <ul>
+             <li>Application specific integrated circuits</li>
+             <li>Application specific instruction set processors</li>
+             <li>Application specific processors</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Design reuse and communication-based design</summary>
+            <ul>
+             <li>Network on chip</li>
+             <li>System on a chip</li>
+             <li>Platform-based design</li>
+             <li>Hard and soft IP</li>
+            </ul>
+           </details>
+          </li>
+          <li>Design rules</li>
+          <li>Economics of chip design and manufacturing</li>
+          <li>Full-custom circuits</li>
+          <li>VLSI design manufacturing considerations</li>
+          <li>On-chip resource management</li>
+          <li>On-chip sensors</li>
+          <li>Standard cell libraries</li>
+          <li>
+           <details>
+            <summary>VLSI packaging</summary>
+            <ul>
+             <li>Die and wafer stacking</li>
+             <li>Input / output styles</li>
+             <li>Multi-chip modules</li>
+             <li>Package-level interconnect</li>
+            </ul>
+           </details>
+          </li>
+          <li>VLSI system specification and constraints</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Power and energy</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Thermal issues</summary>
+            <ul>
+             <li>Temperature monitoring</li>
+             <li>Temperature simulation and estimation</li>
+             <li>Temperature control</li>
+             <li>Temperature optimization</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Energy generation and storage</summary>
+            <ul>
+             <li>Batteries</li>
+             <li>Fuel-based energy</li>
+             <li>Renewable energy</li>
+             <li>Reusable energy storage</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Energy distribution</summary>
+            <ul>
+             <li>Energy metering</li>
+             <li>Power conversion</li>
+             <li>Power networks</li>
+             <li>Smart grid</li>
+            </ul>
+           </details>
+          </li>
+          <li>Impact on the environment</li>
+          <li>
+           <details>
+            <summary>Power estimation and optimization</summary>
+            <ul>
+             <li>Switching devices power issues</li>
+             <li>Interconnect power issues</li>
+             <li>Circuits power issues</li>
+             <li>Chip-level power issues</li>
+             <li>Platform power issues</li>
+             <li>Enterprise level and data centers power issues</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Electronic design automation</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>High-level and register-transfer level synthesis</summary>
+            <ul>
+             <li>Datapath optimization</li>
+             <li>Hardware-software codesign</li>
+             <li>Resource binding and sharing</li>
+             <li>Operations scheduling</li>
+            </ul>
+           </details>
+          </li>
+          <li>Hardware description languages and compilation</li>
+          <li>
+           <details>
+            <summary>Logic synthesis</summary>
+            <ul>
+             <li>Combinational synthesis</li>
+             <li>Circuit optimization</li>
+             <li>Sequential synthesis</li>
+             <li>Technology-mapping</li>
+             <li>Transistor-level synthesis</li>
+            </ul>
+           </details>
+          </li>
+          <li>Modeling and parameter extraction</li>
+          <li>
+           <details>
+            <summary>Physical design (EDA)</summary>
+            <ul>
+             <li>Clock-network synthesis</li>
+             <li>Packaging</li>
+             <li>Partitioning and floorplanning</li>
+             <li>Placement</li>
+             <li>Physical synthesis</li>
+             <li>Power grid design</li>
+             <li>Wire routing</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Timing analysis</summary>
+            <ul>
+             <li>Electrical-level simulation</li>
+             <li>Model-order reduction</li>
+             <li>Compact delay models</li>
+             <li>Static timing analysis</li>
+             <li>Statistical timing analysis</li>
+             <li>Transition-based timing analysis</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Methodologies for EDA</summary>
+            <ul>
+             <li>Best practices for EDA</li>
+             <li>Design databases for EDA</li>
+             <li>Software tools for EDA</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Hardware validation</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Functional verification</summary>
+            <ul>
+             <li>Model checking</li>
+             <li>Coverage metrics</li>
+             <li>Equivalence checking</li>
+             <li>Semi-formal verification</li>
+             <li>Simulation and emulation</li>
+             <li>Transaction-level verification</li>
+             <li>Theorem proving and SAT solving</li>
+             <li>Assertion checking</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Physical verification</summary>
+            <ul>
+             <li>Design rule checking</li>
+             <li>Layout-versus-schematics</li>
+             <li>Power and thermal analysis</li>
+             <li>Timing analysis and sign-off</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Post-manufacture validation and debug</summary>
+            <ul>
+             <li>Bug detection, localization and diagnosis</li>
+             <li>Bug fixing (hardware)</li>
+             <li>Design for debug</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Hardware test</summary>
+         <ul>
+          <li>Analog, mixed-signal and radio frequency test</li>
+          <li>Board- and system-level test</li>
+          <li>Defect-based test</li>
+          <li>
+           <details>
+            <summary>Design for testability</summary>
+            <ul>
+             <li>Built-in self-test</li>
+             <li>Online test and diagnostics</li>
+             <li>Test data compression</li>
+            </ul>
+           </details>
+          </li>
+          <li>Fault models and test metrics</li>
+          <li>Memory test and repair</li>
+          <li>Hardware reliability screening</li>
+          <li>Test-pattern generation and fault simulation</li>
+          <li>Testing with distributed and parallel systems</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Robustness</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Fault tolerance</summary>
+            <ul>
+             <li>Error detection and error correction</li>
+             <li>Failure prediction</li>
+             <li>Failure recovery, maintenance and self-repair</li>
+             <li>Redundancy</li>
+             <li>Self-checking mechanisms</li>
+             <li>System-level fault tolerance</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Design for manufacturability</summary>
+            <ul>
+             <li>Process variations</li>
+             <li>Yield and cost modeling</li>
+             <li>Yield and cost optimization</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Hardware reliability</summary>
+            <ul>
+             <li>Aging of circuits and systems</li>
+             <li>Circuit hardening</li>
+             <li>Early-life failures and infant mortality</li>
+             <li>Process, voltage and temperature variations</li>
+             <li>Signal integrity and noise analysis</li>
+             <li>Transient errors and upsets</li>
+            </ul>
+           </details>
+          </li>
+          <li>Safety critical systems</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Emerging technologies</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Analysis and design of emerging devices and systems</summary>
+            <ul>
+             <li>Emerging architectures</li>
+             <li>Emerging languages and compilers</li>
+             <li>Emerging simulation</li>
+             <li>Emerging tools and methodologies</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Biology-related information processing</summary>
+            <ul>
+             <li>Bio-embedded electronics</li>
+             <li>Neural systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Circuit substrates</summary>
+            <ul>
+             <li>III-V compounds</li>
+             <li>Carbon based electronics</li>
+             <li>Cellular neural networks</li>
+             <li>Flexible and printable circuits</li>
+             <li>Superconducting circuits</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Electromechanical systems</summary>
+            <ul>
+             <li>Microelectromechanical systems</li>
+             <li>Nanoelectromechanical systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>Emerging interfaces</li>
+          <li>Memory and dense storage</li>
+          <li>Emerging optical and photonic technologies</li>
+          <li>Reversible logic</li>
+          <li>Plasmonics</li>
+          <li>
+           <details>
+            <summary>Quantum technologies</summary>
+            <ul>
+             <li>Single electron devices</li>
+             <li>Tunneling devices</li>
+             <li>
+              <details>
+               <summary>Quantum computation</summary>
+               <ul>
+                <li>Quantum communication and cryptography</li>
+                <li>Quantum error correction and fault tolerance</li>
+               </ul>
+              </details>
+             </li>
+             <li>Quantum dots and cellular automata</li>
+            </ul>
+           </details>
+          </li>
+          <li>Spintronics and magnetic technologies</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Computer systems organization</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Architectures</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Serial architectures</summary>
+            <ul>
+             <li>Reduced instruction set computing</li>
+             <li>Complex instruction set computing</li>
+             <li>Superscalar architectures</li>
+             <li>Pipeline computing</li>
+             <li>Stack machines</li>
+             <li>PCB design and layout</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Parallel architectures</summary>
+            <ul>
+             <li>Very long instruction word</li>
+             <li>Interconnection architectures</li>
+             <li>Multiple instruction, multiple data</li>
+             <li>Cellular architectures</li>
+             <li>Multiple instruction, single data</li>
+             <li>Single instruction, multiple data</li>
+             <li>Systolic arrays</li>
+             <li>Multicore architectures</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Distributed architectures</summary>
+            <ul>
+             <li>Distributed architectures</li>
+             <li>Cloud computing</li>
+             <li>Client-server architectures</li>
+             <li>n-tier architectures</li>
+             <li>Peer-to-peer architectures</li>
+             <li>Grid computing</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Other architectures</summary>
+            <ul>
+             <li>Neural networks</li>
+             <li>Reconfigurable computing</li>
+             <li>Analog computers</li>
+             <li>Data flow architectures</li>
+             <li>Heterogeneous (hybrid) systems</li>
+             <li>Self-organizing autonomic computing</li>
+             <li>Optical computing</li>
+             <li>Quantum computing</li>
+             <li>Molecular computing</li>
+             <li>High-level language architectures</li>
+             <li>Special purpose systems</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Embedded and cyber-physical systems</summary>
+         <ul>
+          <li>Sensor networks</li>
+          <li>
+           <details>
+            <summary>Robotics</summary>
+            <ul>
+             <li>Robotic components</li>
+             <li>
+              <details>
+               <summary>Robotic control</summary>
+               <ul>
+                <li>Evolutionary robotics</li>
+               </ul>
+              </details>
+             </li>
+             <li>Robotic autonomy</li>
+             <li>External interfaces for robotics</li>
+            </ul>
+           </details>
+          </li>
+          <li>Sensors and actuators</li>
+          <li>System on a chip</li>
+          <li>
+           <details>
+            <summary>Embedded systems</summary>
+            <ul>
+             <li>Firmware</li>
+             <li>Embedded hardware</li>
+             <li>Embedded software</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Real-time systems</summary>
+         <ul>
+          <li>Real-time operating systems</li>
+          <li>Real-time languages</li>
+          <li>Real-time system specification</li>
+          <li>Real-time system architecture</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Dependable and fault-tolerant systems and networks</summary>
+         <ul>
+          <li>Reliability</li>
+          <li>Availability</li>
+          <li>Maintainability and maintenance</li>
+          <li>Processors and memory architectures</li>
+          <li>Secondary storage organization</li>
+          <li>Fault-tolerant network topologies</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Network</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Network architectures</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Network design principles</summary>
+            <ul>
+             <li>Layering</li>
+             <li>Naming and addressing</li>
+            </ul>
+           </details>
+          </li>
+          <li>Programming interfaces</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network protocols</summary>
+         <ul>
+          <li>Network protocol design</li>
+          <li>
+           <details>
+            <summary>Protocol correctness</summary>
+            <ul>
+             <li>Protocol testing and verification</li>
+             <li>Formal specifications</li>
+            </ul>
+           </details>
+          </li>
+          <li>Link-layer protocols</li>
+          <li>
+           <details>
+            <summary>Network layer protocols</summary>
+            <ul>
+             <li>Routing protocols</li>
+             <li>Signaling protocols</li>
+            </ul>
+           </details>
+          </li>
+          <li>Transport protocols</li>
+          <li>Session protocols</li>
+          <li>Presentation protocols</li>
+          <li>
+           <details>
+            <summary>Application layer protocols</summary>
+            <ul>
+             <li>Peer-to-peer protocols</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>OAM protocols</summary>
+            <ul>
+             <li>Time synchronization protocols</li>
+             <li>Network policy</li>
+            </ul>
+           </details>
+          </li>
+          <li>Cross-layer protocols</li>
+          <li>Network File System (NFS) protocol</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network components</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Intermediate nodes</summary>
+            <ul>
+             <li>Routers</li>
+             <li>Bridges and switches</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Physical links</summary>
+            <ul>
+             <li>Repeaters</li>
+            </ul>
+           </details>
+          </li>
+          <li>Middle boxes / network appliances</li>
+          <li>
+           <details>
+            <summary>End nodes</summary>
+            <ul>
+             <li>Network adapters</li>
+             <li>Network servers</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Wireless access points, base stations and infrastructure</summary>
+            <ul>
+             <li>Cognitive radios</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Logical nodes</summary>
+            <ul>
+             <li>Network domains</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network algorithms</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Data path algorithms</summary>
+            <ul>
+             <li>Packet classification</li>
+             <li>Deep packet inspection</li>
+             <li>Packet scheduling</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Control path algorithms</summary>
+            <ul>
+             <li>Network resources allocation</li>
+             <li>Network control algorithms</li>
+             <li>Traffic engineering algorithms</li>
+             <li>Network design and planning algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>Network economics</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network performance evaluation</summary>
+         <ul>
+          <li>Network performance modeling</li>
+          <li>Network simulations</li>
+          <li>Network experimentation</li>
+          <li>Network performance analysis</li>
+          <li>Network measurement</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network properties</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Network Security</summary>
+            <ul>
+             <li>Security protocols</li>
+             <li>Web protocol security</li>
+             <li>Mobile and wireless security</li>
+             <li>Denial-of-service attacks</li>
+             <li>Firewalls</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Network range</summary>
+            <ul>
+             <li>Short-range networks</li>
+             <li>Local area networks</li>
+             <li>Metropolitan area networks</li>
+             <li>Wide area networks</li>
+             <li>Very long-range networks</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Network structure</summary>
+            <ul>
+             <li>Topology analysis and generation</li>
+             <li>Physical topologies</li>
+             <li>Logical / virtual topologies</li>
+             <li>
+              <details>
+               <summary>Network topology types</summary>
+               <ul>
+                <li>Point-to-point networks</li>
+                <li>Bus networks</li>
+                <li>Star networks</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Ring networks</summary>
+               <ul>
+                <li>Token ring networks</li>
+                <li>Fiber distributed data interface (FDDI)</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Mesh networks</summary>
+               <ul>
+                <li>Wireless mesh networks</li>
+               </ul>
+              </details>
+             </li>
+             <li>Hybrid networks</li>
+            </ul>
+           </details>
+          </li>
+          <li>Network dynamics</li>
+          <li>
+           <details>
+            <summary>Network reliability</summary>
+            <ul>
+             <li>Error detection and error correction</li>
+            </ul>
+           </details>
+          </li>
+          <li>Network mobility</li>
+          <li>Network manageability</li>
+          <li>Network privacy and anonymity</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network services</summary>
+         <ul>
+          <li>Naming and addressing</li>
+          <li>Cloud computing</li>
+          <li>Location based services</li>
+          <li>Programmable networks</li>
+          <li>In-network processing</li>
+          <li>Network management</li>
+          <li>Network monitoring</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network types</summary>
+         <ul>
+          <li>Network on chip</li>
+          <li>Home networks</li>
+          <li>Storage area networks</li>
+          <li>Data center networks</li>
+          <li>Wired access networks</li>
+          <li>
+           <details>
+            <summary>Cyber-physical networks</summary>
+            <ul>
+             <li>Sensor networks</li>
+            </ul>
+           </details>
+          </li>
+          <li>Mobile networks</li>
+          <li>
+           <details>
+            <summary>Overlay and other logical network structures</summary>
+            <ul>
+             <li>Peer-to-peer networks</li>
+             <li>World Wide Web (network structure)</li>
+             <li>Social media networks</li>
+             <li>Online social networks</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Wireless access networks</summary>
+            <ul>
+             <li>Wireless local area networks</li>
+             <li>Wireless personal area networks</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Ad hoc networks</summary>
+            <ul>
+             <li>Mobile ad hoc networks</li>
+            </ul>
+           </details>
+          </li>
+          <li>Public Internet</li>
+          <li>Packet-switching networks</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Software and its engineering</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Software organization and properties</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Contextual software domains</summary>
+            <ul>
+             <li>E-commerce infrastructure</li>
+             <li>
+              <details>
+               <summary>Software infrastructure</summary>
+               <ul>
+                <li>Interpreters</li>
+                <li>
+                 <details>
+                  <summary>Middleware</summary>
+                  <ul>
+                   <li>Message oriented middleware</li>
+                   <li>Reflective middleware</li>
+                   <li>Embedded middleware</li>
+                  </ul>
+                 </details>
+                </li>
+                <li>Virtual machines</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Operating systems</summary>
+               <ul>
+                <li>File systems management</li>
+                <li>
+                 <details>
+                  <summary>Memory management</summary>
+                  <ul>
+                   <li>Virtual memory</li>
+                   <li>Main memory</li>
+                   <li>Allocation / deallocation strategies</li>
+                   <li>Garbage collection</li>
+                   <li>Distributed memory</li>
+                   <li>Secondary storage</li>
+                  </ul>
+                 </details>
+                </li>
+                <li>
+                 <details>
+                  <summary>Process management</summary>
+                  <ul>
+                   <li>Scheduling</li>
+                   <li>Deadlocks</li>
+                   <li>Multithreading</li>
+                   <li>Multiprocessing / multiprogramming / multitasking</li>
+                   <li>Monitors</li>
+                   <li>Mutual exclusion</li>
+                   <li>Concurrency control</li>
+                   <li>Power management</li>
+                   <li>Process synchronization</li>
+                  </ul>
+                 </details>
+                </li>
+                <li>
+                 <details>
+                  <summary>Communications management</summary>
+                  <ul>
+                   <li>Buffering</li>
+                   <li>Input / output</li>
+                   <li>Message passing</li>
+                  </ul>
+                 </details>
+                </li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Virtual worlds software</summary>
+               <ul>
+                <li>Interactive games</li>
+                <li>Virtual worlds training simulations</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Software system structures</summary>
+            <ul>
+             <li>Embedded software</li>
+             <li>
+              <details>
+               <summary>Software architectures</summary>
+               <ul>
+                <li>n-tier architectures</li>
+                <li>Peer-to-peer architectures</li>
+                <li>Data flow architectures</li>
+                <li>Cooperating communicating processes</li>
+                <li>Layered systems</li>
+                <li>Publish-subscribe / event-based architectures</li>
+                <li>Electronic blackboards</li>
+                <li>Simulator / interpreter</li>
+                <li>Object oriented architectures</li>
+                <li>Tightly coupled architectures</li>
+                <li>Space-based architectures</li>
+                <li>3-tier architectures</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Software system models</summary>
+               <ul>
+                <li/>
+                <li>Petri nets</li>
+                <li>State systems</li>
+                <li>Entity relationship modeling</li>
+                <li>Model-driven software engineering</li>
+                <li>Feature interaction</li>
+                <li>Massively parallel systems</li>
+               </ul>
+              </details>
+             </li>
+             <li>Ultra-large-scale systems</li>
+             <li>
+              <details>
+               <summary>Distributed systems organizing principles</summary>
+               <ul>
+                <li>Cloud computing</li>
+                <li>Client-server architectures</li>
+                <li>Grid computing</li>
+                <li>Organizing principles for web applications</li>
+               </ul>
+              </details>
+             </li>
+             <li>Real-time systems software</li>
+             <li>Abstraction, modeling and modularity</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Software functional properties</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Correctness</summary>
+               <ul>
+                <li>Synchronization</li>
+                <li>Functionality</li>
+                <li>Real-time schedulability</li>
+                <li>Consistency</li>
+                <li>Completeness</li>
+                <li>Access protection</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Formal methods</summary>
+               <ul>
+                <li>Model checking</li>
+                <li>Software verification</li>
+                <li>Automated static analysis</li>
+                <li>Dynamic analysis</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Extra-functional properties</summary>
+            <ul>
+             <li>Interoperability</li>
+             <li>Software performance</li>
+             <li>Software reliability</li>
+             <li>
+              <details>
+               <summary>Software fault tolerance</summary>
+               <ul>
+                <li>Checkpoint / restart</li>
+               </ul>
+              </details>
+             </li>
+             <li>Software safety</li>
+             <li>Software usability</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Software notations and tools</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>General programming languages</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Language types</summary>
+               <ul>
+                <li>Parallel programming languages</li>
+                <li>Distributed programming languages</li>
+                <li>Imperative languages</li>
+                <li>Object oriented languages</li>
+                <li>Functional languages</li>
+                <li>Concurrent programming languages</li>
+                <li>Constraint and logic languages</li>
+                <li>Data flow languages</li>
+                <li>Extensible languages</li>
+                <li>Assembly languages</li>
+                <li>Multiparadigm languages</li>
+                <li>Very high level languages</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Language features</summary>
+               <ul>
+                <li>Abstract data types</li>
+                <li>Polymorphism</li>
+                <li>Inheritance</li>
+                <li>Control structures</li>
+                <li>Data types and structures</li>
+                <li>Classes and objects</li>
+                <li>Modules / packages</li>
+                <li>Constraints</li>
+                <li>Recursion</li>
+                <li>Concurrent programming structures</li>
+                <li>Procedures, functions and subroutines</li>
+                <li>Patterns</li>
+                <li>Coroutines</li>
+                <li>Frameworks</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Formal language definitions</summary>
+            <ul>
+             <li>Syntax</li>
+             <li>Semantics</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Compilers</summary>
+            <ul>
+             <li>Interpreters</li>
+             <li>Incremental compilers</li>
+             <li>Retargetable compilers</li>
+             <li>Just-in-time compilers</li>
+             <li>Dynamic compilers</li>
+             <li>Translator writing systems and compiler generators</li>
+             <li>Source code generation</li>
+             <li>Runtime environments</li>
+             <li>Preprocessors</li>
+             <li>Parsers</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Context specific languages</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Markup languages</summary>
+               <ul>
+                <li>Extensible Markup Language (XML)</li>
+                <li>Hypertext languages</li>
+               </ul>
+              </details>
+             </li>
+             <li>Scripting languages</li>
+             <li>Domain specific languages</li>
+             <li>Specialized application languages</li>
+             <li>API languages</li>
+             <li>Graphical user interface languages</li>
+             <li>Window managers</li>
+             <li>Command and control languages</li>
+             <li>Macro languages</li>
+             <li>Programming by example</li>
+             <li>State based definitions</li>
+             <li>Visual languages</li>
+             <li>Interface definition languages</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>System description languages</summary>
+            <ul>
+             <li>Design languages</li>
+             <li>Unified Modeling Language (UML)</li>
+             <li>Architecture description languages</li>
+             <li>System modeling languages</li>
+             <li>Orchestration languages</li>
+             <li>Integration frameworks</li>
+             <li>Specification languages</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Development frameworks and environments</summary>
+            <ul>
+             <li>Object oriented frameworks</li>
+             <li>Software as a service orchestration system</li>
+             <li>Integrated and visual development environments</li>
+             <li>Application specific development environments</li>
+            </ul>
+           </details>
+          </li>
+          <li>Software configuration management and version control systems</li>
+          <li>Software libraries and repositories</li>
+          <li>Software maintenance tools</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Software creation and management</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Designing software</summary>
+            <ul>
+             <li>Requirements analysis</li>
+             <li>Software design engineering</li>
+             <li>Software design tradeoffs</li>
+             <li>
+              <details>
+               <summary>Software implementation planning</summary>
+               <ul>
+                <li>Software design techniques</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Software development process management</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Software development methods</summary>
+               <ul>
+                <li>Rapid application development</li>
+                <li>Agile software development</li>
+                <li>Capability Maturity Model</li>
+                <li>Waterfall model</li>
+                <li>Spiral model</li>
+                <li>V-model</li>
+                <li>Design patterns</li>
+               </ul>
+              </details>
+             </li>
+             <li>Risk management</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Software development techniques</summary>
+            <ul>
+             <li>Software prototyping</li>
+             <li>Object oriented development</li>
+             <li>Flowcharts</li>
+             <li>
+              <details>
+               <summary>Reusability</summary>
+               <ul>
+                <li>Software product lines</li>
+               </ul>
+              </details>
+             </li>
+             <li>Error handling and recovery</li>
+             <li>
+              <details>
+               <summary>Automatic programming</summary>
+               <ul>
+                <li>Genetic programming</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Software verification and validation</summary>
+            <ul>
+             <li>Software prototyping</li>
+             <li>Operational analysis</li>
+             <li>
+              <details>
+               <summary>Software defect analysis</summary>
+               <ul>
+                <li>Software testing and debugging</li>
+               </ul>
+              </details>
+             </li>
+             <li>Fault tree analysis</li>
+             <li>
+              <details>
+               <summary>Process validation</summary>
+               <ul>
+                <li>Walkthroughs</li>
+                <li>Pair programming</li>
+                <li>Use cases</li>
+                <li>Acceptance testing</li>
+                <li>Traceability</li>
+               </ul>
+              </details>
+             </li>
+             <li>Formal software verification</li>
+             <li>Empirical software validation</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Software post-development issues</summary>
+            <ul>
+             <li>Software reverse engineering</li>
+             <li>Documentation</li>
+             <li>Backup procedures</li>
+             <li>Software evolution</li>
+             <li>Software version control</li>
+             <li>Maintaining software</li>
+             <li>System administration</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Collaboration in software development</summary>
+            <ul>
+             <li>Open source model</li>
+             <li>Programming teams</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Contextual software domains</summary>
+            <ul>
+             <li>Search-based software engineering</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Theory of computation</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Models of computation</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Computability</summary>
+            <ul>
+             <li>Lambda calculus</li>
+             <li>Turing machines</li>
+             <li>Recursive functions</li>
+            </ul>
+           </details>
+          </li>
+          <li>Probabilistic computation</li>
+          <li>
+           <details>
+            <summary>Quantum computation theory</summary>
+            <ul>
+             <li>Quantum complexity theory</li>
+             <li>Quantum communication complexity</li>
+             <li>Quantum query complexity</li>
+             <li>Quantum information theory</li>
+            </ul>
+           </details>
+          </li>
+          <li>Interactive computation</li>
+          <li>Streaming models</li>
+          <li>
+           <details>
+            <summary>Concurrency</summary>
+            <ul>
+             <li>Parallel computing models</li>
+             <li>Distributed computing models</li>
+             <li>Process calculi</li>
+            </ul>
+           </details>
+          </li>
+          <li>Timed and hybrid models</li>
+          <li>Abstract machines</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Formal languages and automata theory</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Formalisms</summary>
+            <ul>
+             <li>Algebraic language theory</li>
+             <li>Rewrite systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>Automata over infinite objects</li>
+          <li>Grammars and context-free languages</li>
+          <li>Tree languages</li>
+          <li>
+           <details>
+            <summary>Automata extensions</summary>
+            <ul>
+             <li>Transducers</li>
+             <li>Quantitative automata</li>
+            </ul>
+           </details>
+          </li>
+          <li>Regular languages</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Computational complexity and cryptography</summary>
+         <ul>
+          <li>Complexity classes</li>
+          <li>Problems, reductions and completeness</li>
+          <li>Communication complexity</li>
+          <li>Circuit complexity</li>
+          <li>Oracles and decision trees</li>
+          <li>Algebraic complexity theory</li>
+          <li>Quantum complexity theory</li>
+          <li>Proof complexity</li>
+          <li>Interactive proof systems</li>
+          <li>Complexity theory and logic</li>
+          <li>Cryptographic primitives</li>
+          <li>Cryptographic protocols</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Logic</summary>
+         <ul>
+          <li>Logic and verification</li>
+          <li>Proof theory</li>
+          <li>Modal and temporal logics</li>
+          <li>Automated reasoning</li>
+          <li>Constraint and logic programming</li>
+          <li>Constructive mathematics</li>
+          <li>Description logics</li>
+          <li>Equational logic and rewriting</li>
+          <li>Finite Model Theory</li>
+          <li>Higher order logic</li>
+          <li>Linear logic</li>
+          <li>Programming logic</li>
+          <li>Abstraction</li>
+          <li>Verification by model checking</li>
+          <li>Type theory</li>
+          <li>Hoare logic</li>
+          <li>Separation logic</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Design and analysis of algorithms</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Graph algorithms analysis</summary>
+            <ul>
+             <li>Network flows</li>
+             <li>Sparsification and spanners</li>
+             <li>Shortest paths</li>
+             <li>Dynamic graph algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Approximation algorithms analysis</summary>
+            <ul>
+             <li>Scheduling algorithms</li>
+             <li>Packing and covering problems</li>
+             <li>Routing and network design problems</li>
+             <li>Facility location and clustering</li>
+             <li>Rounding techniques</li>
+             <li>Stochastic approximation</li>
+             <li>Numeric approximation algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Mathematical optimization</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Discrete optimization</summary>
+               <ul>
+                <li>Network optimization</li>
+                <li>
+                 <details>
+                  <summary>Optimization with randomized search heuristics</summary>
+                  <ul>
+                   <li>Simulated annealing</li>
+                   <li>Evolutionary algorithms</li>
+                   <li>Tabu search</li>
+                   <li>Randomized local search</li>
+                  </ul>
+                 </details>
+                </li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Continuous optimization</summary>
+               <ul>
+                <li>Linear programming</li>
+                <li>Semidefinite programming</li>
+                <li>Convex optimization</li>
+                <li>Quasiconvex programming and unimodality</li>
+                <li>Stochastic control and optimization</li>
+                <li>Quadratic programming</li>
+                <li>Nonconvex optimization</li>
+                <li>Bio-inspired optimization</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Mixed discrete-continuous optimization</summary>
+               <ul>
+                <li>Submodular optimization and polymatroids</li>
+                <li>Integer programming</li>
+                <li>Bio-inspired optimization</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Non-parametric optimization</summary>
+               <ul>
+                <li>Genetic programming</li>
+                <li>Developmental representations</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Data structures design and analysis</summary>
+            <ul>
+             <li>Data compression</li>
+             <li>Pattern matching</li>
+             <li>Sorting and searching</li>
+             <li>Predecessor queries</li>
+             <li>Cell probe models and lower bounds</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Online algorithms</summary>
+            <ul>
+             <li>Online learning algorithms</li>
+             <li>Scheduling algorithms</li>
+             <li>Caching and paging algorithms</li>
+             <li>K-server algorithms</li>
+             <li>Adversary models</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Parameterized complexity and exact algorithms</summary>
+            <ul>
+             <li>Fixed parameter tractability</li>
+             <li>W hierarchy</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Streaming, sublinear and near linear time algorithms</summary>
+            <ul>
+             <li>Bloom filters and hashing</li>
+             <li>Sketching and sampling</li>
+             <li>Lower bounds and information complexity</li>
+             <li>Random order and robust communication complexity</li>
+             <li>Nearest neighbor algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Parallel algorithms</summary>
+            <ul>
+             <li>MapReduce algorithms</li>
+             <li>Self-organization</li>
+             <li>Shared memory algorithms</li>
+             <li>Vector / streaming algorithms</li>
+             <li>Massively parallel algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Distributed algorithms</summary>
+            <ul>
+             <li>MapReduce algorithms</li>
+             <li>Self-organization</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Algorithm design techniques</summary>
+            <ul>
+             <li>Backtracking</li>
+             <li>Branch-and-bound</li>
+             <li>Divide and conquer</li>
+             <li>Dynamic programming</li>
+             <li>Preconditioning</li>
+            </ul>
+           </details>
+          </li>
+          <li>Concurrent algorithms</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Randomness, geometry and discrete structures</summary>
+         <ul>
+          <li>Pseudorandomness and derandomization</li>
+          <li>Computational geometry</li>
+          <li>Generating random combinatorial structures</li>
+          <li>Random walks and Markov chains</li>
+          <li>Expander graphs and randomness extractors</li>
+          <li>Error-correcting codes</li>
+          <li>Random projections and metric embeddings</li>
+          <li>Random network models</li>
+          <li>Random search heuristics</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Theory and algorithms for application domains</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Machine learning theory</summary>
+            <ul>
+             <li>Sample complexity and generalization bounds</li>
+             <li>Boolean function learning</li>
+             <li>Unsupervised learning and clustering</li>
+             <li>
+              <details>
+               <summary>Kernel methods</summary>
+               <ul>
+                <li>Support vector machines</li>
+                <li>Gaussian processes</li>
+               </ul>
+              </details>
+             </li>
+             <li>Boosting</li>
+             <li>Bayesian analysis</li>
+             <li>Inductive inference</li>
+             <li>Online learning theory</li>
+             <li>Multi-agent learning</li>
+             <li>Models of learning</li>
+             <li>Query learning</li>
+             <li>Structured prediction</li>
+             <li>
+              <details>
+               <summary>Reinforcement learning</summary>
+               <ul>
+                <li>Sequential decision making</li>
+                <li>Inverse reinforcement learning</li>
+                <li>Apprenticeship learning</li>
+                <li>Multi-agent reinforcement learning</li>
+                <li>Adversarial learning</li>
+               </ul>
+              </details>
+             </li>
+             <li>Active learning</li>
+             <li>Semi-supervised learning</li>
+             <li>Markov decision processes</li>
+             <li>Regret bounds</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Algorithmic game theory and mechanism design</summary>
+            <ul>
+             <li>Social networks</li>
+             <li>Algorithmic game theory</li>
+             <li>Algorithmic mechanism design</li>
+             <li>Solution concepts in game theory</li>
+             <li>Exact and approximate computation of equilibria</li>
+             <li>Quality of equilibria</li>
+             <li>Convergence and learning in games</li>
+             <li>Market equilibria</li>
+             <li>Computational pricing and auctions</li>
+             <li>Representations of games and their complexity</li>
+             <li>Network games</li>
+             <li>Network formation</li>
+             <li>Computational advertising theory</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Database theory</summary>
+            <ul>
+             <li>Data exchange</li>
+             <li>Data provenance</li>
+             <li>Data modeling</li>
+             <li>Database query languages (principles)</li>
+             <li>Database constraints theory</li>
+             <li>Database interoperability</li>
+             <li>Data structures and algorithms for data management</li>
+             <li>Database query processing and optimization (theory)</li>
+             <li>Data integration</li>
+             <li>Logic and databases</li>
+             <li>Theory of database privacy and security</li>
+             <li>Incomplete, inconsistent, and uncertain databases</li>
+            </ul>
+           </details>
+          </li>
+          <li>Theory of randomized search heuristics</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Semantics and reasoning</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Program constructs</summary>
+            <ul>
+             <li>Control primitives</li>
+             <li>Functional constructs</li>
+             <li>Object oriented constructs</li>
+             <li>Program schemes</li>
+             <li>Type structures</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Program semantics</summary>
+            <ul>
+             <li>Algebraic semantics</li>
+             <li>Denotational semantics</li>
+             <li>Operational semantics</li>
+             <li>Axiomatic semantics</li>
+             <li>Action semantics</li>
+             <li>Categorical semantics</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Program reasoning</summary>
+            <ul>
+             <li>Invariants</li>
+             <li>Program specifications</li>
+             <li>Pre- and post-conditions</li>
+             <li>Program verification</li>
+             <li>Program analysis</li>
+             <li>Assertions</li>
+             <li>Parsing</li>
+             <li>Abstraction</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Mathematics of computing</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Discrete Mathematics</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Combinatorics</summary>
+            <ul>
+             <li>Combinatoric problems</li>
+             <li>Permutations and combinations</li>
+             <li>Combinatorial algorithms</li>
+             <li>Generating functions</li>
+             <li>Combinatorial optimization</li>
+             <li>Combinatorics on words</li>
+             <li>Enumeration</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Graph theory</summary>
+            <ul>
+             <li>Trees</li>
+             <li>Hypergraphs</li>
+             <li>Random graphs</li>
+             <li>Graph coloring</li>
+             <li>Paths and connectivity problems</li>
+             <li>Graph enumeration</li>
+             <li>Matchings and factors</li>
+             <li>Graphs and surfaces</li>
+             <li>Network flows</li>
+             <li>Spectra of graphs</li>
+             <li>Extremal graph theory</li>
+             <li>Matroids and greedoids</li>
+             <li>Graph algorithms</li>
+             <li>Approximation algorithms</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Probability and statistics</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Probabilistic representations</summary>
+            <ul>
+             <li>Bayesian networks</li>
+             <li>Markov networks</li>
+             <li>Factor graphs</li>
+             <li>Decision diagrams</li>
+             <li>Equational models</li>
+             <li>Causal networks</li>
+             <li>Stochastic differential equations</li>
+             <li>
+              <details>
+               <summary>Nonparametric representations</summary>
+               <ul>
+                <li>Kernel density estimators</li>
+                <li>Spline models</li>
+                <li>Bayesian nonparametric models</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Probabilistic inference problems</summary>
+            <ul>
+             <li>Maximum likelihood estimation</li>
+             <li>Bayesian computation</li>
+             <li>Computing most probable explanation</li>
+             <li>Hypothesis testing and confidence interval computation</li>
+             <li>
+              <details>
+               <summary>Density estimation</summary>
+               <ul>
+                <li>Quantile regression</li>
+               </ul>
+              </details>
+             </li>
+             <li>Max marginal computation</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Probabilistic reasoning algorithms</summary>
+            <ul>
+             <li>Variable elimination</li>
+             <li>Loopy belief propagation</li>
+             <li>Variational methods</li>
+             <li>Expectation maximization</li>
+             <li>
+              <details>
+               <summary>Markov-chain Monte Carlo methods</summary>
+               <ul>
+                <li>Gibbs sampling</li>
+                <li>Metropolis-Hastings algorithm</li>
+                <li>Simulated annealing</li>
+                <li>Markov-chain Monte Carlo convergence measures</li>
+               </ul>
+              </details>
+             </li>
+             <li>Sequential Monte Carlo methods</li>
+             <li>Kalman filters and hidden Markov models</li>
+             <li>
+              <details>
+               <summary>Resampling methods</summary>
+               <ul>
+                <li>Bootstrapping</li>
+                <li>Jackknifing</li>
+               </ul>
+              </details>
+             </li>
+             <li>Random number generation</li>
+            </ul>
+           </details>
+          </li>
+          <li>Probabilistic algorithms</li>
+          <li>
+           <details>
+            <summary>Statistical paradigms</summary>
+            <ul>
+             <li>Queueing theory</li>
+             <li>Contingency table analysis</li>
+             <li>
+              <details>
+               <summary>Regression analysis</summary>
+               <ul>
+                <li>Robust regression</li>
+               </ul>
+              </details>
+             </li>
+             <li>Time series analysis</li>
+             <li>Survival analysis</li>
+             <li>Renewal theory</li>
+             <li>Dimensionality reduction</li>
+             <li>Cluster analysis</li>
+             <li>Statistical graphics</li>
+             <li>Exploratory data analysis</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Probabilistic inference problems</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Stochastic processes</summary>
+               <ul>
+                <li>Markov processes</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>Nonparametric statistics</li>
+          <li>Distribution functions</li>
+          <li>Multivariate statistics</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Mathematical software</summary>
+         <ul>
+          <li>Solvers</li>
+          <li>Statistical software</li>
+          <li>Mathematical software performance</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Information theory</summary>
+         <ul>
+          <li>Coding theory</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Mathematical analysis</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Numerical analysis</summary>
+            <ul>
+             <li>Computation of transforms</li>
+             <li>Computations in finite fields</li>
+             <li>Computations on matrices</li>
+             <li>
+              <details>
+               <summary>Computations on polynomials</summary>
+               <ul>
+                <li>Gröbner bases and other special bases</li>
+               </ul>
+              </details>
+             </li>
+             <li>Number-theoretic computations</li>
+             <li>Interpolation</li>
+             <li>Numerical differentiation</li>
+             <li>Interval arithmetic</li>
+             <li>Arbitrary-precision arithmetic</li>
+             <li>Automatic differentiation</li>
+             <li>Mesh generation</li>
+             <li>Discretization</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Mathematical optimization</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Discrete optimization</summary>
+               <ul>
+                <li>Network optimization</li>
+                <li>
+                 <details>
+                  <summary>Optimization with randomized search heuristics</summary>
+                  <ul>
+                   <li>Simulated annealing</li>
+                   <li>Evolutionary algorithms</li>
+                   <li>Tabu search</li>
+                   <li>Randomized local search</li>
+                  </ul>
+                 </details>
+                </li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Continuous optimization</summary>
+               <ul>
+                <li>Linear programming</li>
+                <li>Semidefinite programming</li>
+                <li>Convex optimization</li>
+                <li>Quasiconvex programming and unimodality</li>
+                <li>Stochastic control and optimization</li>
+                <li>Quadratic programming</li>
+                <li>Nonconvex optimization</li>
+                <li>Bio-inspired optimization</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Mixed discrete-continuous optimization</summary>
+               <ul>
+                <li>Submodular optimization and polymatroids</li>
+                <li>Integer programming</li>
+                <li>Bio-inspired optimization</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Non-parametric optimization</summary>
+               <ul>
+                <li>Genetic programming</li>
+                <li>Developmental representations</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Differential equations</summary>
+            <ul>
+             <li>Ordinary differential equations</li>
+             <li>Partial differential equations</li>
+             <li>Differential algebraic equations</li>
+             <li>Differential variational inequalities</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Calculus</summary>
+            <ul>
+             <li>Lambda calculus</li>
+             <li>Differential calculus</li>
+             <li>Integral calculus</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Functional analysis</summary>
+            <ul>
+             <li>Approximation</li>
+            </ul>
+           </details>
+          </li>
+          <li>Integral equations</li>
+          <li>Nonlinear equations</li>
+          <li>Quadrature</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Continuous mathematics</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Calculus</summary>
+            <ul>
+             <li>Lambda calculus</li>
+             <li>Differential calculus</li>
+             <li>Integral calculus</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Topology</summary>
+            <ul>
+             <li>Point-set topology</li>
+             <li>Algebraic topology</li>
+             <li>Geometric topology</li>
+            </ul>
+           </details>
+          </li>
+          <li>Continuous functions</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Information systems</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Data management systems</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Database design and models</summary>
+            <ul>
+             <li>Relational database model</li>
+             <li>Entity relationship models</li>
+             <li>
+              <details>
+               <summary>Graph-based database models</summary>
+               <ul>
+                <li>Hierarchical data models</li>
+                <li>Network data models</li>
+               </ul>
+              </details>
+             </li>
+             <li>Physical data models</li>
+             <li>
+              <details>
+               <summary>Data model extensions</summary>
+               <ul>
+                <li>Semi-structured data</li>
+                <li>Data streams</li>
+                <li>Data provenance</li>
+                <li>Incomplete data</li>
+                <li>Temporal data</li>
+                <li>Uncertainty</li>
+                <li>Inconsistent data</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Data structures</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Data access methods</summary>
+               <ul>
+                <li>Multidimensional range search</li>
+                <li>Data scans</li>
+                <li>Point lookups</li>
+                <li>Unidimensional range search</li>
+                <li>Proximity search</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Data layout</summary>
+               <ul>
+                <li>Data compression</li>
+                <li>Data encryption</li>
+                <li>Record and block layout</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Database management system engines</summary>
+            <ul>
+             <li>DBMS engine architectures</li>
+             <li>
+              <details>
+               <summary>Database query processing</summary>
+               <ul>
+                <li>Query optimization</li>
+                <li>Query operators</li>
+                <li>Query planning</li>
+                <li>Join algorithms</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Database transaction processing</summary>
+               <ul>
+                <li>Data locking</li>
+                <li>Transaction logging</li>
+                <li>Database recovery</li>
+               </ul>
+              </details>
+             </li>
+             <li>Record and buffer management</li>
+             <li>
+              <details>
+               <summary>Parallel and distributed DBMSs</summary>
+               <ul>
+                <li>Key-value stores</li>
+                <li>MapReduce-based systems</li>
+                <li>Relational parallel and distributed DBMSs</li>
+               </ul>
+              </details>
+             </li>
+             <li>Triggers and rules</li>
+             <li>Database views</li>
+             <li>Integrity checking</li>
+             <li>
+              <details>
+               <summary>Distributed database transactions</summary>
+               <ul>
+                <li>Distributed data locking</li>
+                <li>Deadlocks</li>
+                <li>Distributed database recovery</li>
+               </ul>
+              </details>
+             </li>
+             <li>Main memory engines</li>
+             <li>Online analytical processing engines</li>
+             <li>Stream management</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Query languages</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Relational database query languages</summary>
+               <ul>
+                <li>Structured Query Language</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>XML query languages</summary>
+               <ul>
+                <li>XPath</li>
+                <li>XQuery</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Query languages for non-relational engines</summary>
+               <ul>
+                <li>MapReduce languages</li>
+               </ul>
+              </details>
+             </li>
+             <li>Call level interfaces</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Database design and models</summary>
+            <ul>
+             <li>Database administration</li>
+             <li>Database utilities and tools</li>
+             <li>Database performance evaluation</li>
+             <li>Autonomous database administration</li>
+             <li>Data dictionaries</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Database design and models</summary>
+            <ul>
+             <li>Information integration</li>
+             <li>Deduplication</li>
+             <li>Extraction, transformation and loading</li>
+             <li>Data exchange</li>
+             <li>Data cleaning</li>
+             <li>Wrappers (data mining)</li>
+             <li>Mediators and data integration</li>
+             <li>Entity resolution</li>
+             <li>Data warehouses</li>
+             <li>Federated databases</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Database design and models</summary>
+            <ul>
+             <li>Middleware for databases</li>
+             <li>Database web servers</li>
+             <li>Application servers</li>
+             <li>Object-relational mapping facilities</li>
+             <li>Data federation tools</li>
+             <li>Data replication tools</li>
+             <li>Distributed transaction monitors</li>
+             <li>Message queues</li>
+             <li>Service buses</li>
+             <li>Enterprise application integration tools</li>
+             <li>Middleware business process managers</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Information storage systems</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Information storage technologies</summary>
+            <ul>
+             <li>Magnetic disks</li>
+             <li>Magnetic tapes</li>
+             <li>Optical / magneto-optical disks</li>
+             <li>
+              <details>
+               <summary>Storage class memory</summary>
+               <ul>
+                <li>Flash memory</li>
+                <li>Phase change memory</li>
+               </ul>
+              </details>
+             </li>
+             <li>Disk arrays</li>
+             <li>Tape libraries</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Record storage systems</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Record storage alternatives</summary>
+               <ul>
+                <li>Heap (data structure)</li>
+                <li>Hashed file organization</li>
+                <li>Indexed file organization</li>
+                <li>Linked lists</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Directory structures</summary>
+               <ul>
+                <li>B-trees</li>
+                <li>Vnodes</li>
+                <li>Inodes</li>
+                <li>Extent-based file structures</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Block / page strategies</summary>
+               <ul>
+                <li>Slotted pages</li>
+                <li>Intrapage space management</li>
+                <li>Interpage free-space management</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Record layout alternatives</summary>
+               <ul>
+                <li>Fixed length attributes</li>
+                <li>Variable length attributes</li>
+                <li>Null values in records</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Relational storage</summary>
+               <ul>
+                <li>Horizontal partitioning</li>
+                <li>Vertical partitioning</li>
+                <li>Column based storage</li>
+                <li>Hybrid storage layouts</li>
+                <li>Compression strategies</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Storage replication</summary>
+            <ul>
+             <li>Mirroring</li>
+             <li>RAID</li>
+             <li>Point-in-time copies</li>
+             <li>Remote replication</li>
+             <li>Storage recovery strategies</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Storage architectures</summary>
+            <ul>
+             <li>Cloud based storage</li>
+             <li>
+              <details>
+               <summary>Storage network architectures</summary>
+               <ul>
+                <li>Storage area networks</li>
+                <li>Direct attached storage</li>
+                <li>Network attached storage</li>
+               </ul>
+              </details>
+             </li>
+             <li>Distributed storage</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Storage management</summary>
+            <ul>
+             <li>Hierarchical storage management</li>
+             <li>Storage virtualization</li>
+             <li>Information lifecycle management</li>
+             <li>Version management</li>
+             <li>Storage power management</li>
+             <li>Thin provisioning</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Information systems applications</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Enterprise information systems</summary>
+            <ul>
+             <li>Intranets</li>
+             <li>Extranets</li>
+             <li>Enterprise resource planning</li>
+             <li>Enterprise applications</li>
+             <li>Data centers</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Collaborative and social computing systems and tools</summary>
+            <ul>
+             <li>Blogs</li>
+             <li>Wikis</li>
+             <li>Reputation systems</li>
+             <li>Open source software</li>
+             <li>Social networking sites</li>
+             <li>Social tagging systems</li>
+             <li>Synchronous editors</li>
+             <li>Asynchronous editors</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Spatial-temporal systems</summary>
+            <ul>
+             <li>Location based services</li>
+             <li>Geographic information systems</li>
+             <li>Sensor networks</li>
+             <li>Data streaming</li>
+             <li>Global positioning systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Decision support systems</summary>
+            <ul>
+             <li>Data warehouses</li>
+             <li>Expert systems</li>
+             <li>Data analytics</li>
+             <li>Online analytical processing</li>
+            </ul>
+           </details>
+          </li>
+          <li>Mobile information processing systems</li>
+          <li>Process control systems</li>
+          <li>
+           <details>
+            <summary>Multimedia information systems</summary>
+            <ul>
+             <li>Multimedia databases</li>
+             <li>Multimedia streaming</li>
+             <li>Multimedia content creation</li>
+             <li>Massively multiplayer online games</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Data mining</summary>
+            <ul>
+             <li>Data cleaning</li>
+             <li>Collaborative filtering</li>
+             <li>Association rules</li>
+             <li>Clustering</li>
+             <li>Nearest-neighbor search</li>
+             <li>Data stream mining</li>
+            </ul>
+           </details>
+          </li>
+          <li>Digital libraries and archives</li>
+          <li>Computational advertising</li>
+          <li>Computing platforms</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>World Wide Web</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Web searching and information discovery</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Web search engines</summary>
+               <ul>
+                <li>Web crawling</li>
+                <li>Web indexing</li>
+                <li>Page and site ranking</li>
+                <li>Spam detection</li>
+               </ul>
+              </details>
+             </li>
+             <li>Content ranking</li>
+             <li>Collaborative filtering</li>
+             <li>Social recommendation</li>
+             <li>Personalization</li>
+             <li>Social tagging</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Online advertising</summary>
+            <ul>
+             <li>Sponsored search advertising</li>
+             <li>Content match advertising</li>
+             <li>Display advertising</li>
+             <li>Social advertising</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Web mining</summary>
+            <ul>
+             <li>Site wrapping</li>
+             <li>
+              <details>
+               <summary>Data extraction and integration</summary>
+               <ul>
+                <li>Deep web</li>
+                <li>Surfacing</li>
+                <li>Search results deduplication</li>
+               </ul>
+              </details>
+             </li>
+             <li>Web log analysis</li>
+             <li>Traffic analysis</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Web applications</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Internet communications tools</summary>
+               <ul>
+                <li>Email</li>
+                <li>Blogs</li>
+                <li>Texting</li>
+                <li>Chat</li>
+                <li>Web conferencing</li>
+               </ul>
+              </details>
+             </li>
+             <li>Social networks</li>
+             <li>
+              <details>
+               <summary>Crowdsourcing</summary>
+               <ul>
+                <li>Answer ranking</li>
+                <li>Trust</li>
+                <li>Incentive schemes</li>
+                <li>Reputation systems</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Electronic commerce</summary>
+               <ul>
+                <li>Digital cash</li>
+                <li>E-commerce infrastructure</li>
+                <li>Electronic data interchange</li>
+                <li>Electronic funds transfer</li>
+                <li>Online shopping</li>
+                <li>Online banking</li>
+                <li>Secure online transactions</li>
+                <li>Online auctions</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Web interfaces</summary>
+            <ul>
+             <li>Wikis</li>
+             <li>Browsers</li>
+             <li>Mashups</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Web services</summary>
+            <ul>
+             <li>Simple Object Access Protocol (SOAP)</li>
+             <li>RESTful web services</li>
+             <li>Web Services Description Language (WSDL)</li>
+             <li>Universal Description Discovery and Integration (UDDI)</li>
+             <li>Service discovery and interfaces</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Web data description languages</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Semantic web description languages</summary>
+               <ul>
+                <li>Resource Description Framework (RDF)</li>
+                <li>Web Ontology Language (OWL)</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Markup languages</summary>
+               <ul>
+                <li>Extensible Markup Language (XML)</li>
+                <li>Hypertext languages</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Information retrieval</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Document representation</summary>
+            <ul>
+             <li>Document structure</li>
+             <li>Document topic models</li>
+             <li>Content analysis and feature selection</li>
+             <li>Data encoding and canonicalization</li>
+             <li>Document collection models</li>
+             <li>Ontologies</li>
+             <li>Dictionaries</li>
+             <li>Thesauri</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Information retrieval query processing</summary>
+            <ul>
+             <li>Query representation</li>
+             <li>Query intent</li>
+             <li>Query log analysis</li>
+             <li>Query suggestion</li>
+             <li>Query reformulation</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Users and interactive retrieval</summary>
+            <ul>
+             <li>Personalization</li>
+             <li>Task models</li>
+             <li>Search interfaces</li>
+             <li>Collaborative search</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Retrieval models and ranking</summary>
+            <ul>
+             <li>Rank aggregation</li>
+             <li>Probabilistic retrieval models</li>
+             <li>Language models</li>
+             <li>Similarity measures</li>
+             <li>Learning to rank</li>
+             <li>Combination, fusion and federated search</li>
+             <li>Information retrieval diversity</li>
+             <li>Top-k retrieval in databases</li>
+             <li>Novelty in information retrieval</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Retrieval tasks and goals</summary>
+            <ul>
+             <li>Question answering</li>
+             <li>Document filtering</li>
+             <li>Recommender systems</li>
+             <li>Information extraction</li>
+             <li>Sentiment analysis</li>
+             <li>Expert search</li>
+             <li>Near-duplicate and plagiarism detection</li>
+             <li>Clustering and classification</li>
+             <li>Summarization</li>
+             <li>Business intelligence</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Evaluation of retrieval results</summary>
+            <ul>
+             <li>Test collections</li>
+             <li>Relevance assessment</li>
+             <li>Retrieval effectiveness</li>
+             <li>Retrieval efficiency</li>
+             <li>Presentation of retrieval results</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Search engine architectures and scalability</summary>
+            <ul>
+             <li>Search engine indexing</li>
+             <li>Search index compression</li>
+             <li>Distributed retrieval</li>
+             <li>Peer-to-peer retrieval</li>
+             <li>Retrieval on mobile devices</li>
+             <li>Adversarial retrieval</li>
+             <li>Link and co-citation analysis</li>
+             <li>Searching with auxiliary databases</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Specialized information retrieval</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Structure and multilingual text search</summary>
+               <ul>
+                <li>Structured text search</li>
+                <li>Mathematics retrieval</li>
+                <li>Chemical and biochemical retrieval</li>
+                <li>Multilingual and cross-lingual retrieval</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Multimedia and multimodal retrieval</summary>
+               <ul>
+                <li>Image search</li>
+                <li>Video search</li>
+                <li>Speech / audio search</li>
+                <li>Music retrieval</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Environment-specific retrieval</summary>
+               <ul>
+                <li>Enterprise search</li>
+                <li>Desktop search</li>
+                <li>Web and social media search</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Security and Privacy</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Cryptography</summary>
+         <ul>
+          <li>Key management</li>
+          <li>
+           <details>
+            <summary>Public key (asymmetric) techniques</summary>
+            <ul>
+             <li>Digital signatures</li>
+             <li>Public key encryption</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Symmetric cryptography and hash functions</summary>
+            <ul>
+             <li>Block and stream ciphers</li>
+             <li>Hash functions and message authentication codes</li>
+            </ul>
+           </details>
+          </li>
+          <li>Cryptanalysis and other attacks</li>
+          <li>Information-theoretic techniques</li>
+          <li>Mathematical foundations of cryptography</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Formal methods and theory of security</summary>
+         <ul>
+          <li>Trust frameworks</li>
+          <li>Security requirements</li>
+          <li>Formal security models</li>
+          <li>Logic and verification</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Security services</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Authentication</summary>
+            <ul>
+             <li>Biometrics</li>
+             <li>Graphical / visual passwords</li>
+             <li>Multi-factor authentication</li>
+            </ul>
+           </details>
+          </li>
+          <li>Access control</li>
+          <li>Pseudonymity, anonymity and untraceability</li>
+          <li>Privacy-preserving protocols</li>
+          <li>Digital rights management</li>
+          <li>Authorization</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Intrusion/anomaly detection and malware mitigation</summary>
+         <ul>
+          <li>Malware and its mitigation</li>
+          <li>
+           <details>
+            <summary>Intrusion detection systems</summary>
+            <ul>
+             <li>Artificial immune systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Social engineering attacks</summary>
+            <ul>
+             <li>Spoofing attacks</li>
+             <li>Phishing</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Security in hardware</summary>
+         <ul>
+          <li>Tamper-proof and tamper-resistant designs</li>
+          <li>Embedded systems security</li>
+          <li>
+           <details>
+            <summary>Hardware security implementation</summary>
+            <ul>
+             <li>Hardware-based security protocols</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Hardware attacks and countermeasures</summary>
+            <ul>
+             <li>Malicious design modifications</li>
+             <li>Side-channel analysis and countermeasures</li>
+            </ul>
+           </details>
+          </li>
+          <li>Hardware reverse engineering</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Systems security</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Operating systems security</summary>
+            <ul>
+             <li>Mobile platform security</li>
+             <li>Trusted computing</li>
+             <li>Virtualization and security</li>
+            </ul>
+           </details>
+          </li>
+          <li>Browser security</li>
+          <li>Distributed systems security</li>
+          <li>Information flow control</li>
+          <li>Denial-of-service attacks</li>
+          <li>Firewalls</li>
+          <li>
+           <details>
+            <summary>Vulnerability management</summary>
+            <ul>
+             <li>Penetration testing</li>
+             <li>Vulnerability scanners</li>
+            </ul>
+           </details>
+          </li>
+          <li>File system security</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Network security</summary>
+         <ul>
+          <li>Security protocols</li>
+          <li>Web protocol security</li>
+          <li>Mobile and wireless security</li>
+          <li>Denial-of-service attacks</li>
+          <li>Firewalls</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Database and storage security</summary>
+         <ul>
+          <li>Data anonymization and sanitization</li>
+          <li>Management and querying of encrypted data</li>
+          <li>Information accountability and usage control</li>
+          <li>Database activity monitoring</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Software and application security</summary>
+         <ul>
+          <li>Software security engineering</li>
+          <li>Web application security</li>
+          <li>Social network security and privacy</li>
+          <li>Domain-specific security and privacy architectures</li>
+          <li>Software reverse engineering</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Human and societal aspects of security and privacy</summary>
+         <ul>
+          <li>Economics of security and privacy</li>
+          <li>Social aspects of security and privacy</li>
+          <li>Privacy protections</li>
+          <li>Usability in security and privacy</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Human-centred computing</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Human computer interaction (HCI)</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>HCI design and evaluation methods</summary>
+            <ul>
+             <li>User models</li>
+             <li>User studies</li>
+             <li>Usability testing</li>
+             <li>Heuristic evaluations</li>
+             <li>Walkthrough evaluations</li>
+             <li>Laboratory experiments</li>
+             <li>Field studies</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Interaction paradigms</summary>
+            <ul>
+             <li>Hypertext / hypermedia</li>
+             <li>Mixed / augmented reality</li>
+             <li>Command line interfaces</li>
+             <li>Graphical user interfaces</li>
+             <li>Virtual reality</li>
+             <li>Web-based interaction</li>
+             <li>Natural language interfaces</li>
+             <li>Collaborative interaction</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Interaction devices</summary>
+            <ul>
+             <li>Graphics input devices</li>
+             <li>Displays and imagers</li>
+             <li>Sound-based input / output</li>
+             <li>Keyboards</li>
+             <li>Pointing devices</li>
+             <li>Touch screens</li>
+             <li>Haptic devices</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>HCI theory, concepts and models</summary>
+            <ul>
+             <li>Human computer interaction (HCI)</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Interaction techniques</summary>
+            <ul>
+             <li>Auditory feedback</li>
+             <li>Text input</li>
+             <li>Pointing</li>
+             <li>Gestural input</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Interactive systems and tools</summary>
+            <ul>
+             <li>User interface management systems</li>
+             <li>User interface programming</li>
+             <li>User interface toolkits</li>
+            </ul>
+           </details>
+          </li>
+          <li>Empirical studies in HCI</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Interaction design</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Interaction design process and methods</summary>
+            <ul>
+             <li>User interface design</li>
+             <li>User centered design</li>
+             <li>Activity centered design</li>
+             <li>Scenario-based design</li>
+             <li>Participatory design</li>
+             <li>Contextual design</li>
+             <li>Interface design prototyping</li>
+            </ul>
+           </details>
+          </li>
+          <li>Interaction design theory, concepts and paradigms</li>
+          <li>Empirical studies in interaction design</li>
+          <li>
+           <details>
+            <summary>Systems and tools for interaction design</summary>
+            <ul>
+             <li>Wireframes</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Collaborative and social computing</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Collaborative and social computing theory, concepts and paradigms</summary>
+            <ul>
+             <li>Social content sharing</li>
+             <li>Collaborative content creation</li>
+             <li>Collaborative filtering</li>
+             <li>Social recommendation</li>
+             <li>Social networks</li>
+             <li>Social tagging</li>
+             <li>Computer supported cooperative work</li>
+             <li>Social engineering (social sciences)</li>
+             <li>Social navigation</li>
+             <li>Social media</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Collaborative and social computing design and evaluation methods</summary>
+            <ul>
+             <li>Social network analysis</li>
+             <li>Ethnographic studies</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Collaborative and social computing systems and tools</summary>
+            <ul>
+             <li>Blogs</li>
+             <li>Wikis</li>
+             <li>Reputation systems</li>
+             <li>Open source software</li>
+             <li>Social networking sites</li>
+             <li>Social tagging systems</li>
+             <li>Synchronous editors</li>
+             <li>Asynchronous editors</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Empirical studies in collaborative and social computing</summary>
+            <ul>
+             <li>Collaborative and social computing</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Collaborative and social computing devices</summary>
+            <ul>
+             <li>Collaborative and social computing</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Ubiquitous and mobile computing</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Ubiquitous and mobile computing theory, concepts and paradigms</summary>
+            <ul>
+             <li>Ubiquitous computing</li>
+             <li>Mobile computing</li>
+             <li>Ambient intelligence</li>
+            </ul>
+           </details>
+          </li>
+          <li>Ubiquitous and mobile computing systems and tools</li>
+          <li>
+           <details>
+            <summary>Ubiquitous and mobile devices</summary>
+            <ul>
+             <li>Smartphones</li>
+             <li>Interactive whiteboards</li>
+             <li>Mobile phones</li>
+             <li>Mobile devices</li>
+             <li>Portable media players</li>
+             <li>Personal digital assistants</li>
+             <li>Handheld game consoles</li>
+             <li>E-book readers</li>
+             <li>Tablet computers</li>
+            </ul>
+           </details>
+          </li>
+          <li>Ubiquitous and mobile computing design and evaluation methods</li>
+          <li>Empirical studies in ubiquitous and mobile computing</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Visualization</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Visualization techniques</summary>
+            <ul>
+             <li>Treemaps</li>
+             <li>Hyperbolic trees</li>
+             <li>Heat maps</li>
+             <li>Graph drawings</li>
+             <li>Dendrograms</li>
+             <li>Cladograms</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Visualization application domains</summary>
+            <ul>
+             <li>Scientific visualization</li>
+             <li>Visual analytics</li>
+             <li>Geographic visualization</li>
+             <li>Information visualization</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Visualization systems and tools</summary>
+            <ul>
+             <li>Visualization toolkits</li>
+            </ul>
+           </details>
+          </li>
+          <li>Visualization theory, concepts and paradigms</li>
+          <li>Empirical studies in visualization</li>
+          <li>Visualization design and evaluation methods</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Accessibility</summary>
+         <ul>
+          <li>Accessibility theory, concepts and paradigms</li>
+          <li>Empirical studies in accessibility</li>
+          <li>Accessibility design and evaluation methods</li>
+          <li>Accessibility technologies</li>
+          <li>Accessibility systems and tools</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Computing methodologies</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Symbolic and algebraic manipulation</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Symbolic and algebraic algorithms</summary>
+            <ul>
+             <li>Combinatorial algorithms</li>
+             <li>Algebraic algorithms</li>
+             <li>Nonalgebraic algorithms</li>
+             <li>Symbolic calculus algorithms</li>
+             <li>Exact arithmetic algorithms</li>
+             <li>Hybrid symbolic-numeric methods</li>
+             <li>Discrete calculus algorithms</li>
+             <li>Number theory algorithms</li>
+             <li>Equation and inequality solving algorithms</li>
+             <li>Linear algebra algorithms</li>
+             <li>Theorem proving algorithms</li>
+             <li>Boolean algebra algorithms</li>
+             <li>Optimization algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Computer algebra systems</summary>
+            <ul>
+             <li>Special-purpose algebraic systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Representation of mathematical objects</summary>
+            <ul>
+             <li>Representation of exact numbers</li>
+             <li>Representation of mathematical functions</li>
+             <li>Representation of Boolean functions</li>
+             <li>Representation of polynomials</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Parallel computing methodologies</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Parallel algorithms</summary>
+            <ul>
+             <li>MapReduce algorithms</li>
+             <li>Self-organization</li>
+             <li>Shared memory algorithms</li>
+             <li>Vector / streaming algorithms</li>
+             <li>Massively parallel algorithms</li>
+            </ul>
+           </details>
+          </li>
+          <li>Parallel programming languages</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Artificial intelligence</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Natural language processing</summary>
+            <ul>
+             <li>Information extraction</li>
+             <li>Machine translation</li>
+             <li>Discourse, dialogue and pragmatics</li>
+             <li>Natural language generation</li>
+             <li>Speech recognition</li>
+             <li>Lexical semantics</li>
+             <li>Phonology / morphology</li>
+             <li>Language resources</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Knowledge representation and reasoning</summary>
+            <ul>
+             <li>Description logics</li>
+             <li>Semantic networks</li>
+             <li>Nonmonotonic, default reasoning and belief revision</li>
+             <li>Probabilistic reasoning</li>
+             <li>Vagueness and fuzzy logic</li>
+             <li>Causal reasoning and diagnostics</li>
+             <li>Temporal reasoning</li>
+             <li>Cognitive robotics</li>
+             <li>Ontology engineering</li>
+             <li>Logic programming and answer set programming</li>
+             <li>Spatial and physical reasoning</li>
+             <li>Reasoning about belief and knowledge</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Planning and scheduling</summary>
+            <ul>
+             <li>Planning for deterministic actions</li>
+             <li>Planning under uncertainty</li>
+             <li>Multi-agent planning</li>
+             <li>Planning with abstraction and generalization</li>
+             <li>Robotic planning</li>
+             <li>Evolutionary robotics</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Search methodologies</summary>
+            <ul>
+             <li>Heuristic function construction</li>
+             <li>Discrete space search</li>
+             <li>Continuous space search</li>
+             <li>Randomized search</li>
+             <li>Game tree search</li>
+             <li>Abstraction and micro-operators</li>
+             <li>Search with partial observations</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Control methods</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Robotic planning</summary>
+               <ul>
+                <li>Evolutionary robotics</li>
+               </ul>
+              </details>
+             </li>
+             <li>Computational control theory</li>
+             <li>Motion path planning</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Philosophical/theoretical foundations of artificial intelligence</summary>
+            <ul>
+             <li>Cognitive science</li>
+             <li>Theory of mind</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Distributed artificial intelligence</summary>
+            <ul>
+             <li>Multi-agent systems</li>
+             <li>Intelligent agents</li>
+             <li>Mobile agents</li>
+             <li>Cooperation and coordination</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Computer vision</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Computer vision tasks</summary>
+               <ul>
+                <li>Biometrics</li>
+                <li>Scene understanding</li>
+                <li>Activity recognition and understanding</li>
+                <li>Video summarization</li>
+                <li>Visual content-based indexing and retrieval</li>
+                <li>Visual inspection</li>
+                <li>Vision for robotics</li>
+                <li>Scene anomaly detection</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Image and video acquisition</summary>
+               <ul>
+                <li>Camera calibration</li>
+                <li>Epipolar geometry</li>
+                <li>Computational photography</li>
+                <li>Hyperspectral imaging</li>
+                <li>Motion capture</li>
+                <li>3D imaging</li>
+                <li>Active vision</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Computer vision representations</summary>
+               <ul>
+                <li>Image representations</li>
+                <li>Shape representations</li>
+                <li>Appearance and texture representations</li>
+                <li>Hierarchical representations</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Computer vision problems</summary>
+               <ul>
+                <li>Interest point and salient region detections</li>
+                <li>Image segmentation</li>
+                <li>Video segmentation</li>
+                <li>Shape inference</li>
+                <li>Object detection</li>
+                <li>Object recognition</li>
+                <li>Object identification</li>
+                <li>Tracking</li>
+                <li>Reconstruction</li>
+                <li>Matching</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Machine learning</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Learning paradigms</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Supervised learning</summary>
+               <ul>
+                <li>Ranking</li>
+                <li>Learning to rank</li>
+                <li>Supervised learning by classification</li>
+                <li>Supervised learning by regression</li>
+                <li>Structured outputs</li>
+                <li>Cost-sensitive learning</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Unsupervised learning</summary>
+               <ul>
+                <li>Cluster analysis</li>
+                <li>Anomaly detection</li>
+                <li>Mixture modeling</li>
+                <li>Topic modeling</li>
+                <li>Source separation</li>
+                <li>Motif discovery</li>
+                <li>Dimensionality reduction and manifold learning</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Reinforcement learning</summary>
+               <ul>
+                <li>Sequential decision making</li>
+                <li>Inverse reinforcement learning</li>
+                <li>Apprenticeship learning</li>
+                <li>Multi-agent reinforcement learning</li>
+                <li>Adversarial learning</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Multi-task learning</summary>
+               <ul>
+                <li>Transfer learning</li>
+                <li>Lifelong machine learning</li>
+                <li>Learning under covariate shift</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Learning settings</summary>
+            <ul>
+             <li>Batch learning</li>
+             <li>Online learning settings</li>
+             <li>Learning from demonstrations</li>
+             <li>Learning from critiques</li>
+             <li>Learning from implicit feedback</li>
+             <li>Active learning settings</li>
+             <li>Semi-supervised learning settings</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Machine learning approaches</summary>
+            <ul>
+             <li>Classification and regression trees</li>
+             <li>
+              <details>
+               <summary>Kernel methods</summary>
+               <ul>
+                <li>Support vector machines</li>
+                <li>Gaussian processes</li>
+               </ul>
+              </details>
+             </li>
+             <li>Neural networks</li>
+             <li>
+              <details>
+               <summary>Logical and relational learning</summary>
+               <ul>
+                <li>Inductive logic learning</li>
+                <li>Statistical relational learning</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Learning in probabilistic graphical models</summary>
+               <ul>
+                <li>Maximum likelihood modeling</li>
+                <li>Maximum entropy modeling</li>
+                <li>Maximum a posteriori modeling</li>
+                <li>Mixture models</li>
+                <li>Latent variable models</li>
+                <li>Bayesian network models</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Learning linear models</summary>
+               <ul>
+                <li>Perceptron algorithm</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Factorization methods</summary>
+               <ul>
+                <li>Non-negative matrix factorization</li>
+                <li>Factor analysis</li>
+                <li>Principal component analysis</li>
+                <li>Canonical correlation analysis</li>
+                <li>Latent Dirichlet allocation</li>
+               </ul>
+              </details>
+             </li>
+             <li>Rule learning</li>
+             <li>Instance-based learning</li>
+             <li>Markov decision processes</li>
+             <li>Partially-observable Markov decision processes</li>
+             <li>Stochastic games</li>
+             <li>
+              <details>
+               <summary>Learning latent representations</summary>
+               <ul>
+                <li>Deep belief networks</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Bio-inspired approaches</summary>
+               <ul>
+                <li>Artificial life</li>
+                <li>Evolvable hardware</li>
+                <li>Genetic algorithms</li>
+                <li>Genetic programming</li>
+                <li>Evolutionary robotics</li>
+                <li>Generative and developmental approaches</li>
+               </ul>
+              </details>
+             </li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Machine learning algorithms</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Dynamic programming for Markov decision processes</summary>
+               <ul>
+                <li>Value iteration</li>
+                <li>Q-learning</li>
+                <li>Policy iteration</li>
+                <li>Temporal difference learning</li>
+                <li>Approximate dynamic programming methods</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Ensemble methods</summary>
+               <ul>
+                <li>Boosting</li>
+                <li>Bagging</li>
+               </ul>
+              </details>
+             </li>
+             <li>Spectral methods</li>
+             <li>Feature selection</li>
+             <li>Regularization</li>
+            </ul>
+           </details>
+          </li>
+          <li>Cross-validation</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Modeling and simulation</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Model development and analysis</summary>
+            <ul>
+             <li>Modeling methodologies</li>
+             <li>Model verification and validation</li>
+             <li>Uncertainty quantification</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Simulation theory</summary>
+            <ul>
+             <li>Systems theory</li>
+             <li>Network science</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Simulation types and techniques</summary>
+            <ul>
+             <li>Uncertainty quantification</li>
+             <li>Quantum mechanic simulation</li>
+             <li>Molecular simulation</li>
+             <li>Rare-event simulation</li>
+             <li>Discrete-event simulation</li>
+             <li>Agent / discrete models</li>
+             <li>Distributed simulation</li>
+             <li>Continuous simulation</li>
+             <li>Continuous models</li>
+             <li>Real-time simulation</li>
+             <li>Interactive simulation</li>
+             <li>Multiscale systems</li>
+             <li>Massively parallel and high-performance simulations</li>
+             <li>Data assimilation</li>
+             <li>Scientific visualization</li>
+             <li>Visual analytics</li>
+             <li>Simulation by animation</li>
+             <li>Artificial life</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Simulation support systems</summary>
+            <ul>
+             <li>Simulation environments</li>
+             <li>Simulation languages</li>
+             <li>Simulation tools</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary/>
+            <ul>
+             <li>Simulation evaluation</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Computer graphics</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Animation</summary>
+            <ul>
+             <li>Motion capture</li>
+             <li>Procedural animation</li>
+             <li>Physical simulation</li>
+             <li>Motion processing</li>
+             <li>Collision detection</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Rendering</summary>
+            <ul>
+             <li>Rasterization</li>
+             <li>Ray tracing</li>
+             <li>Non-photorealistic rendering</li>
+             <li>Reflectance modeling</li>
+             <li>Visibility</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Image manipulation</summary>
+            <ul>
+             <li>Computational photography</li>
+             <li>Image processing</li>
+             <li>Texturing</li>
+             <li>Image-based rendering</li>
+             <li>Antialiasing</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Graphics systems and interfaces</summary>
+            <ul>
+             <li>Graphics processors</li>
+             <li>Graphics input devices</li>
+             <li>Mixed / augmented reality</li>
+             <li>Perception</li>
+             <li>Graphics file formats</li>
+             <li>Virtual reality</li>
+            </ul>
+           </details>
+          </li>
+          <li>Image compression</li>
+          <li>
+           <details>
+            <summary>Shape modeling</summary>
+            <ul>
+             <li>Mesh models</li>
+             <li>Mesh geometry models</li>
+             <li>Parametric curve and surface models</li>
+             <li>Point-based models</li>
+             <li>Volumetric models</li>
+             <li>Shape analysis</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Distributed computing methodologies</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Distributed algorithms</summary>
+            <ul>
+             <li>MapReduce algorithms</li>
+             <li>Self-organization</li>
+            </ul>
+           </details>
+          </li>
+          <li>Distributed programming languages</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Concurrent computing methodologies</summary>
+         <ul>
+          <li>Concurrent programming languages</li>
+          <li>Concurrent algorithms</li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Applied computing</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Electronic commerce</summary>
+         <ul>
+          <li>Digital cash</li>
+          <li>E-commerce infrastructure</li>
+          <li>Electronic data interchange</li>
+          <li>Electronic funds transfer</li>
+          <li>Online shopping</li>
+          <li>Online banking</li>
+          <li>Secure online transactions</li>
+          <li>Online auctions</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Enterprise computing</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Enterprise information systems</summary>
+            <ul>
+             <li>Intranets</li>
+             <li>Extranets</li>
+             <li>Enterprise resource planning</li>
+             <li>Enterprise applications</li>
+             <li>Data centers</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Business process management</summary>
+            <ul>
+             <li>Business process modeling</li>
+             <li>Business process management systems</li>
+             <li>Business process monitoring</li>
+             <li>Cross-organizational business processes</li>
+             <li>Business intelligence</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Enterprise architectures</summary>
+            <ul>
+             <li>Enterprise architecture management</li>
+             <li>Enterprise architecture frameworks</li>
+             <li>Enterprise architecture modeling</li>
+            </ul>
+           </details>
+          </li>
+          <li>Service-oriented architectures</li>
+          <li>Event-driven architectures</li>
+          <li>Business rules</li>
+          <li>Enterprise modeling</li>
+          <li>Enterprise ontologies, taxonomies and vocabularies</li>
+          <li>Enterprise data management</li>
+          <li>Reference models</li>
+          <li>Business-IT alignment</li>
+          <li>IT architectures</li>
+          <li>IT governance</li>
+          <li>Enterprise computing infrastructures</li>
+          <li>
+           <details>
+            <summary>Enterprise interoperability</summary>
+            <ul>
+             <li>Enterprise application integration</li>
+             <li>Information integration and interoperability</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Physical sciences and engineering</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Aerospace</summary>
+            <ul>
+             <li>Avionics</li>
+            </ul>
+           </details>
+          </li>
+          <li>Archaeology</li>
+          <li>Astronomy</li>
+          <li>Chemistry</li>
+          <li>
+           <details>
+            <summary>Earth and atmospheric sciences</summary>
+            <ul>
+             <li>Environmental sciences</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Engineering</summary>
+            <ul>
+             <li>Computer-aided design</li>
+            </ul>
+           </details>
+          </li>
+          <li>Physics</li>
+          <li>Mathematics and statistics</li>
+          <li>
+           <details>
+            <summary>Electronics</summary>
+            <ul>
+             <li>Avionics</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Telecommunications</summary>
+            <ul>
+             <li>Internet telephony</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Life and medical sciences</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Computational biology</summary>
+            <ul>
+             <li>Molecular sequence analysis</li>
+             <li>Recognition of genes and regulatory elements</li>
+             <li>Molecular evolution</li>
+             <li>Computational transcriptomics</li>
+             <li>Biological networks</li>
+             <li>Sequencing and genotyping technologies</li>
+             <li>Imaging</li>
+             <li>Computational proteomics</li>
+             <li>Molecular structural biology</li>
+             <li>Computational genomics                      -</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Genomics</summary>
+            <ul>
+             <li>Computational genomics</li>
+            </ul>
+           </details>
+          </li>
+          <li>Systems biology</li>
+          <li>Consumer health</li>
+          <li>Health care information systems</li>
+          <li>Health informatics</li>
+          <li>Bioinformatics</li>
+          <li>Metabolomics / metabonomics</li>
+          <li>
+           <details>
+            <summary>Genetics</summary>
+            <ul>
+             <li>Population genetics</li>
+             <li>
+              <details>
+               <summary>Proteomics</summary>
+               <ul>
+                <li>Computational proteomics</li>
+               </ul>
+              </details>
+             </li>
+             <li>Transcriptomics</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Law, social and behavioral sciences</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Anthropology</summary>
+            <ul>
+             <li>Ethnography</li>
+            </ul>
+           </details>
+          </li>
+          <li>Law</li>
+          <li>Psychology</li>
+          <li>Economics</li>
+          <li>Sociology</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Computer forensics</summary>
+         <ul>
+          <li>Surveillance mechanisms</li>
+          <li>Investigation techniques</li>
+          <li>Evidence collection, storage and analysis</li>
+          <li>Network forensics</li>
+          <li>System forensics</li>
+          <li>Data recovery</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Arts and humanities</summary>
+         <ul>
+          <li>Fine arts</li>
+          <li>Performing arts</li>
+          <li>
+           <details>
+            <summary>Architecture (buildings)</summary>
+            <ul>
+             <li>Computer-aided design</li>
+            </ul>
+           </details>
+          </li>
+          <li>Language translation</li>
+          <li>Media arts</li>
+          <li>Sound and music computing</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Computers in other domains</summary>
+         <ul>
+          <li>Digital libraries and archives</li>
+          <li>Publishing</li>
+          <li>
+           <details>
+            <summary>Military</summary>
+            <ul>
+             <li>Cyberwarfare</li>
+            </ul>
+           </details>
+          </li>
+          <li>Cartography</li>
+          <li>Agriculture</li>
+          <li>
+           <details>
+            <summary>Computing in government</summary>
+            <ul>
+             <li>Voting / election technologies</li>
+             <li>E-government</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Personal computers and PC applications</summary>
+            <ul>
+             <li>Word processors</li>
+             <li>Spreadsheets</li>
+             <li>Computer games</li>
+             <li>Microcomputers</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Operations research</summary>
+         <ul>
+          <li>Consumer products</li>
+          <li>
+           <details>
+            <summary>Industry and manufacturing</summary>
+            <ul>
+             <li>Supply chain management</li>
+             <li>Command and control</li>
+            </ul>
+           </details>
+          </li>
+          <li>Computer-aided manufacturing</li>
+          <li>
+           <details>
+            <summary>Decision analysis</summary>
+            <ul>
+             <li>Multi-criterion optimization and decision-making</li>
+            </ul>
+           </details>
+          </li>
+          <li>Transportation</li>
+          <li>Forecasting</li>
+          <li>Marketing</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Education</summary>
+         <ul>
+          <li>Digital libraries and archives</li>
+          <li>Computer-assisted instruction</li>
+          <li>Interactive learning environments</li>
+          <li>Collaborative learning</li>
+          <li>Learning management systems</li>
+          <li>Distance learning</li>
+          <li>E-learning</li>
+          <li>Computer-managed instruction</li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Document management and text processing</summary>
+         <ul>
+          <li>Document searching</li>
+          <li>
+           <details>
+            <summary>Document management</summary>
+            <ul>
+             <li>Text editing</li>
+             <li>Version control</li>
+             <li>Document metadata</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Document capture</summary>
+            <ul>
+             <li>Document analysis</li>
+             <li>Document scanning</li>
+             <li>Graphics recognition and interpretation</li>
+             <li>Optical character recognition</li>
+             <li>Online handwriting recognition</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Document preparation</summary>
+            <ul>
+             <li>Markup languages</li>
+             <li>Extensible Markup Language (XML)</li>
+             <li>Hypertext languages</li>
+             <li>Annotation</li>
+             <li>Format and notation</li>
+             <li>Multi / mixed media creation</li>
+             <li>Image composition</li>
+             <li>Hypertext / hypermedia creation</li>
+             <li>Document scripting languages</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+    <li>
+     <details>
+      <summary>Social and professional topics</summary>
+      <ul>
+       <li>
+        <details>
+         <summary>Professional topics</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Computing industry</summary>
+            <ul>
+             <li>Industry statistics</li>
+             <li>Computer manufacturing</li>
+             <li>Sustainability</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Management of computing and information systems</summary>
+            <ul>
+             <li>
+              <details>
+               <summary>Project and people management</summary>
+               <ul>
+                <li>Project management techniques</li>
+                <li>Project staffing</li>
+                <li>Systems planning</li>
+                <li>Systems analysis and design</li>
+                <li>Systems development</li>
+                <li>Computer and information systems training</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Implementation management</summary>
+               <ul>
+                <li>Hardware selection</li>
+                <li>Computing equipment management</li>
+                <li>Pricing and resource allocation</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>Software management</summary>
+               <ul>
+                <li>Software maintenance</li>
+                <li>Software selection and adaptation</li>
+               </ul>
+              </details>
+             </li>
+             <li>
+              <details>
+               <summary>System management</summary>
+               <ul>
+                <li>Centralization / decentralization</li>
+                <li>Technology audits</li>
+                <li>Quality assurance</li>
+               </ul>
+              </details>
+             </li>
+             <li>Network operations</li>
+             <li>File systems management</li>
+             <li>Information system economics</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>History of computing</summary>
+            <ul>
+             <li>Historical people</li>
+             <li>History of hardware</li>
+             <li>History of software</li>
+             <li>History of programming languages</li>
+             <li>History of computing theory</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Computing education</summary>
+            <ul>
+             <li>Computational thinking</li>
+             <li>Accreditation</li>
+             <li>Model curricula</li>
+             <li>
+              <details>
+               <summary>Computing education programs</summary>
+               <ul>
+                <li>Information systems education</li>
+                <li>Computer science education</li>
+                <li>CS1</li>
+                <li>Computer engineering education</li>
+                <li>Information technology education</li>
+                <li>Information science education</li>
+                <li>Computational science and engineering education</li>
+                <li>Software engineering education</li>
+               </ul>
+              </details>
+             </li>
+             <li>Informal education</li>
+             <li>Computing literacy</li>
+             <li>Student assessment</li>
+             <li>K-12 education</li>
+             <li>Adult education</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Computing and business</summary>
+            <ul>
+             <li>Employment issues</li>
+             <li>Automation</li>
+             <li>Computer supported cooperative work</li>
+             <li>Economic impact</li>
+             <li>Offshoring</li>
+             <li>Reengineering</li>
+             <li>Socio-technical systems</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Computing profession</summary>
+            <ul>
+             <li>Codes of ethics</li>
+             <li>Employment issues</li>
+             <li>Funding</li>
+             <li>Computing occupations</li>
+             <li>Computing organizations</li>
+             <li>Testing, certification and licensing</li>
+             <li>Assistive technologies</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>Computing / technology policy</summary>
+         <ul>
+          <li>
+           <details>
+            <summary>Intellectual property</summary>
+            <ul>
+             <li>Digital rights management</li>
+             <li>Copyrights</li>
+             <li>Software reverse engineering</li>
+             <li>Patents</li>
+             <li>Trademarks</li>
+             <li>Internet governance / domain names</li>
+             <li>Licensing</li>
+             <li>Treaties</li>
+             <li>Database protection laws</li>
+             <li>Secondary liability</li>
+             <li>Soft intellectual property</li>
+             <li>Hardware reverse engineering</li>
+            </ul>
+           </details>
+          </li>
+          <li>Privacy policies</li>
+          <li>
+           <details>
+            <summary>Censorship</summary>
+            <ul>
+             <li>Pornography</li>
+             <li>Hate speech</li>
+             <li>Political speech</li>
+             <li>Technology and censorship</li>
+             <li>Censoring filters</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Surveillance</summary>
+            <ul>
+             <li>Governmental surveillance</li>
+             <li>Corporate surveillance</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Commerce policy</summary>
+            <ul>
+             <li>Taxation</li>
+             <li>Transborder data flow</li>
+             <li>Antitrust and competition</li>
+             <li>Governmental regulations</li>
+             <li>Online auctions policy</li>
+             <li>Consumer products policy</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Network access control</summary>
+            <ul>
+             <li>Censoring filters</li>
+             <li>Broadband access</li>
+             <li>Net neutrality</li>
+             <li>Network access restrictions</li>
+             <li>Age-based restrictions</li>
+             <li>Acceptable use policy restrictions</li>
+             <li>Universal access</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Computer crime</summary>
+            <ul>
+             <li>Social engineering attacks</li>
+             <li>Spoofing attacks</li>
+             <li>Phishing</li>
+             <li>Identity theft</li>
+             <li>Financial crime</li>
+             <li>Malware / spyware crime</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Government technology policy</summary>
+            <ul>
+             <li>Governmental regulations</li>
+             <li>Import / export controls</li>
+            </ul>
+           </details>
+          </li>
+          <li>
+           <details>
+            <summary>Medical information policy</summary>
+            <ul>
+             <li>Medical records</li>
+             <li>Personal health records</li>
+             <li>Genetic information</li>
+             <li>Patient privacy</li>
+             <li>Health information exchanges</li>
+             <li>Medical technologies</li>
+             <li>Remote medicine</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+       <li>
+        <details>
+         <summary>User characteristics</summary>
+         <ul>
+          <li>Race and ethnicity</li>
+          <li>Religious orientation</li>
+          <li>
+           <details>
+            <summary>Gender</summary>
+            <ul>
+             <li>Men</li>
+             <li>Women</li>
+            </ul>
+           </details>
+          </li>
+          <li>Sexual orientation</li>
+          <li>People with disalities</li>
+          <li>Geographic characteristics</li>
+          <li>Cultural characteristics</li>
+          <li>
+           <details>
+            <summary>Age</summary>
+            <ul>
+             <li>Children</li>
+             <li>Seniors</li>
+             <li>Adolescents</li>
+            </ul>
+           </details>
+          </li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </details>
+    </li>
+   </ul>
+  </body>
+ </html>

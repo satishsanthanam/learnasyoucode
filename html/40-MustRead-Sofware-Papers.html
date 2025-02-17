@@ -1,0 +1,352 @@
+ <html>
+<head>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: Verdana, Geneva, sans-serif;
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background-color: #4CAF50; /* Verde oscuro */
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Gris claro */
+    }
+
+   
+    td {
+        color: #333; /* Gris oscuro para texto */
+    }
+  
+    td:nth-child(1) {
+        background-color: #e6f7ff; /* Azul claro para la segunda columna */
+    }
+  
+    .hoverTable{
+        width:100%; 
+        border-collapse:collapse; 
+    }
+    .hoverTable td{ 
+        padding:7px; border:#4e95f4 1px solid;
+    }
+    /* Define the default color for all the table rows */
+    .hoverTable tr{
+        background: #b8d1f3;
+    }
+    /* Define the hover highlight color for the table row */
+    .hoverTable tr:hover {
+          background-color: #ffff99;
+    }
+
+    .hoverTable tr:hover td:nth-child(1) {
+          background-color: #ffff99;
+    }
+
+</style>
+</head>
+
+<body>
+ <p>Credits: <a href="https://medium.com/javarevisited/40-must-read-white-papers-to-learn-system-design-and-software-architecture-775c4197f9c8">40 Must read Software Papers</a></p>
+<p>&nbsp;</p>
+
+<table class="hoverTable" style="border-color: #bcadec;" border="2">
+    <tr>
+        <th>#</th>
+        <th>Paper Name</th>
+        <th>Author</th>
+        <th>Summary</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Google File System</td>
+        <td>Sanjay Ghemawat, Howard Gobioff, Shun-Tak Leung</td>
+        <td>This foundational paper describes the Google File System (GFS), a scalable distributed file system for large distributed data-intensive applications.</td>
+        <td>[https://research.google/pubs/pub51/ Link]</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>MapReduce: Simplified Data Processing on Large Clusters</td>
+        <td>Jeffrey Dean, Sanjay Ghemawat</td>
+        <td>This white paper is an essential read on the MapReduce programming model that enables processing vast amounts of data across many machines.</td>
+        <td>[https://research.google/pubs/pub62/ Link]</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Dynamo: Amazon&#39;s Highly Available Key-Value Store</td>
+        <td>Giuseppe DeCandia et al.</td>
+        <td>In this research paper from AWS, you will learn about Dynamo, Amazon&#39;s key-value store designed for high availability and scalability, used to manage the state of various services.</td>
+        <td>[https://allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Bigtable: A Distributed Storage System for Structured Data</td>
+        <td>Fay Chang et al.</td>
+        <td>This paper details Bigtable, Google&#39;s distributed storage system for managing structured data designed to scale to a very large size.</td>
+        <td>[https://research.google/pubs/pub27898/ Link]</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>The Chubby Lock Service for Loosely-Coupled Distributed Systems</td>
+        <td>Mike Burrows</td>
+        <td>This paper presents Chubby, a lock service for loosely-coupled distributed systems designed to manage coarse-grained locks.</td>
+        <td>[https://research.google/pubs/pub27897/ Link]</td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Paxos Made Simple</td>
+        <td>Leslie Lamport</td>
+        <td>A simplified explanation of the Paxos consensus algorithm, which is foundational for understanding distributed systems and achieving consensus.</td>
+        <td>[https://research.microsoft.com/en-us/um/people/lamport/pubs/paxos-simple.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Raft Consensus Algorithm</td>
+        <td>Diego Ongaro, John Ousterhout</td>
+        <td>An approachable and understandable consensus algorithm designed as an alternative to Paxos, providing better understandability and manageability.</td>
+        <td>[https://ramcloud.stanford.edu/raft.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Spanner: Google&#39;s Globally-Distributed Database</td>
+        <td>James C. Corbett et al.</td>
+        <td>This paper introduces Spanner, Google&#39;s scalable, multi-version, globally-distributed, and synchronously-replicated database.</td>
+        <td>[https://research.google/pubs/pub39966/ Link]</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>The Log-Structured Merge-Tree (LSM-Tree)</td>
+        <td>Patrick O&#39;Neil et al.</td>
+        <td>The LSM-Tree paper introduces a method for improving write performance in databases, which is crucial for high-write systems.</td>
+        <td>[https://cs.umb.edu/~poneil/lsmtree.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>Kafka: A Distributed Messaging System for Log Processing</td>
+        <td>Jay Kreps et al.</td>
+        <td>This paper describes Kafka, a distributed messaging system that is highly scalable and fault-tolerant, widely used for real-time data pipelines.</td>
+        <td>[https://storageconference.org/2011/Papers/19.Kreps.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>Cassandra - A Decentralized Structured Storage System</td>
+        <td>Avinash Lakshman, Prashant Malik</td>
+        <td>This paper introduces Cassandra, a decentralized storage system designed to handle large amounts of data across many commodity servers.</td>
+        <td>[https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>Mesos: A Platform for Fine-Grained Resource Sharing in the Data Center</td>
+        <td>Benjamin Hindman et al.</td>
+        <td>Learn about Apache Mesos, a resource management platform that allows multiple distributed systems to efficiently share cluster resources.</td>
+        <td>[https://people.eecs.berkeley.edu/~alig/papers/mesos.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>The CAP Theorem</td>
+        <td>Eric Brewer</td>
+        <td>This white paper introduces the CAP Theorem, which states that it is impossible for a distributed data store to simultaneously provide consistency, availability, and partition tolerance.</td>
+        <td>[https://www.cs.cornell.edu/courses/cs7412/2013sp/papers/decisive.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>The Tail at Scale</td>
+        <td>Jeffrey Dean, Luiz André Barroso</td>
+        <td>This paper discusses the phenomenon of long latency tails in large-scale services and how to mitigate their effects.</td>
+        <td>[https://research.google/pubs/pub40801/ Link]</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>The End-to-End Argument in System Design</td>
+        <td>Jerome H. Saltzer, David P. Reed, David D. Clark</td>
+        <td>A seminal paper that introduces the end-to-end argument, a principle in system design that helps in deciding where to place functions in a networked system.</td>
+        <td>[https://web.mit.edu/Saltzer/www/publications/endtoend/endtoend.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>FAWN: A Fast Array of Wimpy Nodes</td>
+        <td>David G. Andersen et al.</td>
+        <td>FAWN presents an architecture that uses a cluster of low-power nodes to provide efficient, scalable, and reliable storage.</td>
+        <td>[https://www.cs.cmu.edu/~dga/papers/fawn-sosp09.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>The Zebra Copying Garbage Collector</td>
+        <td>Bill McCloskey et al.</td>
+        <td>This paper discusses the Zebra garbage collector, which provides a copying collector optimized for high throughput and low pause times.</td>
+        <td>[https://research.fb.com/wp-content/uploads/2016/11/the-zebra-copying-garbage-collector.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>The Datacenter as a Computer: An Introduction to the Design of Warehouse-Scale Machines</td>
+        <td>Luiz André Barroso, Urs Hölzle</td>
+        <td>This paper introduces the concept of warehouse-scale computing and discusses the design of datacenters that function as single massive computers.</td>
+        <td>[https://research.google/pubs/archive/281200.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>Pregel: A System for Large-Scale Graph Processing</td>
+        <td>Grzegorz Malewicz et al.</td>
+        <td>Pregel is a system designed by Google for processing large-scale graphs efficiently using a vertex-centric model.</td>
+        <td>[https://research.google/pubs/archive/36721.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>SEDA: An Architecture for Well-Conditioned, Scalable Internet Services</td>
+        <td>Matt Welsh et al.</td>
+        <td>This paper presents SEDA (Staged Event-Driven Architecture), a framework for building scalable and well-conditioned internet services.</td>
+        <td>[https://people.eecs.berkeley.edu/~dawnsong/teaching/spring08/Papers/seda-sosp01.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>TreadMarks: Distributed Shared Memory on Standard Workstations and Operating Systems</td>
+        <td>Pete Keleher et al.</td>
+        <td>TreadMarks is a distributed shared memory system that allows processes on different machines to share memory efficiently.</td>
+        <td>[https://www.cs.rochester.edu/u/scott/papers/1994 TreadMarks TR536.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>The SWIM Gossip Protocol</td>
+        <td>I. Gupta et al.</td>
+        <td>This paper describes the SWIM protocol, a scalable, weakly-consistent, infection-style process group membership protocol.</td>
+        <td>[https://cs.brown.edu/~irina/papers/swim.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>CORFU: A Shared Log Design for Flash Clusters</td>
+        <td>Dahlia Malkhi et al.</td>
+        <td>CORFU introduces a scalable shared log design that leverages the properties of flash storage to provide high throughput and low latency.</td>
+        <td>[https://research.cs.wisc.edu/wind/Publications/corfusosp2012.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>24</td>
+        <td>Dapper: A Large-Scale Distributed Systems Tracing Infrastructure</td>
+        <td>Benjamin H. Sigelman et al.</td>
+        <td>This paper presents Dapper, Google&#39;s large-scale distributed systems tracing infrastructure for monitoring and diagnosing complex systems.</td>
+        <td>[https://research.google/pubs/archive/36356.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td>ZooKeeper: Wait-Free Coordination for Internet-Scale Systems</td>
+        <td>Patrick Hunt et al.</td>
+        <td>ZooKeeper is a coordination service for distributed applications, providing primitives such as configuration maintenance, synchronization, and naming.</td>
+        <td>[https://www.usenix.org/legacy/event/atc10/tech/full_papers/Hunt.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>26</td>
+        <td>Ceph: A Scalable, High-Performance Distributed File System</td>
+        <td>Sage Weil et al.</td>
+        <td>Ceph is a distributed file system that provides excellent performance, reliability, and scalability.</td>
+        <td>[https://ceph.com/wp-content/uploads/2016/08/weil-ceph.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>27</td>
+        <td>The Google File System</td>
+        <td>Sanjay Ghemawat, Howard Gobioff, Shun-Tak Leung</td>
+        <td>This foundational paper describes the Google File System (GFS), a scalable distributed file system for large distributed data-intensive applications.</td>
+        <td>[https://research.google/pubs/pub51/ Link]</td>
+    </tr>
+    <tr>
+        <td>28</td>
+        <td>Kubernetes: Up and Running</td>
+        <td>Joe Beda et al.</td>
+        <td>This white paper introduces Kubernetes, an open-source platform designed to automate deploying, scaling, and operating application containers.</td>
+        <td>[https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/ Link]</td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td>GFS: Evolution on Fast-Forward</td>
+        <td>Sean Quinlan, Sean Myrick</td>
+        <td>This paper discusses the evolution of the Google File System (GFS) and its impact on large-scale data processing.</td>
+        <td>[https://www.usenix.org/system/files/conference/atc15/atc15-paper-quinlan.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>Borg, Omega, and Kubernetes</td>
+        <td>Brendan Burns et al.</td>
+        <td>This paper examines the relationship between Borg, Omega, and Kubernetes, providing insights into the evolution of cluster management systems at Google.</td>
+        <td>[https://storage.googleapis.com/pub-tools-public-publication-data/pdf/44843.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>In Search of an Understandable Consensus Algorithm</td>
+        <td>Diego Ongaro, John Ousterhout</td>
+        <td>This paper presents the Raft consensus algorithm, designed to be more understandable than Paxos while providing similar functionality.</td>
+        <td>[https://raft.github.io/raft.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>32</td>
+        <td>Distributing and Querying the &quot;Big Data&quot; with Apache Hive</td>
+        <td>Ashish Thusoo et al.</td>
+        <td>This paper discusses Apache Hive, a data warehouse infrastructure built on top of Hadoop for providing data summarization, query, and analysis.</td>
+        <td>[https://www.vldb.org/pvldb/vol2/vldb09-938.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td>Cassandra: A Decentralized Structured Storage System</td>
+        <td>Avinash Lakshman, Prashant Malik</td>
+        <td>This paper introduces Cassandra, a decentralized storage system designed to handle large amounts of data across many commodity servers.</td>
+        <td>[https://www.cs.cornell.edu/projects/ladis2009/papers/lakshman-ladis2009.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>34</td>
+        <td>The Chubby Lock Service for Loosely-Coupled Distributed Systems</td>
+        <td>Mike Burrows</td>
+        <td>This paper presents Chubby, a lock service for loosely-coupled distributed systems designed to manage coarse-grained locks.</td>
+        <td>[https://research.google/pubs/pub27897/ Link]</td>
+    </tr>
+    <tr>
+        <td>35</td>
+        <td>The Google File System</td>
+        <td>Sanjay Ghemawat, Howard Gobioff, Shun-Tak Leung</td>
+        <td>This foundational paper describes the Google File System (GFS), a scalable distributed file system for large distributed data-intensive applications.</td>
+        <td>[https://research.google/pubs/pub51/ Link]</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td>MapReduce: Simplified Data Processing on Large Clusters</td>
+        <td>Jeffrey Dean, Sanjay Ghemawat</td>
+        <td>An essential read on the MapReduce programming model that enables processing vast amounts of data across many machines.</td>
+        <td>[https://research.google/pubs/pub62/ Link]</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td>Dynamo: Amazon&#39;s Highly Available Key-Value Store</td>
+        <td>Giuseppe DeCandia et al.</td>
+        <td>Learn about Dynamo, Amazon&#39;s key-value store designed for high availability and scalability, used to manage the state of various services.</td>
+        <td>[https://allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td>The Log-Structured Merge-Tree (LSM-Tree)</td>
+        <td>Patrick O&#39;Neil et al.</td>
+        <td>The LSM-Tree paper introduces a method for improving write performance in databases, which is crucial for high-write systems.</td>
+        <td>[https://cs.umb.edu/~poneil/lsmtree.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>39</td>
+        <td>Kafka: A Distributed Messaging System for Log Processing</td>
+        <td>Jay Kreps et al.</td>
+        <td>This paper describes Kafka, a distributed messaging system that is highly scalable and fault-tolerant, widely used for real-time data pipelines.</td>
+        <td>[https://storageconference.org/2011/Papers/19.Kreps.pdf Link]</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>Spanner: Google&#39;s Globally-Distributed Database</td>
+        <td>James C. Corbett et al.</td>
+        <td>This paper introduces Spanner, Google&#39;s scalable, multi-version, globally-distributed, and synchronously-replicated database.</td>
+        <td>[https://research.google/pubs/pub39966/ Link]</td>
+    </tr>
+</table>
+</body>
+</html>
