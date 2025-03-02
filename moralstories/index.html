@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index of Stories</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        ol {
+            list-style: none; /* Remove default list styles */
+            counter-reset: link-counter; /* Initialize the counter */
+            padding-left: 0; /* Remove default padding */
+        }
+        ol li {
+            counter-increment: link-counter; /* Increment the counter for each list item */
+            margin-bottom: 5px; /* Add some spacing between items */
+        }
+        ol li a::before {
+            content: counter(link-counter) ". "; /* Add the counter before the link */
+            font-weight: bold; /* Make the number bold */
+            margin-right: 5px; /* Add some spacing between the number and link */
+        }
+    </style>
 </head>
 <body>
-    <h1>Index of Files</h1>
-    <ul>
+    <h1>Index of Stories</h1>
+    <ol>
         <li><a href="mada_four_places.html">Four intellect draining places</a></li>
-        <li><a href="bhima_war_strategy.html">Bhima War Strategy</a></li>
+        <li><a href="nala_damayanthi.html">Story of King Nala and Damayanthi</a></li>
+        <li><a href="bhishma_on_lord_krishna.html">Bhishma on Lord Krishna</a></li>
+        <li><a href="dhritarastra_on_lord_krishna.html">Dhritarastra on Lord Krishna</a></li>
         <li><a href="ani-mandavya.html">Ani Mandavya</a></li>
         <li><a href="Jarasand-on-fairness.html">Jarasand on Fairness</a></li>
         <li><a href="Hidimbi-gita.html">Hidimbi Gita</a></li>
@@ -18,6 +39,7 @@
         <li><a href="yayati-gita-II.html">Yayati Gita II</a></li>
         <li><a href="vasudeva_vakya.html">Vasudeva Vakya</a></li>
         <li><a href="story_of_a_constructive_student.html">Story of a Constructive Student</a></li>
-    </ul>
+        <li><a href="bhima_war_strategy.html">Bhima War Strategy</a></li>
+    </ol>
 </body>
 </html>
