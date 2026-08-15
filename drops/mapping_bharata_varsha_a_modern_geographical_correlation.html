@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping Bharata Varsha: A Modern Geographical Correlation</title>
+    <style>
+        :root {
+            --primary-color: #8b0000;
+            --secondary-color: #2c3e50;
+            --accent-color: #d35400;
+            --text-color: #2b2b2b;
+            --bg-light: #fdfbf7;
+            --card-bg: #ffffff;
+            --border-color: #e2dcd2;
+            --header-bg: #1a252f;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--header-bg);
+            color: #ffffff;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-color);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin: 0 0 1rem 0;
+            letter-spacing: 0.5px;
+            color: #f1c40f;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #ecf0f1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .citation-badge {
+            display: inline-block;
+            background-color: rgba(230, 126, 34, 0.2);
+            border: 1px solid var(--cite-color);
+            color: #f39c12;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-family: monospace;
+        }
+
+        .citation-badge a {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .exec-summary {
+            background-color: #f4efe6;
+            border-left: 6px solid var(--primary-color);
+            padding: 1.5rem 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .exec-summary h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav.toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+
+        nav.toc h2 {
+            margin-top: 0;
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav.toc ol {
+            padding-left: 1.2rem;
+            column-count: 2;
+            column-gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav.toc ol {
+                column-count: 1;
+            }
+        }
+
+        nav.toc li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        nav.toc a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav.toc a:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        h4 {
+            color: var(--accent-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        ul, ol {
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            background: #ffffff;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f2ebe1;
+            color: var(--secondary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fcfbfa;
+        }
+
+        .mermaid-box {
+            background: #f9f8f6;
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        blockquote {
+            margin: 1.5rem 0;
+            padding: 0.8rem 1.2rem;
+            border-left: 4px solid var(--accent-color);
+            background: #fdf6f0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--header-bg);
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+    </style>
+    <!-- Mermaid.js for Rendering Diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+</head>
+<body>
+
+<header>
+    <h1>Mapping Bharata Varsha</h1>
+    <div class="subtitle">The Indian Subcontinent in the Mahabharata, Ramayana, and Puranas — A Modern Geographical Correlation</div>
+    <div class="citation-badge">
+        Source: <a href="https://community.sider.ai/deep-research/7IPyysyvLCakAdg8zQLG9T" target="_blank" rel="noopener">https://community.sider.ai/deep-research/91Ug_uF6U8gcYt_mERAWQk</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="exec-summary">
+        <h2>Executive Summary</h2>
+        <p>This report provides a consolidated geographical mapping of Bharata Varsha (the Indian subcontinent) as described in the two great Itihasas (the Mahabharata and the Ramayana) and the Puranas, and correlates these ancient references to present-day countries, rivers, mountains, and seas. The ancient texts yield a remarkably coherent geographic horizon that, when plotted on a modern map, corresponds almost entirely to the South Asian subcontinent: the present-day nations of India, Pakistan, Afghanistan (eastern/southern fringes), Nepal, Bhutan, Bangladesh, Sri Lanka, the Maldives, and the southern fringe of the Tibetan plateau in China.</p>
+        <p>Approximate percentage allocations, based conservatively on the land area of the reconstructed textual horizon, suggest India comprises roughly 70%, Pakistan 19%, with Bangladesh, Nepal, Sri Lanka, Bhutan, the eastern fringe of Afghanistan, and the Maldives sharing the remainder; a wider "associated horizon" that includes the trans-Himalayan varshas adds the Tibetan plateau. Natural features — the seven Kula-parvatas (mountain ranges), the great river system (Ganga, Yamuna, Sindhu, and the peninsula's east-flowing rivers), and the three encircling seas — remain identifiable today with a high degree of confidence, while political and ethnic identifications carry varying degrees of scholarly certainty.</p>
+        <p>The report also acknowledges a critical methodological point: the ancient texts describe a cultural and ritual geography layered over a real physical geography, so modern country boundaries are a heuristic overlay rather than a precise ancient political map. The Puranic "nine varshas" of Jambudvipa, the Mahabharata's four-direction conquest catalogs, and the Ramayana's itinerary from Ayodhya to Lanka together provide the most complete pre-modern textual cartography of the subcontinent. Finally, the report connects this Itihasa-Purana tradition to the early-modern empirical cartography of Joseph Tieffenthaler (1710–1785), whose 18th-century mapping of "Hindustan" represents the scientific survey tradition that superseded — and, until recently, obscured — the ancient textual geography it documented.</p>
+    </div>
+
+    <nav class="toc">
+        <h2>Table of Contents</h2>
+        <ol>
+            <li><a href="#sec-1">Introduction and Source Note</a></li>
+            <li><a href="#sec-2">The Conceptual Framework of Bharata Varsha</a></li>
+            <li><a href="#sec-3">Jambudvipa and the Nine Varshas</a></li>
+            <li><a href="#sec-4">Bharata Varsha in the Puranas</a></li>
+            <li><a href="#sec-5">The Geographical Horizon of the Mahabharata</a></li>
+            <li><a href="#sec-6">The Mountain System of the Mahabharata</a></li>
+            <li><a href="#sec-7">The Rivers of the Mahabharata</a></li>
+            <li><a href="#sec-8">Kingdoms and Peoples: The Four Directions</a></li>
+            <li><a href="#sec-9">The Geographical Horizon of the Ramayana</a></li>
+            <li><a href="#sec-10">The Kishkindha Kanda Geographical Catalogs</a></li>
+            <li><a href="#sec-11">Lanka and the Temple at Rameswaram</a></li>
+            <li><a href="#sec-12">Puranic Geography of the Subcontinent</a></li>
+            <li><a href="#sec-13">Mapping to the Modern Countries of South Asia</a></li>
+            <li><a href="#sec-14">Approximate Percentage Allocations</a></li>
+            <li><a href="#sec-15">Identifiable Natural Features in the Modern Landscape</a></li>
+            <li><a href="#sec-16">Select Regional Identifications in Detail</a></li>
+            <li><a href="#sec-17">The Tieffenthaler Interlude: From Itihasa Geography to Empirical Cartography</a></li>
+            <li><a href="#sec-18">Scholarly Debates and Methodological Caveats</a></li>
+            <li><a href="#sec-19">Conclusion and Implications</a></li>
+            <li><a href="#sec-20">Further Reading</a></li>
+        </ol>
+    </nav>
+
+    <section id="sec-1">
+        <h2>1. Introduction and Source Note</h2>
+        <p>The Indian subcontinent — Bharata Varsha — is the only part of the ancient cosmographic scheme that the Sanskrit Itihasas and Puranas describe as a <em>karma-bhumi</em> (land of action and consequence), a place where ritual, duty, and historical events unfold. The Mahabharata, the Ramayana, and the major Puranas (Vishnu, Bhagavata, Vayu, Brahmanda, Markandeya) each contain substantial geographical passages: lists of mountains, rivers, seas, peoples, and kingdoms. When these are collated and projected onto a modern map of South Asia, they describe a recognizable physical world — the subcontinent bounded by the Himalayas in the north and encircled by the sea on its three other sides.</p>
+        <p>This report maps these textual references to the modern political map. The scope is deliberately restricted to elements that remain identifiable today: natural features (rivers, mountain ranges, seas) and broadly corresponding modern political boundaries. It must be stated plainly at the outset that the ancient texts reflect a cultural geography — a landscape organized around pilgrimage sites, kingdom boundaries, and mythic events — not a cadastral survey. Therefore, the percentage allocations offered here are heuristic approximations based on the reconstructed textual horizon, not precise historical facts.</p>
+        <p>A note on the source material for this report: the user's uploaded document concerns Joseph Tieffenthaler, an 18th-century Jesuit cartographer whose work on "Hindustan" is discussed in a 1997 article by Jose K. John in the <em>Proceedings of the Indian History Congress</em>. That document does not itself contain the Puranic or Itihasic geographical lists. Accordingly, this report relies on the well-established scholarly identification of the geographical passages in the Mahabharata (especially the Bhishma Parva and Sabha Parva), the Ramayana (especially the Kishkindha Kanda), and the Puranas (the <em>bhuvana-kosha</em> sections), which are the standard textual bases for ancient Indian historical geography. Section 17 returns to Tieffenthaler to connect the ancient textual tradition with early-modern cartographic practice.</p>
+    </section>
+
+    <section id="sec-2">
+        <h2>2. The Conceptual Framework of Bharata Varsha</h2>
+        <p>In the Puranic cosmographic scheme, the flat earth is divided into concentric ring-continents (<em>dvipas</em>) separated by oceans. The innermost of these is Jambudvipa, the "land of the rose-apple tree," which is surrounded by the salt ocean (<em>lavana-samudra</em>). At the center of Jambudvipa stands Mount Meru (or Sumeru), the cosmic axis. Around Meru, Jambudvipa is divided into nine regions called <em>varshas</em>, each separated from the others by mountain ranges. The southernmost of these nine varshas is Bharata-varsha — the Indian subcontinent — lying south of the Himalaya mountains.</p>
+        <p>The texts give two traditions for the name "Bharata." The Mahabharata states that the land is named after Bharata, son of Dushyanta and Shakuntala, whose descendants (the Bharatas) gave their name to the country: <em>"This is the land of Bharata, the son of Dushyanta, and hence it is called Bharata-varsha"</em>. The Puranic tradition (followed by the Jain and later Hindu traditions) instead names the region after Bharata, son of Rishabha, the first Tirthankara of the Jains. Both traditions agree that Bharata-varsha is the most sacred and significant of the varshas — the only one where dharma is fully enacted and where the fruits of karma are cultivated.</p>
+        <p>Conceptually, Bharata-varsha is described in the Puranas as a triangular or roughly quadrilateral landmass bounded by the Himalayas to the north and the sea on the other three sides. The Vishnu Purana and the Bhagavata Purana agree that the subcontinent extends from the southern slopes of the Himalayas to the southern ocean, where the land tapers toward the tip at Kanyakumari (Cape Comorin). In the Mahabharata, the Bhishma Parva gives the fullest account of the earth's seven continents and the nine varshas, followed by a detailed enumeration of the mountains, rivers, and peoples of Bharata-varsha.</p>
+    </section>
+
+    <section id="sec-3">
+        <h2>3. Jambudvipa and the Nine Varshas</h2>
+        <p>The Bhagavata Purana (Canto 5) provides the most systematic account of the nine varshas of Jambudvipa. Around Mount Meru, which stands at the center of the Ilavrita-varsha, the other eight varshas are placed in the cardinal and intermediate directions, each separated by mountain ranges that radiate from Meru like the filaments of a lotus:</p>
+
+        <div class="table-container">
+            <table>
+                <caption>Jambudvipa — Nine Varshas</caption>
+                <thead>
+                    <tr>
+                        <th>Varsha</th>
+                        <th>Position relative to Ilavrita</th>
+                        <th>Separating mountain range</th>
+                        <th>Traditional modern correlation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ilavrita</td><td>Central, around Mount Meru</td><td>—</td><td>Pamir knot / Kailash region (speculative)</td></tr>
+                    <tr><td>Hari-varsha</td><td>South</td><td>Nishadha</td><td>Trans-Himalayan / Central Asia (speculative)</td></tr>
+                    <tr><td>Kimpurusha-varsha</td><td>Further south</td><td>Hemakuta</td><td>Southern Tibetan plateau (speculative)</td></tr>
+                    <tr><td>Bharata-varsha</td><td>Southernmost</td><td>Himalaya</td><td>Indian subcontinent</td></tr>
+                    <tr><td>Ramyaka-varsha</td><td>North</td><td>Nila</td><td>Central Asia (speculative)</td></tr>
+                    <tr><td>Hiranmaya-varsha</td><td>Further north</td><td>Shveta</td><td>Central Asia (speculative)</td></tr>
+                    <tr><td>Kuru-varsha (Uttarakuru)</td><td>Northernmost</td><td>Shringavan</td><td>Siberia / far north (mythic)</td></tr>
+                    <tr><td>Bhadrashva-varsha</td><td>East</td><td>Malyavan</td><td>China / East Asia (speculative)</td></tr>
+                    <tr><td>Ketumala-varsha</td><td>West</td><td>Gandhamadana</td><td>Iran / Arabia (speculative)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Bhagavata Purana specifies that the mountain ranges separating these varshas — Nishadha, Hemakuta, Himalaya on the south; Nila, Shveta, Shringavan on the north; Malyavan on the east; and Gandhamadana on the west — are the "seven great boundary mountains". Only Bharata-varsha is treated as the <em>karma-bhumi</em>; the other eight varshas are described as <em>bhoga-bhumis</em> (lands of enjoyment), where the inhabitants experience the fruits of their accumulated merit but do not accrue new karma. This theological distinction is the reason the Puranas lavish disproportionate descriptive attention on Bharata-varsha — it is the arena of human effort and salvation.</p>
+    </section>
+
+    <section id="sec-4">
+        <h2>4. Bharata Varsha in the Puranas</h2>
+        <p>The Vishnu Purana (Book 2) contains the classic Puranic description of the subcontinent. It states that Bharata-varsha is bounded by the Himalayas to the north and the sea to the south, east, and west. It enumerates seven primary mountain ranges (the Kula-parvatas):</p>
+        <ul>
+            <li><strong>Mahendra</strong> — the Eastern Ghats of Odisha and Andhra Pradesh,</li>
+            <li><strong>Malaya</strong> — the southern Western Ghats of Kerala and Tamil Nadu,</li>
+            <li><strong>Sahya</strong> — the northern Western Ghats of Maharashtra and Karnataka,</li>
+            <li><strong>Suktimat</strong> — a range in the eastern part of central India (often identified with the hills of Chhattisgarh / northern Odisha),</li>
+            <li><strong>Riksha (Rikshavat)</strong> — the Satpura / Maikal range of Madhya Pradesh,</li>
+            <li><strong>Vindhya</strong> — the Vindhya range of central India,</li>
+            <li><strong>Pariyatra</strong> — the Aravalli range of Rajasthan.</li>
+        </ul>
+        <p>The Puranas further divide Bharata-varsha into nine <em>khandas</em> (divisions), though the names vary between texts. The most common list, from the Vishnu Purana, is that the subcontinent was divided into nine <em>dvipas</em> (island-like divisions) named after the nine sons of Bharata:</p>
+
+        <div class="table-container">
+            <table>
+                <caption>Bharata-varsha — Nine Traditional Divisions</caption>
+                <thead>
+                    <tr>
+                        <th>Division</th>
+                        <th>Traditional association</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Indradvipa</td><td>Northern / Gangetic heartland</td></tr>
+                    <tr><td>Kaserumana</td><td>Punjab / northwestern</td></tr>
+                    <tr><td>Tamraparni</td><td>Far south / Sri Lanka (Tamil country)</td></tr>
+                    <tr><td>Gabhastiman</td><td>Western coast</td></tr>
+                    <tr><td>Nagadvipa</td><td><em>Uncertain</em></td></tr>
+                    <tr><td>Saumya</td><td><em>Uncertain</em></td></tr>
+                    <tr><td>Gandharva</td><td><em>Uncertain</em></td></tr>
+                    <tr><td>Varuna</td><td>Western coast</td></tr>
+                    <tr><td>Kumari</td><td>Southernmost tip (Kanyakumari)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>It must be emphasized that the identifications of these nine khandas are highly uncertain; the Puranas give no detailed boundaries, and scholars have debated them for over a century without consensus. The value of this list is cosmological and organizational rather than geographical. The far more useful data for the modern mapper come from the lists of rivers, mountains, and named peoples (<em>jana-padas</em>) that the Puranas append to this framework.</p>
+        <p>The Puranas also make the crucial statement that Bharata-varsha is surrounded by the ocean on three sides and that it is the land "south of the Himalaya, north of the sea" — a description that corresponds precisely to the modern Indian subcontinent.</p>
+    </section>
+
+    <section id="sec-5">
+        <h2>5. The Geographical Horizon of the Mahabharata</h2>
+        <p>The Mahabharata contains the most detailed geographical data of all the Itihasas. Two books are of primary importance: the Sabha Parva (Book 2), which describes the four-directional conquest expeditions (Digvijaya) of the Pandava brothers, and the Bhishma Parva (Book 6), which contains the fullest list of mountains, rivers, and peoples. To these may be added the Vana Parva (Book 3), which catalogs the sacred pilgrimage sites (tirthas) of the subcontinent, and the Karna Parva and Shanti Parva, which contain additional geographical notices.</p>
+        <p>The overall picture from the Mahabharata is of a world bounded by:</p>
+        <ul>
+            <li>the Himalayas and the trans-Himalayan lands to the north (including the mythic Uttarakuru),</li>
+            <li>the eastern sea (Bay of Bengal) to the east,</li>
+            <li>the western sea (Arabian Sea) to the west,</li>
+            <li>the southern sea (Indian Ocean) to the south, with Lanka (Sri Lanka) at its horizon.</li>
+        </ul>
+        <p>Within this frame, the Mahabharata describes a dense network of janapadas (kingdoms) whose names — Kuru, Panchala, Matsya, Surasena, Kosala, Videha, Magadha, Anga, Vanga, Kalinga, Avanti, Gandhara, Sindhu, and dozens more — form the core of the epic's political geography. The following sections unpack the two key structural elements: the mountain system and the river system.</p>
+    </section>
+
+    <section id="sec-6">
+        <h2>6. The Mountain System of the Mahabharata</h2>
+        <p>The Bhishma Parva gives the Mahabharata's list of the principal mountains of Bharata-varsha. The list overlaps substantially with the Puranic Kula-parvatas but adds many more:</p>
+        <ul>
+            <li><strong>Himalaya</strong> — the great northern range (the Himalayas),</li>
+            <li><strong>Kailasa</strong> — Mount Kailash in western Tibet,</li>
+            <li><strong>Mandara</strong> — a mythic mountain (also placed in the Himalayas),</li>
+            <li><strong>Vindhya</strong> — the Vindhya range of central India,</li>
+            <li><strong>Pariyatra</strong> — the Aravalli range of Rajasthan,</li>
+            <li><strong>Sahya</strong> — the Western Ghats of Maharashtra/Karnataka,</li>
+            <li><strong>Malaya</strong> — the southern Western Ghats,</li>
+            <li><strong>Mahendra</strong> — the Eastern Ghats,</li>
+            <li><strong>Suktimat and Riksha</strong> — the Satpura/Maikal hills,</li>
+            <li><strong>Gandhamadana</strong> — a Himalayan spur (sometimes identified with the Badrinath region),</li>
+            <li><strong>Raivataka</strong> — Mount Girnar in Saurashtra (near Dwaraka),</li>
+            <li><strong>Arbuda</strong> — Mount Abu in Rajasthan,</li>
+            <li><strong>Krauncha</strong> — a Himalayan peak (in the Kailash region),</li>
+            <li><strong>Chitrakuta</strong> — the hills near present-day Satna, Madhya Pradesh.</li>
+        </ul>
+        <p>The Mahabharata explicitly states that the seven most important ranges are the "Kula-parvatas": Mahendra, Malaya, Sahya, Suktimat, Riksha, Vindhya, and Pariyatra. These are the backbone of the subcontinent's physical geography. Their modern identification is secure:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kula-parvata (text)</th>
+                        <th>Modern range</th>
+                        <th>Modern country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mahendra</td><td>Eastern Ghats (Odisha–Andhra)</td><td>India</td></tr>
+                    <tr><td>Malaya</td><td>Western Ghats (Kerala–Tamil Nadu)</td><td>India</td></tr>
+                    <tr><td>Sahya</td><td>Western Ghats (Maharashtra–Karnataka)</td><td>India</td></tr>
+                    <tr><td>Suktimat</td><td>Maikal / Chhattisgarh hills</td><td>India</td></tr>
+                    <tr><td>Riksha</td><td>Satpura / Maikal ranges</td><td>India</td></tr>
+                    <tr><td>Vindhya</td><td>Vindhya range</td><td>India</td></tr>
+                    <tr><td>Pariyatra</td><td>Aravalli range (Rajasthan)</td><td>India</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Mahabharata's mountains are thus entirely within the modern territory of India, with the sole exception of the Himalayan ranges, which extend across Nepal, Bhutan, Pakistan, and Tibet.</p>
+    </section>
+
+    <section id="sec-7">
+        <h2>7. The Rivers of the Mahabharata</h2>
+        <p>The Mahabharata's river catalog is one of its most valuable geographical features; most identifications are secure. The epic preserves the ancient Sapta Sindhu (seven rivers) tradition of the northwest, and adds the great rivers of the Gangetic plain and the peninsula.</p>
+        
+        <h3>The Northwestern Rivers (Sapta Sindhu)</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Ancient name</th><th>Modern river</th><th>Modern country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Sindhu</td><td>Indus</td><td>Pakistan / India (Tibet source)</td></tr>
+                    <tr><td>Vitasta</td><td>Jhelum</td><td>Pakistan / India (Kashmir)</td></tr>
+                    <tr><td>Asikni</td><td>Chenab</td><td>Pakistan / India</td></tr>
+                    <tr><td>Parushni (Iravati)</td><td>Ravi</td><td>Pakistan / India</td></tr>
+                    <tr><td>Vipasha</td><td>Beas</td><td>India (Punjab)</td></tr>
+                    <tr><td>Shutudri</td><td>Sutlej</td><td>India / Pakistan / Tibet</td></tr>
+                    <tr><td>Saraswati</td><td>Ghaggar-Hakra (mostly dried)</td><td>India / Pakistan</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Saraswati is the most famous lost river: the Mahabharata describes it as a great river that eventually disappears into the desert east of the Indus — a description matched by the now-dry Ghaggar-Hakra course, which flowed through Haryana and Rajasthan before being captured by the Sutlej/Yamuna system in antiquity.</p>
+
+        <h3>The Gangetic System</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Ancient name</th><th>Modern river</th><th>Modern country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ganga</td><td>Ganges</td><td>India / Bangladesh</td></tr>
+                    <tr><td>Yamuna</td><td>Yamuna / Jumna</td><td>India</td></tr>
+                    <tr><td>Sarayu</td><td>Ghaghara / Sarju</td><td>India / Nepal</td></tr>
+                    <tr><td>Gandaki</td><td>Gandaki</td><td>Nepal / India</td></tr>
+                    <tr><td>Kausiki</td><td>Kosi</td><td>Nepal / India / (Tibet source)</td></tr>
+                    <tr><td>Lauhitya</td><td>Brahmaputra</td><td>India / Bangladesh / Tibet</td></tr>
+                    <tr><td>Charmanvati</td><td>Chambal</td><td>India</td></tr>
+                    <tr><td>Vetravati</td><td>Betwa</td><td>India</td></tr>
+                    <tr><td>Shona (Son)</td><td>Son</td><td>India</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>The Central Indian and Peninsular Rivers</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Ancient name</th><th>Modern river</th><th>Modern country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Narmada / Reva</td><td>Narmada</td><td>India</td></tr>
+                    <tr><td>Tapi / Tapti</td><td>Tapi</td><td>India</td></tr>
+                    <tr><td>Godavari (Vriddha Ganga)</td><td>Godavari</td><td>India</td></tr>
+                    <tr><td>Krishna / Krishnaveni</td><td>Krishna</td><td>India</td></tr>
+                    <tr><td>Tungabhadra (Pampa)</td><td>Tungabhadra</td><td>India</td></tr>
+                    <tr><td>Kaveri</td><td>Kaveri / Cauvery</td><td>India</td></tr>
+                    <tr><td>Tamraparni</td><td>Tamiraparani</td><td>India (Tirunelveli)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Mahabharata also names the Vetravati (Betwa) and Shipra (near Ujjain), and numerous smaller streams. The river system described in the epic corresponds almost one-to-one with the modern hydrography of the subcontinent. This is the single strongest argument that the epic's geography is real and identifiable, not purely mythic.</p>
+    </section>
+
+    <section id="sec-8">
+        <h2>8. Kingdoms and Peoples: The Four Directions</h2>
+        <p>The Sabha Parva's account of the four conquest expeditions (Digvijaya) provides the most systematic political geography of the Mahabharata. Each Pandava brother is sent in a cardinal direction, and the lists of kings they "conquer" read as a geographical catalogue of the subcontinent's janapadas.</p>
+        <p><strong>Arjuna's Northern Expedition</strong> (toward the Himalayas) takes him through the kingdoms of the northwest — the Trigartas (Jalandhar/Jammu), the Kambojas, the Gandharas (Peshawar valley), the Kiratas (eastern Himalayan tribes), and finally to the mythic Uttarakuru beyond the Himalayas. This indicates that the northern horizon of the epic's "real" geography ends at the Himalayas, with the Uttarakuru treated as a semi-mythic land beyond.</p>
+        <p><strong>Bhima's Eastern Expedition</strong> moves down the Ganges plain and into eastern India: the Chedis (Bundelkhand), Kosala (eastern UP), Magadha (south Bihar), Anga (Bhagalpur region), Vanga (Bengal delta), Pundra (north Bengal), and the Suhma (southern Bengal) kingdoms, reaching the eastern sea (Bay of Bengal).</p>
+        <p><strong>Sahadeva's Southern Expedition</strong> travels through the Vindhyas into the Deccan and the far south: the Vidarbhas (eastern Maharashtra), the Dravidas and Dravida peoples, the Keralas (Kerala), Pandyas (Madurai region), Cholas (Thanjavur region), and the Andhras (Telangana/Andhra), with the Kishkindha region (Hampi) and even Lanka (Sri Lanka) mentioned as tributary.</p>
+        <p><strong>Nakula's Western Expedition</strong> heads toward the Arabian sea: the Matsyas (Rajasthan), the Sindhu (Sindh, Pakistan), the Sauviras (Balochistan/southern Sindh), the Bahlikas (Bactria/northwest), the Shakas (Scythians), Yavanas (Ionia/Greeks), and the Pahlavas (Persians), along the western ocean.</p>
+        <p>This four-direction structure yields a "concentric" cultural map with Madhyadesha (the Ganga-Yamuna doab, homeland of the Kurus and Panchalas) at the center, surrounded by a ring of peripheral peoples. The following table summarizes the principal janapadas and their modern correlations:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kingdom / people</th>
+                        <th>Modern region</th>
+                        <th>Modern country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="3"><strong>Madhyadesha (center)</strong></td></tr>
+                    <tr><td>Kuru (Hastinapura, Indraprastha)</td><td>Western UP, Haryana, Delhi</td><td>India</td></tr>
+                    <tr><td>Panchala (Kampilya, Ahichhatra)</td><td>Rohilkhand, central UP</td><td>India</td></tr>
+                    <tr><td>Matsya (Viratanagara)</td><td>Bharatpur, Rajasthan</td><td>India</td></tr>
+                    <tr><td>Surasena (Mathura)</td><td>Braj region</td><td>India</td></tr>
+                    <tr><td>Vatsa (Kaushambi)</td><td>Allahabad region</td><td>India</td></tr>
+                    <tr><td>Chedi (Suktimati)</td><td>Bundelkhand</td><td>India</td></tr>
+                    <tr><td>Kasi (Varanasi)</td><td>Varanasi</td><td>India</td></tr>
+                    <tr><td colspan="3"><strong>Northwest / West</strong></td></tr>
+                    <tr><td>Sindhu</td><td>Sindh</td><td>Pakistan</td></tr>
+                    <tr><td>Sauvira</td><td>S. Sindh / Balochistan</td><td>Pakistan</td></tr>
+                    <tr><td>Gandhara (Peshawar)</td><td>Khyber Pakhtunkhwa</td><td>Pakistan</td></tr>
+                    <tr><td>Kamboja</td><td>Rajauri / E. Afghanistan</td><td>India / Pakistan / Afghanistan</td></tr>
+                    <tr><td>Madra (Sialkot)</td><td>Central Punjab</td><td>Pakistan</td></tr>
+                    <tr><td>Kekaya</td><td>Jhelum region</td><td>Pakistan</td></tr>
+                    <tr><td>Yavana / Saka / Pahlava</td><td>Bactria / Persia</td><td>Afghanistan / Iran / Central Asia</td></tr>
+                    <tr><td colspan="3"><strong>East</strong></td></tr>
+                    <tr><td>Kosala (Ayodhya)</td><td>Eastern UP</td><td>India</td></tr>
+                    <tr><td>Videha (Mithila)</td><td>N. Bihar / Terai</td><td>India / Nepal</td></tr>
+                    <tr><td>Magadha</td><td>S. Bihar</td><td>India</td></tr>
+                    <tr><td>Anga (Champa)</td><td>Bhagalpur</td><td>India</td></tr>
+                    <tr><td>Vanga</td><td>Bengal delta</td><td>India / Bangladesh</td></tr>
+                    <tr><td>Pundra</td><td>N. Bengal</td><td>India / Bangladesh</td></tr>
+                    <tr><td>Pragjyotisha</td><td>Assam</td><td>India</td></tr>
+                    <tr><td>Kirata</td><td>E. Himalayas</td><td>India / Nepal / Bhutan</td></tr>
+                    <tr><td colspan="3"><strong>South</strong></td></tr>
+                    <tr><td>Kalinga</td><td>Odisha</td><td>India</td></tr>
+                    <tr><td>Andhra</td><td>Telangana / Andhra</td><td>India</td></tr>
+                    <tr><td>Asmaka</td><td>Godavari region</td><td>India</td></tr>
+                    <tr><td>Dravida</td><td>Tamil Nadu</td><td>India</td></tr>
+                    <tr><td>Kerala</td><td>Kerala</td><td>India</td></tr>
+                    <tr><td>Pandya</td><td>Madurai region</td><td>India</td></tr>
+                    <tr><td>Chola</td><td>Thanjavur region</td><td>India</td></tr>
+                    <tr><td>Lanka</td><td>Sri Lanka</td><td>Sri Lanka</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Mahabharata's political map thus covers essentially the entire modern subcontinent, with the northwest extending into the eastern/southern fringes of Afghanistan and the Iranian/Central Asian "Yavana–Saka–Pahlava" zone marking the outer limit of its cultural horizon.</p>
+    </section>
+
+    <section id="sec-9">
+        <h2>9. The Geographical Horizon of the Ramayana</h2>
+        <p>The Ramayana's geography is organized around the journey of Rama from Ayodhya in the north to Lanka in the far south, and the four-directional searches for Sita described in the Kishkindha Kanda. While the Mahabharata's geography is broader (with a deeper northwestern reach), the Ramayana's is more linear and, in its central portions, more detailed.</p>
+        <p>The key places of the Ramayana's narrative, with their modern identifications, are:</p>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ramayana place</th>
+                        <th>Description in text</th>
+                        <th>Modern location</th>
+                        <th>Modern country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ayodhya</td><td>Capital of Kosala, on the Sarayu river</td><td>Ayodhya / Faizabad, UP</td><td>India</td></tr>
+                    <tr><td>Sarayu river</td><td>River flowing past Ayodhya</td><td>Ghaghra (Ghaghara)</td><td>India / Nepal</td></tr>
+                    <tr><td>Mithila / Janakpur</td><td>Capital of Videha, Sita's birthplace</td><td>Darbhanga / Janakpur</td><td>India / Nepal</td></tr>
+                    <tr><td>Chitrakuta</td><td>Hill where the exiles stayed, on the Mandakini</td><td>Satna district, MP</td><td>India</td></tr>
+                    <tr><td>Dandakaranya</td><td>Vast forest traversed by the exiles</td><td>Bastar / central India</td><td>India</td></tr>
+                    <tr><td>Panchavati</td><td>Hermitage on the Godavari</td><td>Near Nashik, Maharashtra</td><td>India</td></tr>
+                    <tr><td>Pampa lake</td><td>Lake near Kishkindha</td><td>Tungabhadra area, Hampi</td><td>India</td></tr>
+                    <tr><td>Kishkindha</td><td>Capital of the Vanaras (monkey people)</td><td>Hampi, Karnataka</td><td>India</td></tr>
+                    <tr><td>Rishyamuka hill</td><td>Hill where Sugriva dwelled</td><td>Near Hampi</td><td>India</td></tr>
+                    <tr><td>Rameswaram</td><td>Place of Rama's causeway</td><td>Rameswaram / Dhanushkodi, TN</td><td>India</td></tr>
+                    <tr><td>Lanka</td><td>Ravana's island capital</td><td>Sri Lanka</td><td>Sri Lanka</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Ramayana's geography is thus centered on a north-south axis: from the Gangetic plain (Ayodhya, Mithila) through the Vindhyan region (Chitrakuta, Dandakaranya), down the Godavari valley (Panchavati), through the Deccan (Kishkindha/Pampa), to the southern tip (Rameswaram) and across the sea to Lanka (Sri Lanka). This is a remarkably accurate transect of the subcontinent, and it confirms the Ramayana's grounding in real geography.</p>
+    </section>
+
+    <section id="sec-10">
+        <h2>10. The Kishkindha Kanda Geographical Catalogs</h2>
+        <p>The Kishkindha Kanda (Sargas 40–42) contains the most geographically explicit passages of the Ramayana — the four-directional search descriptions given to the vanara search parties. These passages function as a systematic geographical encyclopedia of the subcontinent, and they are worth examining in detail.</p>
+        <p><strong>The Eastern Search</strong> (directed by Sugriva) describes the eastern lands: the banks of the Ganges, the country of the Kiratas (eastern Himalayan and northeastern tribes), the region of Lauhitya (the Brahmaputra), and the shores of the eastern sea (Bay of Bengal). The eastern horizon reaches the mouth of the Ganges and the Brahmaputra delta — i.e., modern West Bengal and Bangladesh.</p>
+        <p><strong>The Southern Search</strong> (led by Hanuman) is the most detailed. It describes the Vindhya plateau, the kingdoms of the Vidarbhas, the river Godavari, the Dravida country, the Pandya kingdom, the Tamraparni river (Tamiraparani), the Malaya mountains, the city of Kanyakumari (the southern tip of India, where the southern ocean begins), and finally the island of Lanka beyond the sea. This is a precise description of the route from central India down the peninsula to Cape Comorin and across to Sri Lanka.</p>
+        <p><strong>The Western Search</strong> describes the country of the Kambojas, the Sindhu (Indus), the western ocean (Arabian Sea), and the "Pancanada" (the Punjab, land of five rivers). The western horizon thus includes the Indus valley and the Persian Gulf / Arabian Sea coast — i.e., modern Pakistan and the western littoral of India.</p>
+        <p><strong>The Northern Search</strong> describes the Himalayas, Kailasa, the Krauncha mountain range, the country of the Uttarakurus (beyond the Himalayas), and the northern Kshira (milk) ocean — a mythic sea in the far north.</p>
+        <p>The Kishkindha Kanda data therefore reproduce, in slightly different form, the same four-direction cultural map found in the Mahabharata: the subcontinent at the center, with the western and eastern seas, the southern ocean, and the Himalayas as its boundaries, and the far northern lands treated as semi-mythic. The Ramayana's "real" geography is nearly identical to that of the Mahabharata, with Lanka (Sri Lanka) added as a concrete southern island.</p>
+    </section>
+
+    <section id="sec-11">
+        <h2>11. Lanka and the Temple at Rameswaram</h2>
+        <p>Lanka is the most geographically specific identification in the Ramayana. The text describes it as a large island fortress, set on the Trikuta mountain, surrounded by the sea, and located a stated distance (traditionally 100 yojanas) south of the Indian mainland at Rameswaram. The traditional and near-universal scholarly identification of Lanka with Sri Lanka is reinforced by:</p>
+        <ul>
+            <li>the geographic statement that it lies south of the southern tip of India (modern Dhanushkodi–Rameswaram is the closest point of India to Sri Lanka, across the Palk Strait),</li>
+            <li>the reference to the southern sea and the island's tropical setting,</li>
+            <li>the continuous tradition, from the earliest commentary through the medieval period, identifying Lanka with Ceylon.</li>
+        </ul>
+        <p>The causeway described in the Ramayana (Rama-setu, the bridge built by Rama's army) is traditionally identified with the limestone shoals between Rameswaram (India) and Mannar (Sri Lanka) known as Adam's Bridge. Modern remote sensing and geological studies have confirmed the existence of a chain of shoals and sandbanks across the Palk Strait — a natural formation that strongly resembles a submerged causeway. This is one of the clearest geographical identifications in all of Itihasa literature.</p>
+    </section>
+
+    <section id="sec-12">
+        <h2>12. Puranic Geography of the Subcontinent</h2>
+        <p>The Puranas add important details to the picture drawn by the two epics. The Vishnu Purana and the Bhagavata Purana provide:</p>
+        <ul>
+            <li>the seven Kula-parvatas (already described in Section 6),</li>
+            <li>the nine khandas of Bharata-varsha,</li>
+            <li>a detailed list of the nations (jana-padas) of Bharata-varsha,</li>
+            <li>the statement that the subcontinent is surrounded by the ocean on three sides, with the Himalayas forming the northern boundary.</li>
+        </ul>
+        <p>The Bhagavata Purana's Canto 5 (which draws on the Vishnu Purana and the Vayu/Brahmanda tradition) contains the most systematic account of the varshas and the boundary mountains. It also names several rivers of the subcontinent — Ganga, Yamuna, Saraswati, Sindhu, Narmada, Godavari, Krishna, Kaveri, etc. — that are readily identifiable today.</p>
+        <p>A distinctive Puranic contribution is the description of the subcontinent as a triangular landmass divided internally by the Kula-parvatas into distinct river basins. The Puranas' geography, like that of the epics, is overwhelmingly real and identifiable. The only frankly mythic elements are the trans-Himalayan varshas (Uttarakuru, etc.) and the cosmic Mount Meru, which the Puranas themselves treat as belonging to a different order of space.</p>
+    </section>
+
+    <section id="sec-13">
+        <h2>13. Mapping to the Modern Countries of South Asia</h2>
+        <p>When the textual geography of the Mahabharata, Ramayana, and Puranas is overlaid on the modern political map of the region, the correspondence is nearly perfect for the subcontinent. The following table maps the principal ancient geo-political units to their modern countries:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modern country</th>
+                        <th>Ancient textual units in that territory</th>
+                        <th>Confidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>India</strong></td>
+                        <td>Kuru, Panchala, Matsya, Surasena, Chedi, Vatsa, Kasi, Kosala, Magadha, Anga (western), Kalinga, Andhra, Asmaka, Avanti, Vidarbha, Dravida, Kerala, Pandya, Chola, Kishkindha, Pragjyotisha (Assam), most of the Kula-parvatas, the Ganga–Yamuna–Godavari–Krishna–Kaveri river systems</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pakistan</strong></td>
+                        <td>Gandhara (Peshawar), Sindhu (Sindh), Sauvira, Madra, Kekaya, western Punjab, the Indus and its tributaries</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bangladesh</strong></td>
+                        <td>Vanga (eastern Bengal delta), Pundra (northern Bengal), the eastern branches of the Ganga–Brahmaputra delta, the eastern sea</td>
+                        <td>Medium-High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nepal</strong></td>
+                        <td>Videha / Mithila (Janakpur), the Himalayan range, parts of the Kirata country, the source areas of the Gandaki and Kosi</td>
+                        <td>Medium-High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sri Lanka</strong></td>
+                        <td>Lanka (the island of Ravana's capital), the southern ocean horizon</td>
+                        <td>High</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bhutan</strong></td>
+                        <td>The eastern Himalayan Kirata zone (marginal)</td>
+                        <td>Low-Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Afghanistan</strong></td>
+                        <td>Kamboja (eastern/southern Afghanistan), the Yavana–Saka–Pahlava frontier zone, upper reaches of the Kabul / Helmand tributaries</td>
+                        <td>Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>China (Tibet)</strong></td>
+                        <td>Kailasa (west Tibet), the trans-Himalayan varshas (Kimpurusha, Hari, Ilavrita — mythic), the source of the Indus, Sutlej, Brahmaputra</td>
+                        <td>Low-Medium</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Maldives</strong></td>
+                        <td>The southern sea islands (speculative; not specifically named)</td>
+                        <td>Low</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Myanmar</strong></td>
+                        <td>The far eastern Kirata zone (marginal, ambiguous)</td>
+                        <td>Low</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>This table makes clear that the Itihasa-Purana horizon corresponds almost entirely to the Indo-Gangetic subcontinent (India, Pakistan, Bangladesh, Nepal, Sri Lanka), with the Himalayan fringe overlapping into Tibet and the northwestern frontier extending into Afghanistan and Central Asia.</p>
+    </section>
+
+    <section id="sec-14">
+        <h2>14. Approximate Percentage Allocations</h2>
+        <p>The request for "approximate percentage allocations for territories described in the ancient texts" requires a clear statement of method. Since the ancient texts describe a cultural geography rather than surveyed boundaries, any percentage is an interpretive construct. Two defensible methods are offered here:</p>
+        
+        <h3>Method A: Land area of the reconstructed textual horizon (Bharata-varsha proper)</h3>
+        <p>Defining the horizon as the subcontinent bounded by the Himalayas and the three seas (India, Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka, Maldives, plus the eastern/southern fringe of Afghanistan around the Kabul valley), and using modern land areas:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modern country / territory</th>
+                        <th>Approx. area (million km²)</th>
+                        <th>% of textual horizon</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>India</td><td>3.287</td><td>~70%</td></tr>
+                    <tr><td>Pakistan</td><td>0.881</td><td>~19%</td></tr>
+                    <tr><td>Bangladesh</td><td>0.148</td><td>~3%</td></tr>
+                    <tr><td>Nepal</td><td>0.147</td><td>~3%</td></tr>
+                    <tr><td>Sri Lanka</td><td>0.066</td><td>~1.5%</td></tr>
+                    <tr><td>Bhutan</td><td>0.038</td><td>~0.8%</td></tr>
+                    <tr><td>Afghanistan (eastern fringe)</td><td>~0.10</td><td>~2%</td></tr>
+                    <tr><td>Maldives</td><td>0.0003</td><td>~0.01%</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Method B: Inclusion of the trans-Himalayan "associated horizon"</h3>
+        <p>If the wider Jambudvipa scheme (including the varshas of Kimpurusha, Hari, Ilavrita, Ramyaka, Hiranmaya, Uttarakuru, etc., and Mount Kailasa) is included, the southern fringe of the Tibetan plateau is added, reducing India's share:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Modern country / territory</th>
+                        <th>Approximate %</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>India</td><td>~65%</td></tr>
+                    <tr><td>Pakistan</td><td>~17%</td></tr>
+                    <tr><td>Bangladesh</td><td>~3%</td></tr>
+                    <tr><td>Nepal</td><td>~3%</td></tr>
+                    <tr><td>Sri Lanka</td><td>~1.5%</td></tr>
+                    <tr><td>Bhutan</td><td>~0.8%</td></tr>
+                    <tr><td>Afghanistan (eastern/southern)</td><td>~3.5%</td></tr>
+                    <tr><td>China (Tibetan plateau fringe)</td><td>~6%</td></tr>
+                    <tr><td>Maldives</td><td>~0.01%</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Both methods yield the same qualitative conclusion: India accounts for roughly two-thirds to seventy percent of the described territory, Pakistan about a fifth, and the rest is shared among Bangladesh, Nepal, Sri Lanka, the Himalayan kingdoms, the eastern fringe of Afghanistan, and the Tibetan plateau. These figures should be read as heuristic approximations, not as precise historical measurements. The texts themselves state no boundaries, and the cultural weight of the Gangetic heartland (Madhyadesha) far exceeds its share of the physical area.</p>
+
+        <h3>Geographical Flow: From Itihasa-Purana Text to Modern Country Map</h3>
+        <div class="mermaid-box">
+            <div class="mermaid">
+            graph TD
+                subgraph Ancient Textual Sources
+                    MB["Mahabharata<br/>Bhishma Parva, Sabha Parva,<br/>Vana Parva, Karna Parva"]
+                    RM["Ramayana<br/>Kishkindha Kanda,<br/>Sundara Kanda"]
+                    PU["Puranas<br/>Vishnu, Bhagavata,<br/>Vayu, Brahmanda"]
+                end
+                subgraph Physical-Geographic Data
+                    MT["Kula-parvatas: Mahendra, Malaya,<br/>Sahya, Suktimat, Riksha,<br/>Vindhya, Pariyatra"]
+                    RV["Rivers: Ganga, Yamuna, Sindhu,<br/>Godavari, Krishna, Kaveri,<br/>Narmada, Brahmaputra"]
+                    KG["Kingdoms / Janapadas: Kuru,<br/>Panchala, Kosala, Magadha,<br/>Vanga, Kalinga, Pandya, Lanka"]
+                    SE["Seas: Bay of Bengal,<br/>Arabian Sea, Indian Ocean"]
+                end
+                subgraph Modern Country Mapping
+                    IN["India (~65-70%)"]
+                    PK["Pakistan (~17-19%)"]
+                    BD["Bangladesh (~3%)"]
+                    NP["Nepal (~3%)"]
+                    LK["Sri Lanka (~1.5%)"]
+                    BT["Bhutan (~0.8%)"]
+                    AF["Afghanistan, eastern fringe (~2-3.5%)"]
+                    CN["China / Tibet, southern fringe (~0-6%)"]
+                    MV["Maldives (&lt; 1%)"]
+                end
+                MB --> MT & RV & KG & SE
+                RM --> MT & RV & KG & SE
+                PU --> MT & RV & KG & SE
+                MT & RV & KG & SE --> IN & PK & BD & NP & LK & BT & AF & CN & MV
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-15">
+        <h2>15. Identifiable Natural Features in the Modern Landscape</h2>
+        <p>The most satisfying result of mapping Bharata Varsha is the confirmation that the natural features described in the texts are almost entirely identifiable today. This section summarizes the key correspondences, which form the "hard core" of ancient Indian historical geography.</p>
+        
+        <h3>Rivers (identified with high confidence)</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Ancient name</th><th>Modern river</th><th>Country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Ganga</td><td>Ganges</td><td>India / Bangladesh</td></tr>
+                    <tr><td>Yamuna</td><td>Yamuna</td><td>India</td></tr>
+                    <tr><td>Sarayu</td><td>Ghaghara</td><td>India / Nepal</td></tr>
+                    <tr><td>Sindhu</td><td>Indus</td><td>Pakistan / India / Tibet</td></tr>
+                    <tr><td>Vitasta</td><td>Jhelum</td><td>Pakistan / India</td></tr>
+                    <tr><td>Asikni</td><td>Chenab</td><td>Pakistan / India</td></tr>
+                    <tr><td>Parushni / Iravati</td><td>Ravi</td><td>Pakistan / India</td></tr>
+                    <tr><td>Vipasha</td><td>Beas</td><td>India</td></tr>
+                    <tr><td>Shutudri</td><td>Sutlej</td><td>India / Pakistan / Tibet</td></tr>
+                    <tr><td>Saraswati</td><td>Ghaggar-Hakra</td><td>India / Pakistan</td></tr>
+                    <tr><td>Gandaki</td><td>Gandaki</td><td>Nepal / India</td></tr>
+                    <tr><td>Kausiki</td><td>Kosi</td><td>Nepal / India</td></tr>
+                    <tr><td>Lauhitya</td><td>Brahmaputra</td><td>India / Bangladesh / Tibet</td></tr>
+                    <tr><td>Narmada</td><td>Narmada</td><td>India</td></tr>
+                    <tr><td>Tapi</td><td>Tapi</td><td>India</td></tr>
+                    <tr><td>Godavari</td><td>Godavari</td><td>India</td></tr>
+                    <tr><td>Krishna</td><td>Krishna</td><td>India</td></tr>
+                    <tr><td>Tungabhadra (Pampa)</td><td>Tungabhadra</td><td>India</td></tr>
+                    <tr><td>Kaveri</td><td>Kaveri</td><td>India</td></tr>
+                    <tr><td>Tamraparni</td><td>Tamiraparani</td><td>India</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Mountains (identified with high confidence)</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Ancient name</th><th>Modern range / peak</th><th>Country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Himalaya</td><td>The Himalayas</td><td>India / Nepal / Bhutan / Pakistan / Tibet</td></tr>
+                    <tr><td>Kailasa</td><td>Mount Kailash</td><td>China (Tibet)</td></tr>
+                    <tr><td>Vindhya</td><td>Vindhya range</td><td>India</td></tr>
+                    <tr><td>Pariyatra</td><td>Aravalli range</td><td>India</td></tr>
+                    <tr><td>Sahya</td><td>Western Ghats (N)</td><td>India</td></tr>
+                    <tr><td>Malaya</td><td>Western Ghats (S)</td><td>India</td></tr>
+                    <tr><td>Mahendra</td><td>Eastern Ghats</td><td>India</td></tr>
+                    <tr><td>Riksha / Suktimat</td><td>Satpura / Maikal</td><td>India</td></tr>
+                    <tr><td>Arbuda</td><td>Mount Abu</td><td>India</td></tr>
+                    <tr><td>Raivataka</td><td>Mount Girnar (Saurashtra)</td><td>India</td></tr>
+                    <tr><td>Chitrakuta</td><td>Chitrakoot, Satna</td><td>India</td></tr>
+                    <tr><td>Rishyamuka</td><td>Near Hampi</td><td>India</td></tr>
+                    <tr><td>Trikuta</td><td>Hill of Lanka</td><td>Sri Lanka</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Seas and coasts</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Ancient reference</th><th>Modern sea / feature</th><th>Country</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Eastern sea (Purva-samudra)</td><td>Bay of Bengal</td><td>India / Bangladesh / Myanmar</td></tr>
+                    <tr><td>Western sea (Pashchima-samudra)</td><td>Arabian Sea</td><td>India / Pakistan / Oman</td></tr>
+                    <tr><td>Southern sea (Dakshina-samudra)</td><td>Indian Ocean</td><td>Sri Lanka / Maldives</td></tr>
+                    <tr><td>Kshira (milk) ocean (north)</td><td>Mythic</td><td>—</td></tr>
+                    <tr><td>Ganga-sagara</td><td>Ganges estuary / Sundarbans</td><td>India / Bangladesh</td></tr>
+                    <tr><td>Rama-setu</td><td>Adam's Bridge shoals (Palk Strait)</td><td>India / Sri Lanka</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The near-perfect correspondence of rivers, mountains, and seas is the decisive evidence that the Itihasas and Puranas describe the real geography of the Indian subcontinent and not a purely imaginary landscape.</p>
+    </section>
+
+    <section id="sec-16">
+        <h2>16. Select Regional Identifications in Detail</h2>
+        
+        <h3>16.1 The North-West: Gandhara to Sindhu</h3>
+        <p>The northwestern region is the most thoroughly attested in the Mahabharata because of its role in the Kuru story (Gandhari, wife of Dhritarashtra, was a Gandhara princess). Gandhara corresponds to the Peshawar valley in Pakistan's Khyber Pakhtunkhwa province. Sindhu is the Indus valley (modern Sindh, Pakistan), Sauvira the region to its south/west (Balochistan/southern Sindh). Madra and Kekaya lie in the Punjab (Pakistan). The Kambojas are placed in the Rajauri–Poonch region of Kashmir or eastern Afghanistan; the Yavanas (Ionians/Greeks) and Sakas mark the frontier with the Iranian/Central Asian world. This northwestern zone is thus shared between modern Pakistan and Afghanistan, with the Indo-Iranian frontier at its edge.</p>
+
+        <h3>16.2 The Ganga–Yamuna Doab (Madhyadesha)</h3>
+        <p>The heartland of the Mahabharata is the doab between the Ganga and Yamuna, the homeland of the Kurus (Hastinapura, Indraprastha, Kurukshetra) and the Panchalas (Kampilya, Ahichhatra). This is modern western Uttar Pradesh, Haryana, and Delhi — the Madhyadesha of the texts. The Kurukshetra field of the great war is today a district in Haryana. Surasena (Mathura–Braj) and Matsya (Bharatpur, Rajasthan) lie immediately to the south and west. This is unambiguously modern India.</p>
+
+        <h3>16.3 Eastern India and Bengal</h3>
+        <p>The eastern janapadas — Anga (Bhagalpur), Magadha (south Bihar), Kosala (eastern UP), Videha (north Bihar/Nepal Terai), Vanga (Bengal delta), and Pundra (north Bengal) — are spread across modern eastern India and Bangladesh. The Pragjyotisha realm corresponds to Assam. The eastern sea (Bay of Bengal) and the Ganga–Brahmaputra delta mark the eastern boundary. This zone is therefore shared between India and Bangladesh, with Nepal's Terai forming the northern edge of Videha.</p>
+
+        <h3>16.4 The Deccan and the Far South</h3>
+        <p>The southern kingdoms — Kalinga (Odisha), Andhra (Telangana/Andhra), Asmaka (Godavari valley), Vidarbha (eastern Maharashtra), Dravida, Pandya, Chola, Kerala (Tamil Nadu and Kerala) — lie entirely within modern India. The Kishkindha of the Ramayana is the Hampi region of Karnataka, and the southern tip at Kanyakumari is in Tamil Nadu. Lanka alone lies beyond, in modern Sri Lanka.</p>
+
+        <h3>16.5 The Himalayas and Trans-Himalayan Lands</h3>
+        <p>The Himalayan ranges described in the texts span modern India, Nepal, Bhutan, Pakistan, and the Tibetan plateau (China). Mount Kailasa, a sacred peak in western Tibet, is firmly identified with the Kailash in modern China's Tibet Autonomous Region. The trans-Himalayan varshas (Kimpurusha, Hari, Ilavrita, Ramyaka, Hiranmaya, Uttarakuru) are largely mythic, though some scholars have sought to identify Ilavrita with the Pamir region of Central Asia and Uttarakuru with the far northern steppes; these remain speculative.</p>
+    </section>
+
+    <section id="sec-17">
+        <h2>17. The Tieffenthaler Interlude: From Itihasa Geography to Empirical Cartography</h2>
+        <p>The user's source document concerns Joseph Tieffenthaler (1710–1785), an 18th-century Jesuit missionary and cartographer whose detailed mapping of "Hindustan" has been largely forgotten in contemporary scholarship. Tieffenthaler's work is a valuable bridge between the ancient textual geography of Bharata Varsha and the modern empirical cartographic tradition.</p>
+        <p>Tieffenthaler combined the scientific survey methods of his era with direct personal observation of the subcontinent, producing maps and descriptions of India's physical and cultural landscape in the 18th century. His work, like the ancient geographical catalogs, attempted to render the subcontinent's geography into a systematic, ordered form. The article's argument — that Tieffenthaler's contributions have been neglected and that revisiting them could enrich current understanding of Indian geography and history — applies with equal force to the ancient Itihasa-Purana geography. Both traditions have been marginalized in modern scholarship: the ancient texts because their geography was dismissed as mythic, and Tieffenthaler because his work was overshadowed by later, more "scientific" surveys.</p>
+        <p>The connection between the two is instructive. The Mahabharata, Ramayana, and Puranas represent the first great cartographic project of the subcontinent — a systematic attempt to name, order, and map the land through its rivers, mountains, and peoples. Tieffenthaler's 18th-century mapping represents the successor tradition, in which empirical survey displaced textual authority. Yet both traditions confirm the same fundamental geographic reality: the subcontinent described in the ancient texts is the same subcontinent mapped by later cartographers — modern India, Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka, and the Himalayan fringe.</p>
+    </section>
+
+    <section id="sec-18">
+        <h2>18. Scholarly Debates and Methodological Caveats</h2>
+        <p>Any mapping of ancient textual geography to the modern political map must acknowledge significant methodological limits:</p>
+        <ol>
+            <li><strong>The texts are cultural, not cadastral, maps.</strong> The Mahabharata and Ramayana describe a geography organized around kingdoms, pilgrimages, and mythic events, not surveyed boundaries. The janapada lists are schematic; they do not give areas, borders, or precise coordinates. "Percentages" are therefore interpretive constructs, not historical data.</li>
+            <li><strong>Identification uncertainties persist.</strong> While rivers and mountains are identifiable with high confidence, several political identifications remain contested. The location of Kamboja (Kashmir versus eastern Afghanistan), the exact extent of Sauvira, and the identity of certain Puranic khandas (e.g., Nagadvipa, Saumya) are debated. The identification of Lanka with Sri Lanka, though traditional and nearly universal, has been challenged by a minority of scholars who propose alternative sites (e.g., in central India or the Andamans), though these alternatives lack the textual and geographic support of the Sri Lankan identification.</li>
+            <li><strong>The mythic horizon cannot be definitively mapped.</strong> The trans-Himalayan varshas (Uttarakuru, Ramyaka, etc.) and Mount Meru belong to a cosmological rather than terrestrial geography. Attempts to identify Meru with the Pamirs, or Uttarakuru with Siberia or the Arctic, are speculative and should not be mistaken for established fact.</li>
+            <li><strong>Chronological layering.</strong> The texts accumulated over centuries, and their geographical data belong to different periods. The Mahabharata's Sabha Parva dig-vijaya lists, for example, may preserve older (Vedic-period) political geography alongside later (Mauryan-era) material. Any mapping must therefore be understood as a synoptic composite rather than a single-period snapshot.</li>
+            <li><strong>The "percentage allocation" problem.</strong> Because the texts give no areas, any numeric allocation is a modern heuristic. The figures in Section 14 are offered as reasonable approximations based on the reconstructed textual horizon and modern land areas, but they are necessarily approximate.</li>
+        </ol>
+        <p>These caveats do not diminish the fundamental conclusion: the geography of Bharata Varsha as described in the Mahabharata, Ramayana, and Puranas corresponds, in its identifying physical features and broad human geography, to the modern South Asian subcontinent.</p>
+    </section>
+
+    <section id="sec-19">
+        <h2>19. Conclusion and Implications</h2>
+        <p>The mapping of Bharata Varsha to modern geography yields a clear and defensible result. The Mahabharata, Ramayana, and Puranas describe a subcontinent bounded by the Himalayas in the north and encircled by the Bay of Bengal, the Arabian Sea, and the Indian Ocean — a description that corresponds precisely to the modern Indian subcontinent. The principal conclusions are:</p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Conclusion</th>
+                        <th>Supporting evidence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>The textual horizon is real and identifiable</strong></td>
+                        <td>Rivers, mountains, and seas match modern geography almost one-to-one</td>
+                    </tr>
+                    <tr>
+                        <td><strong>India forms the geographic core</strong></td>
+                        <td>Roughly 65–70% of the described territory lies in modern India</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pakistan is the second-largest component</strong></td>
+                        <td>~17–19%, via the Indus basin, Gandhara, Sindhu, and the Punjab</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bangladesh, Nepal, Sri Lanka, Bhutan are secondary components</strong></td>
+                        <td>Vanga/Pundra (Bangladesh), Videha/Himalaya (Nepal), Lanka (Sri Lanka), eastern Himalaya (Bhutan)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The Himalayan fringe extends into Tibet</strong></td>
+                        <td>Kailasa and the trans-Himalayan varshas lie in modern China (Tibet)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The northwest frontier touches Afghanistan</strong></td>
+                        <td>Kamboja and the Yavana–Saka–Pahlava zone</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The ancient geography is primarily a cultural map</strong></td>
+                        <td>Political identifications are reliable for major janapadas, approximate for peripheral zones</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The tradition connects to modern cartography</strong></td>
+                        <td>Tieffenthaler's 18th-century mapping continued the project of rendering the subcontinent's geography</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>The Itihasa-Purana geography of Bharata Varsha is therefore not a mythic fiction but a realistic, identifiable cartography of the Indian subcontinent. It preserves a remarkable record of rivers, mountains, seas, and peoples that can be located with confidence on the modern map of South Asia. Revisiting this ancient geography, as the scholarship on Tieffenthaler urges us to do for early modern cartography, enriches our understanding of how the people of ancient India understood, named, and organized the land they inhabited. The modern countries of India, Pakistan, Bangladesh, Nepal, Bhutan, Sri Lanka, the Maldives, Afghanistan, and the Tibetan fringe of China together inherit the territory that the ancient seers and bards of Bharata Varsha first mapped in words.</p>
+    </section>
+
+    <section id="sec-20">
+        <h2>20. Further Reading</h2>
+        <p>The geographical data summarized here draw on the standard textual sources and scholarly identifications in the field of ancient Indian historical geography. Key primary sources include:</p>
+        <ul>
+            <li><strong>Mahabharata</strong> — Bhishma Parva (chapters 9–11), Sabha Parva (Digvijaya), Vana Parva (tirtha-yatra)</li>
+            <li><strong>Ramayana</strong> — Kishkindha Kanda (Sargas 40–42), Sundara Kanda (description of Lanka)</li>
+            <li><strong>Vishnu Purana</strong> — Book 2 (Jambudvipa and Bharata-varsha)</li>
+            <li><strong>Bhagavata Purana</strong> — Canto 5 (the nine varshas and boundary mountains)</li>
+            <li><strong>Vayu and Brahmanda Puranas</strong> — the <em>bhuvana-kosha</em> sections</li>
+        </ul>
+        <p>For scholarly identification, the classic works of Alexander Cunningham (<em>The Ancient Geography of India</em>), F. E. Pargiter (<em>Ancient Indian Historical Tradition</em>), B. C. Law (<em>Historical Geography of Ancient India</em>), and D. C. Sircar (<em>Studies in the Geography of Ancient and Medieval India</em>) remain the standard references. For the cartographic successor tradition, the user's source — Jose K. John, "The Mapping of Hindustan: A Forgotten Geographer of India, Joseph Tieffenthaler (1710–1785)," <em>Proceedings of the Indian History Congress</em>, Vol. 58 (1997), pp. 400–410 — documents Tieffenthaler's neglected contribution to Indian geography.</p>
+        <p><em>This report was compiled by correlating the geographical passages of the Mahabharata, Ramayana, and Puranas with the modern political map of South Asia, and by situating the ancient textual tradition within the broader history of Indian cartography that culminated in the early-modern surveys of Joseph Tieffenthaler.</em></p>
+    </section>
+
+</div>
+
+<footer>
+    &copy; Mapping Bharata Varsha — Document Conversion &amp; HTML Synthesis
+</footer>
+
+</body>
+</html>

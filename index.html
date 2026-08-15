@@ -1,122 +1,535 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <meta charset="utf-8">
-    <title>Learnings</title>
-    <link rel="stylesheet" href="styles.css">
+<meta name="generator" content="HTML Tidy for HTML5 for Linux version 5.8.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satish Santhanam | Solution &amp; Technical Architect</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --primary: #38bdf8;
+            --primary-hover: #0284c7;
+            --border: #334155;
+            --accent: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
-        h1 {
-            color: #2c3e50;
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
         }
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 80%;
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
         }
-        td {
-            padding: 15px;
-            border: 1px solid #ddd;
-            background-color: #fff;
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
         }
-        td a {
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
             text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
         }
-        td a:hover {
-            color: #2980b9;
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
         }
-        img {
-            width: 200px;
-            border-radius: 10px;
-            margin-top: 20px;
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn-library {
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--primary) !important;
+            padding: 0.4rem 0.85rem;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn-library:hover {
+            background: var(--primary) !important;
+            color: #0f172a !important;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0 2rem;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding-top: 4rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-content h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin-bottom: 2rem;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            color: #fff;
+        }
+
+        .btn-library {
+            background-color: #0284c7;
+            color: #ffffff;
+            border: 1px solid #38bdf8;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.2);
+        }
+
+        .btn-library:hover {
+            background-color: #0369a1;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .library-highlight-card {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 2px solid var(--primary);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.15);
+        }
+
+        .library-highlight-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .card .subtitle {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .card ul {
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .card ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-box {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .metric-box .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .metric-box .label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            color: var(--text-muted);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-item:hover {
+            color: var(--primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Learnings</h1>
-    <p style="text-align: center;">Website dedicated to Lewis.</p>
-    <img src="website_dedicated_to.jpg" alt="Dedicated Image">
-    <table>
-        <tbody>
-            <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Learnings</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            color: #2c3e50;
-        }
-        table {
-            margin: 20px auto;
-            border-collapse: collapse;
-            width: 80%;
-        }
-        td {
-            padding: 15px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-        }
-        td a {
-            text-decoration: none;
-            color: #3498db;
-            font-weight: bold;
-        }
-        td a:hover {
-            color: #2980b9;
-        }
-        img {
-            width: 200px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Learnings</h1>
-    <table>
-        <tbody>
-            <tr>
-                <td><a href="https://learnasyoucode.w3spaces.com/ebooks/ebooks.html">Ebooks</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://learnasyoucode.w3spaces.com/moralstories/index.html">Moral Stories</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://learnasyoucode.w3spaces.com/arabic/arabic_index.html">Arabic letters</a></td>
-            </tr>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Satish Santhanam</a>
+            <ul class="nav-links">
+                <li><a href="site_contents.html" class="nav-btn-library">Learnings &amp; Notes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#sites">Ecosystem</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="hero">
+            <div class="hero-content">
+                <h1>Satish Santhanam</h1>
+                <h2>Solution Architect &amp; IT Delivery Leader</h2>
+                <p>
+                    27+ years driving digital modernization, enterprise architecture, and cloud delivery across tier-1 financial institutions including AMEX, Deutsche Bank, PayPal, and Bank of America. Specialized in Core Banking Platforms, distributed systems, and release management.
+                </p>
+
+                <div class="metrics">
+                    <div class="metric-box">
+                        <div class="number">27+</div>
+                        <div class="label">Years IT Experience</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="number">0</div>
+                        <div class="label">Major Client Complaints</div>
+                    </div>
+                    <div class="metric-box">
+                        <div class="number">13+</div>
+                        <div class="label">Zero-Defect Enterprise Releases</div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <a href="site_contents.html" class="btn btn-library">Learnings &amp; Reference Library</a>
+                    <a href="https://ventpipe.blog" target="_blank" rel="noopener noreferrer" class="btn btn-primary">ventpipe.blog</a>
+                    <a href="https://hey.link/satish" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="border-color: #f59e0b; color: #f59e0b;">All Links (HeyLink)</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="library-highlight-card">
+            <h3>Learnings &amp; Knowledge Reference Repository</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1.25rem;">
+                Explore my curated library of notes, ancient scripture insights (Mahabharata, Gitas), mental models, 40+ software architecture papers, and productivity guides.
+            </p>
+            <a href="site_contents.html" class="btn btn-primary">Browse Learnings &amp; Notes &rarr;</a>
+        </div>
+
+        <section id="sites">
+            <h2 class="section-title">Digital Sites &amp; Publications</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <h3>Ventpipe Blog</h3>
+                    <p class="subtitle">Personal Blog &amp; Thoughts</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+                        Articles covering management principles, technology, ancient scriptures, and structured learning notes.
+                    </p>
+                    <a href="https://ventpipe.blog" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Visit ventpipe.blog &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <h3>NCERT Notes Library</h3>
+                    <p class="subtitle">GitHub Pages Reference Site</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+                        Comprehensive chapter-by-chapter reference notes covering NCERT curriculum across subjects and classes.
+                    </p>
+                    <a href="https://satishsanthanam.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Visit NCERT Library &rarr;</a>
+                </div>
+
+                <div class="card">
+                    <h3>Śrīmad Devī Bhāgavatam</h3>
+                    <p class="subtitle">Bitbucket Scripture Library</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+                        Verse-mapped digital reference edition with Devanagari Sanskrit text, English translations, and Tamil script toggles.
+                    </p>
+                    <a href="https://satishsanthanam.bitbucket.io/index.html" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none; font-weight: 600;">Visit Scripture Site &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Technical Expertise</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Architecture &amp; Methodologies</h3>
+                    <div class="skills-container">
+                        <span class="tag">Solution Architecture</span>
+                        <span class="tag">Enterprise Architecture</span>
+                        <span class="tag">Microservices</span>
+                        <span class="tag">REST APIs</span>
+                        <span class="tag">Agile / Scrum / Kanban</span>
+                        <span class="tag">CMM Level 4 QA</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Languages &amp; Core Tech</h3>
+                    <div class="skills-container">
+                        <span class="tag">Java</span>
+                        <span class="tag">C++ / VC++</span>
+                        <span class="tag">SQL / PL/SQL</span>
+                        <span class="tag">Perl</span>
+                        <span class="tag">Unix Shell Scripting</span>
+                        <span class="tag">Spring / Hibernate</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Cloud, DevOps &amp; Databases</h3>
+                    <div class="skills-container">
+                        <span class="tag">Red Hat OpenShift</span>
+                        <span class="tag">Jenkins</span>
+                        <span class="tag">Git / GitHub</span>
+                        <span class="tag">Oracle</span>
+                        <span class="tag">Sybase</span>
+                        <span class="tag">Autosys</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="experience">
+            <h2 class="section-title">Professional Journey</h2>
             
-        </tbody>
-    </table>
-    <script src="scripts.js"></script>
-</body>
-</html>
-            <tr>
-                <td><a href="https://learnasyoucode.w3spaces.com/ebooks/ebooks.html">Ebooks</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://learnasyoucode.w3spaces.com/moralstories/index.html">Moral Stories</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <script src="scripts.js"></script>
+            <div class="card">
+                <h3>FIS</h3>
+                <div class="card-subtitle">Technical Architect / Development Manager / Release Manager | 2014&ndash;2026</div>
+                <ul>
+                    <li>Governed global release operations and defect remediation pipelines for FIS&#39;s flagship Modern Banking Platform.</li>
+                    <li>Serviced tier-1 financial clients: AMEX, SMBC, Citizens&nbsp;Bank, BMO, and PayPal.</li>
+                    <li>Designed Git branching strategies, container environments, and CI/CD pipelines via Jenkins and Red Hat OpenShift.</li>
+                    <li>Spearheaded daily defect triage sessions, maintaining zero-downtime patch rollouts and strict SLA commitments.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Tata Consultancy Services (TCS)</h3>
+                <div class="card-subtitle">Technical Architect / Module Leader / Programmer Analyst | 1998&ndash;2014</div>
+                <ul>
+                    <li><b>Deutsche Bank:</b> Led technical architecture for Magellan Trading System (Repo &amp; Money Market) across London, NY, and Singapore hubs.</li>
+                    <li><b>TCSFS Core Banking:</b> Architected security frameworks (Encryption, MFA, Biometrics) and a unified Java framework for cross-platform mobile apps.</li>
+                    <li><b>Bank of America:</b> Managed vendor data transfers (IDW ETL) using Unix and Autosys with zero client complaints.</li>
+                    <li><b>Compaq (Tandem):</b> Managed QA for C/C++ compilers under CMM Level 4 governance across 13 major software releases with zero field defect escapes.</li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="achievements">
+            <h2 class="section-title">Education &amp; Key Honors</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Education &amp; Certifications</h3>
+                    <ul>
+                        <li><b>B.E. in Electronics &amp; Communication</b> – RVCE, Bangalore (First Class with Distinction - 77%)</li>
+                        <li><b>Advanced Certificate in Business Analytics</b> – IIT Mumbai</li>
+                        <li><b>AI in Healthcare Certificate</b> – Aster Health Academy</li>
+                        <li>Sun Certified Java Programmer (SCJP 6.0)</li>
+                        <li>Investment Banking &amp; Wealth Management Certifications (CPIBC, CPPBWMC)</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Recognitions &amp; Thought Leadership</h3>
+                    <ul>
+                        <li><b>Zero Complaint Record:</b> Untarnished delivery record across a 27+ year career.</li>
+                        <li><b>TCS Excellence Awards:</b> Best Team Award, Star Team Award, Star of the Month.</li>
+                        <li><b>Bank of America:</b> 1st Prize in White Paper Contest.</li>
+                        <li><b>Founder &amp; Writer:</b> <a href="https://ventpipe.blog" target="_blank" rel="noopener noreferrer" style="color:var(--primary);">ventpipe.blog</a> – Management principles, ancient wisdom, and technology.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p style="color: var(--text-muted); margin-top: 1rem;">Based in Bengaluru, Karnataka, India. Available for digital transformation leadership, architecture, and consulting opportunities.</p>
+            
+            <div class="contact-info">
+                <a href="mailto:satishsanthanam@gmail.com" class="contact-item">
+                    satishsanthanam@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/satishsanthanam" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/satishsanthanam" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    GitHub
+                </a>
+                <a href="https://hey.link/satish" target="_blank" rel="noopener noreferrer" class="contact-item" style="color: #f59e0b;">
+                    hey.link/satish
+                </a>
+                <a href="https://ventpipe.blog" target="_blank" rel="noopener noreferrer" class="contact-item">
+                    ventpipe.blog
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Satish Santhanam. Built for performance and scannability.</p>
+    </footer>
+
 </body>
 </html>
