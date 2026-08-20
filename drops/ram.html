@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valmiki Ramayana Reader</title>
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #212529;
+      --accent-color: #b33951;
+      --border-color: #e9ecef;
+      --sanskrit-color: #1a252c;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px 20px 0 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      flex: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      color: var(--accent-color);
+      margin: 0 0 6px 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      color: #6c757d;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-bar {
+      margin-bottom: 24px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    select, button, .home-btn, input[type="text"] {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    select {
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .sarga-select {
+      min-width: 150px;
+      font-weight: 500;
+    }
+
+    button, .home-btn {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button:hover, .home-btn:hover {
+      opacity: 0.9;
+    }
+
+    button:disabled {
+      background-color: #ced4da;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    .nav-btn {
+      background-color: #495057;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 14px 20px;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .card.open .card-header {
+      border-bottom-color: var(--border-color);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .badge-summary {
+      background: #2b580c;
+    }
+
+    .toggle-icon {
+      font-size: 0.9rem;
+      color: #6c757d;
+      transition: transform 0.2s ease;
+    }
+
+    .card.open .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .card-body {
+      display: none;
+      padding: 20px;
+    }
+
+    .card.open .card-body {
+      display: block;
+    }
+
+    .shloka-text {
+      font-size: 1.25rem;
+      color: var(--sanskrit-color);
+      font-weight: 600;
+      white-space: pre-line;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .explanation {
+      font-size: 1rem;
+      color: #495057;
+      margin-bottom: 16px;
+    }
+
+    audio {
+      width: 100%;
+      height: 36px;
+    }
+
+    .empty-state, .loading-state {
+      text-align: center;
+      color: #6c757d;
+      padding: 40px;
+      font-size: 1.1rem;
+    }
+
+    .loading-state {
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6c757d;
+      background-color: var(--bg-color);
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>श्रीमद्वॉल्मीकीय रामायणम्</h1>
+      <p id="kandaSubtitle">Valmiki Ramayana Reader</p>
+    </header>
+
+    <div class="controls">
+      <a href="gitabookpress_valmiki_ramayan.html" class="home-btn" title="Back to Home">🏠 Home</a>
+      
+      <button id="prevSargaBtn" class="nav-btn" title="Previous Sarga">◄ Prev</button>
+      
+      <select id="kandaSelect">
+        <option value="../data/Valmiki_Ramayan_Balakanda.json">Bala Kanda</option>
+        <option value="../data/Valmiki_Ramayan_Ayodhyakanda.json">Ayodhya Kanda</option>
+        <option value="../data/Valmiki_Ramayan_Aranyakanda.json">Aranya Kanda</option>
+        <option value="../data/Valmiki_Ramayan_Kishkindhakanda.json">Kishkindha Kanda</option>
+        <option value="../data/Valmiki_Ramayan_Sundarakanda.json">Sundara Kanda</option>
+        <option value="../data/Valmiki_Ramayan_Yuddhakanda.json">Yuddha Kanda</option>
+        <option value="../data/Valmiki_Ramayan_Uttarakanda.json">Uttara Kanda</option>
+      </select>
+
+      <!-- Sarga Dropdown Combo -->
+      <select id="sargaSelect" class="sarga-select"></select>
+
+      <button id="nextSargaBtn" class="nav-btn" title="Next Sarga">Next ►</button>
+      
+      <button id="toggleAllBtn">Expand All</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search text or explanation across current Kanda...">
+    </div>
+
+    <div id="content"></div>
+  </div>
+
+  <button id="scrollTopBtn" title="Go to top">▲</button>
+
+  <footer>
+            <div class="footer-dedication">🙏 Shri Krishnarpanam Asthu 🙏</div>
+            <p>Source: <strong>Gita Press Edition</strong> (Sanskrit Ślokas & English Translations)</p>
+            <p>Dataset Source: <a href="https://github.com/satishsanthanam/gitabookpress_valmiki_ramayan" target="_blank"
+                    rel="noopener noreferrer">Gita Book Press Mistral OCR Dataset, Assisted by Gemini AI</a></p>
+            <p class="footer-subtext">Press <kbd>/</kbd> to search anytime &bull; <a href="#top">Back to Top ↑</a></p>
+  </footer>
+
+  <script>
+    let currentData = [];
+    let allExpanded = false;
+    let maxSarga = 1;
+
+    const kandaSelect = document.getElementById('kandaSelect');
+    const kandaSubtitle = document.getElementById('kandaSubtitle');
+    const sargaSelect = document.getElementById('sargaSelect');
+    const searchInput = document.getElementById('searchInput');
+    const prevSargaBtn = document.getElementById('prevSargaBtn');
+    const nextSargaBtn = document.getElementById('nextSargaBtn');
+    const toggleAllBtn = document.getElementById('toggleAllBtn');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const contentDiv = document.getElementById('content');
+
+    // Populate Sarga Dropdown Options
+    function populateSargaDropdown(targetSarga = 1) {
+      const uniqueSargas = [...new Set(currentData.map(item => item.sarga))].sort((a, b) => a - b);
+      maxSarga = uniqueSargas.length > 0 ? Math.max(...uniqueSargas) : 1;
+
+      sargaSelect.innerHTML = '';
+      uniqueSargas.forEach(sNum => {
+        const option = document.createElement('option');
+        option.value = sNum;
+        option.textContent = `Sarga ${sNum} of ${maxSarga}`;
+        sargaSelect.appendChild(option);
+      });
+
+      if (uniqueSargas.includes(targetSarga)) {
+        sargaSelect.value = targetSarga;
+      } else if (uniqueSargas.length > 0) {
+        sargaSelect.value = uniqueSargas[0];
+      }
+    }
+
+    // Load Kanda Data with Loading State
+    async function loadKanda(filePath, initialSarga = 1) {
+      contentDiv.innerHTML = `<div class="loading-state">⏳ Loading JSON, please wait...</div>`;
+      
+      try {
+        const response = await fetch(filePath);
+        if (!response.ok) throw new Error('File not found');
+        currentData = await response.json();
+        
+        populateSargaDropdown(initialSarga);
+
+        const selectedOptionName = kandaSelect.options[kandaSelect.selectedIndex].text;
+        kandaSubtitle.textContent = `${selectedOptionName} (${maxSarga} Sargas, ${currentData.length} entries)`;
+
+        render();
+      } catch (err) {
+        contentDiv.innerHTML = `<div class="empty-state">Unable to load Kanda data. Ensure JSON files exist in the /data folder.</div>`;
+      }
+    }
+
+    // Render Filtered Entries
+    function render() {
+      const selectedSarga = parseInt(sargaSelect.value) || 1;
+      const query = searchInput.value.trim().toLowerCase();
+
+      // Navigation Buttons State
+      prevSargaBtn.disabled = selectedSarga <= 1;
+      nextSargaBtn.disabled = selectedSarga >= maxSarga;
+
+      let filtered = currentData;
+
+      if (query.length > 0) {
+        filtered = filtered.filter(item => 
+          (item.shloka_text && item.shloka_text.toLowerCase().includes(query)) ||
+          (item.explanation && item.explanation.toLowerCase().includes(query))
+        );
+      } else {
+        filtered = filtered.filter(item => item.sarga === selectedSarga);
+      }
+
+      if (filtered.length === 0) {
+        contentDiv.innerHTML = `<div class="empty-state">No entries found for this selection or query.</div>`;
+        return;
+      }
+
+      contentDiv.innerHTML = filtered.map(item => {
+        let verseLabel = `Sarga ${item.sarga}`;
+        let badgeClass = "badge";
+        const isSummary = item.shloka_start === 0;
+
+        if (isSummary) {
+          verseLabel += ` • Summary`;
+          badgeClass += " badge-summary";
+        } else if (item.shloka_start === item.shloka_end) {
+          verseLabel += ` • Shloka ${item.shloka_start}`;
+        } else {
+          verseLabel += ` • Shlokas ${item.shloka_start}–${item.shloka_end}`;
+        }
+
+        const isOpen = allExpanded || query.length > 0 || isSummary ? 'open' : '';
+
+        return `
+          <div class="card ${isOpen}">
+            <div class="card-header" onclick="toggleCard(this)">
+              <span class="${badgeClass}">${verseLabel}</span>
+              <span class="toggle-icon">▼</span>
+            </div>
+            
+            <div class="card-body">
+              ${item.shloka_text ? `<div class="shloka-text">${item.shloka_text}</div>` : ''}
+              <div class="explanation">${item.explanation}</div>
+              
+              ${item.audio_file ? `
+                <audio controls preload="none">
+                  <source src="${item.audio_file}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+              ` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleCard(headerElem) {
+      headerElem.closest('.card').classList.toggle('open');
+    }
+
+    prevSargaBtn.addEventListener('click', () => {
+      let current = parseInt(sargaSelect.value) || 1;
+      if (current > 1) {
+        sargaSelect.value = current - 1;
+        searchInput.value = '';
+        render();
+      }
+    });
+
+    nextSargaBtn.addEventListener('click', () => {
+      let current = parseInt(sargaSelect.value) || 1;
+      if (current < maxSarga) {
+        sargaSelect.value = current + 1;
+        searchInput.value = '';
+        render();
+      }
+    });
+
+    toggleAllBtn.addEventListener('click', () => {
+      allExpanded = !allExpanded;
+      toggleAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+      
+      document.querySelectorAll('.card').forEach(card => {
+        if (allExpanded) card.classList.add('open');
+        else card.classList.remove('open');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    function initFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const kandaIndex = params.get('kanda');
+      const sarga = parseInt(params.get('sarga')) || 1;
+
+      if (kandaIndex !== null && kandaSelect.options[kandaIndex]) {
+        kandaSelect.selectedIndex = parseInt(kandaIndex);
+      }
+
+      loadKanda(kandaSelect.value, sarga);
+    }
+
+    kandaSelect.addEventListener('change', (e) => {
+      searchInput.value = '';
+      loadKanda(e.target.value, 1);
+    });
+    
+    sargaSelect.addEventListener('change', () => {
+      searchInput.value = '';
+      render();
+    });
+
+    searchInput.addEventListener('input', render);
+
+    initFromURL();
+  </script>
+</body>
+</html>

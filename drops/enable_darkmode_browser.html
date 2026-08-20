@@ -1,0 +1,233 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Enable Dark Mode via Browser Flags</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #f0f0f0;
+    padding: 40px 20px;
+  }
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  header h1 {
+    font-size: 2.4em;
+    margin: 0;
+    background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header p {
+    color: #b8b8d1;
+    font-size: 1.1em;
+  }
+  .browser-section {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+  }
+  .browser-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fbc2eb;
+  }
+  .icon-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+  }
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .step-num {
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e94560;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.95em;
+    flex-shrink: 0;
+  }
+  .step-text code {
+    background: rgba(0,0,0,0.3);
+    padding: 2px 8px;
+    border-radius: 6px;
+    color: #a18cd1;
+    font-size: 0.95em;
+  }
+  .flag-tags {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .flag-tag {
+    background: rgba(161,140,209,0.2);
+    border: 1px solid #a18cd1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    color: #d4c9f0;
+  }
+  .warning-box {
+    background: rgba(233, 69, 96, 0.15);
+    border-left: 4px solid #e94560;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 40px;
+  }
+  .warning-box h3 {
+    margin-top: 0;
+    color: #ff8a9b;
+  }
+  .warning-box ul {
+    padding-left: 20px;
+    line-height: 1.7;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #888;
+    font-size: 0.85em;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>🌙 Enable Dark Mode via Browser Flags</h1>
+    <p>Force system-wide dark rendering on any website</p>
+  </header>
+
+  <!-- Chrome / Edge -->
+  <div class="browser-section">
+    <div class="browser-title">
+      <div class="icon-circle">🌐</div>
+      Chrome / Edge / Brave
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Go to <code>chrome://flags</code> (or <code>edge://flags</code>)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Search for <strong>"Auto Dark Mode for Web Contents"</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Set dropdown to <strong>Enabled</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Relaunch the browser when prompted</div>
+      </div>
+    </div>
+    <div class="flag-tags">
+      <span class="flag-tag">#enable-force-dark</span>
+      <span class="flag-tag">#enable-webui-dark-mode</span>
+    </div>
+  </div>
+
+  <!-- Firefox -->
+  <div class="browser-section">
+    <div class="browser-title">
+      <div class="icon-circle">🦊</div>
+      Firefox
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Go to <code>about:config</code></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Accept the risk warning prompt</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Search: <code>layout.css.prefers-color-scheme.content-override</code></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Change value to <strong>0</strong> (dark)</div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-text">Restart the browser</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Safari -->
+  <div class="browser-section">
+    <div class="browser-title">
+      <div class="icon-circle">🧭</div>
+      Safari (macOS)
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Open <strong>System Settings → Appearance</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Select <strong>Dark</strong></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Safari automatically adapts sites supporting <code>prefers-color-scheme</code></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning-box">
+    <h3>⚠️ Things to Know</h3>
+    <ul>
+      <li>These flags <strong>force</strong> dark rendering on all sites — expect occasional bugs (inverted images, low contrast).</li>
+      <li>Different from a site's native dark mode toggle using CSS <code>prefers-color-scheme</code>.</li>
+      <li>Flags are experimental and may be renamed or removed in future updates.</li>
+      <li>To disable, revisit the flag/setting and reset to Default.</li>
+    </ul>
+  </div>
+
+  <footer>
+    Compatible with latest Chromium (v100+), Firefox (v90+), and macOS Safari
+  </footer>
+
+</div>
+</body>
+</html>
