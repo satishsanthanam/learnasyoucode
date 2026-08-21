@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valmiki Ramayana - Home & Cross-Search</title>
+  <title>Śrī Rāmacaritamānasa - Home & Global Search</title>
   <style>
     :root {
       --bg-color: #f8f9fa;
       --card-bg: #ffffff;
       --text-color: #212529;
-      --accent-color: #b33951;
+      --accent-color: #8b0000;
       --border-color: #e9ecef;
-      --sanskrit-color: #1a252c;
+      --shloka-color: #1a252c;
     }
 
     body {
@@ -20,7 +20,7 @@
       color: var(--text-color);
       line-height: 1.6;
       margin: 0;
-      padding: 20px 20px 0 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -40,7 +40,8 @@
     header h1 {
       color: var(--accent-color);
       margin: 0 0 8px 0;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
+      font-family: 'Georgia', serif;
     }
 
     header p {
@@ -105,7 +106,7 @@
 
     .kanda-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 16px rgba(139,0,0,0.12);
       border-color: var(--accent-color);
     }
 
@@ -147,17 +148,24 @@
       margin-bottom: 10px;
     }
 
-    .sanskrit-preview {
+    .shloka-preview {
       font-size: 1.1rem;
       font-weight: 600;
-      color: var(--sanskrit-color);
+      color: var(--shloka-color);
       margin-bottom: 8px;
       white-space: pre-line;
+      font-family: 'Noto Sans Devanagari', 'Sanskrit Text', Georgia, serif;
     }
 
     .explanation-preview {
       font-size: 0.95rem;
       color: #495057;
+      margin-bottom: 6px;
+    }
+
+    .english-preview {
+      font-size: 0.95rem;
+      color: #065f46;
     }
 
     .status-msg {
@@ -175,14 +183,17 @@
       color: #6c757d;
     }
 
+    .footer-dedication {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+    }
+
     footer a {
       color: var(--accent-color);
       text-decoration: none;
       font-weight: 600;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -190,14 +201,14 @@
 
   <div class="container">
     <header>
-      <h1>श्रीमद्वॉल्मीकीय रामायणम्</h1>
-      <p><a href="https://gitapress.org/product/shrimad-valmiki-ramayan-english-set-part-1-and-2-complete-set-book-codes-452-453">Valmiki Ramayana Reader & Cross-Kanda Search</a></p>
+      <h1>श्रीमद्रामचरितमानस</h1>
+      <p>Gita Press Edition &bull; Cross-Kanda Search & Interactive Reader</p>
     </header>
 
-    <!-- Cross Kanda Search -->
+    <!-- Global Search -->
     <div class="search-section">
       <div class="search-box">
-        <input type="text" id="globalSearchInput" placeholder="🔍 Search keywords across ALL 7 Kandas (e.g. Dasaratha, Janaka, Ayodhya)...">
+        <input type="text" id="globalSearchInput" placeholder="🔍 Search keywords across ALL 7 Kandas (Awadhi, Hindi, or English)...">
         <button id="searchBtn">Search</button>
       </div>
     </div>
@@ -208,54 +219,52 @@
     <!-- Kanda Quick Jump Grid -->
     <h2 style="color: var(--accent-color); margin-bottom: 16px;">Browse Kandas</h2>
     <div class="kanda-grid">
-      <a href="ram.html?kanda=0" class="kanda-card">
-        <h3>Bala Kanda</h3>
-        <p>Book 1 • Childhood & Early Life</p>
+      <a href="ram.html?kanda=balakanda" class="kanda-card">
+        <h3>1. Bāla Kāṇḍa</h3>
+        <p>बालकाण्डम् &bull; Childhood & Early Pastimes</p>
       </a>
-      <a href="ram.html?kanda=1" class="kanda-card">
-        <h3>Ayodhya Kanda</h3>
-        <p>Book 2 • Ayodhya & Exile</p>
+      <a href="ram.html?kanda=ayodhyakanda" class="kanda-card">
+        <h3>2. Ayodhyā Kāṇḍa</h3>
+        <p>अयोध्याकाण्डम् &bull; Preparations & Exile</p>
       </a>
-      <a href="ram.html?kanda=2" class="kanda-card">
-        <h3>Aranya Kanda</h3>
-        <p>Book 3 • The Forest Life</p>
+      <a href="ram.html?kanda=aranyakanda" class="kanda-card">
+        <h3>3. Araṇya Kāṇḍa</h3>
+        <p>अरण्यकाण्डम् &bull; Forest Life & Sita Haran</p>
       </a>
-      <a href="ram.html?kanda=3" class="kanda-card">
-        <h3>Kishkindha Kanda</h3>
-        <p>Book 4 • Kingdom of Monkeys</p>
+      <a href="ram.html?kanda=kishkindhakanda" class="kanda-card">
+        <h3>4. Kiṣkindhā Kāṇḍa</h3>
+        <p>किष्किन्धाकाण्डम् &bull; Alliance with Sugriva</p>
       </a>
-      <a href="ram.html?kanda=4" class="kanda-card">
-        <h3>Sundara Kanda</h3>
-        <p>Book 5 • Book of Beauty & Hanuman</p>
+      <a href="ram.html?kanda=sundarakanda" class="kanda-card">
+        <h3>5. Sundara Kāṇḍa</h3>
+        <p>सुन्दरकाण्डम् &bull; Hanuman's Exploits in Lanka</p>
       </a>
-      <a href="ram.html?kanda=5" class="kanda-card">
-        <h3>Yuddha Kanda</h3>
-        <p>Book 6 • The War with Ravana</p>
+      <a href="ram.html?kanda=lankakanda" class="kanda-card">
+        <h3>6. Laṅkā Kāṇḍa</h3>
+        <p>लङ्काकाण्डम् &bull; The Great War & Victory</p>
       </a>
-      <a href="ram.html?kanda=6" class="kanda-card">
-        <h3>Uttara Kanda</h3>
-        <p>Book 7 • Epilogue & Later Life</p>
+      <a href="ram.html?kanda=uttarakanda" class="kanda-card">
+        <h3>7. Uttara Kāṇḍa</h3>
+        <p>उत्तरकाण्डम् &bull; Coronation & Ramrajya</p>
       </a>
     </div>
   </div>
 
   <footer>
-            <div class="footer-dedication">🙏 Shri Krishnarpanam Asthu 🙏</div>
-            <p>Source: <strong>Gita Press Edition</strong> (Sanskrit Ślokas & English Translations)</p>
-            <p>Dataset Source: <a href="https://github.com/satishsanthanam/gitabookpress_valmiki_ramayan" target="_blank"
-                    rel="noopener noreferrer">Gita Book Press Mistral OCR Dataset, Assisted by Gemini AI</a></p>
-            <p class="footer-subtext">Press <kbd>/</kbd> to search anytime &bull; <a href="#top">Back to Top ↑</a></p>
+    <div class="footer-dedication">🙏 Shri Krishnarpanam Asthu 🙏</div>
+    <p>Source: <strong>Gita Press Edition</strong> (Awadhi, Hindi & English Translations)</p>
+    <p>Dataset Source: <a href="https://github.com/satishsanthanam/thulasidas_ramcharitramanas" target="_blank" rel="noopener noreferrer">Gita Press Mistral OCR Dataset, Assisted by Gemini AI & Microsoft Azure AI Foundry LLM Translation API (GPT-4o)</a></p>
   </footer>
 
   <script>
     const KANDAS = [
-      { name: "Bala Kanda", file: "data/Valmiki_Ramayan_Balakanda.json" },
-      { name: "Ayodhya Kanda", file: "data/Valmiki_Ramayan_Ayodhyakanda.json" },
-      { name: "Aranya Kanda", file: "data/Valmiki_Ramayan_Aranyakanda.json" },
-      { name: "Kishkindha Kanda", file: "data/Valmiki_Ramayan_Kishkindhakanda.json" },
-      { name: "Sundara Kanda", file: "data/Valmiki_Ramayan_Sundarakanda.json" },
-      { name: "Yuddha Kanda", file: "data/Valmiki_Ramayan_Yuddhakanda.json" },
-      { name: "Uttara Kanda", file: "data/Valmiki_Ramayan_Uttarakanda.json" }
+      { name: "Bala Kanda", key: "balakanda", file: "data/01_balakanda_en.json" },
+      { name: "Ayodhya Kanda", key: "ayodhyakanda", file: "data/02_ayodhyakanda_en.json" },
+      { name: "Aranya Kanda", key: "aranyakanda", file: "data/03_aranyakanda_en.json" },
+      { name: "Kishkindha Kanda", key: "kishkindhakanda", file: "data/04_kishkindhakanda_en.json" },
+      { name: "Sundara Kanda", key: "sundarakanda", file: "data/05_sundarakanda_en.json" },
+      { name: "Lanka Kanda", key: "lankakanda", file: "data/06_lankakanda_en.json" },
+      { name: "Uttara Kanda", key: "uttarakanda", file: "data/07_uttarakanda_en.json" }
     ];
 
     const searchInput = document.getElementById('globalSearchInput');
@@ -273,7 +282,6 @@
 
       let matches = [];
 
-      // Iterate through each Kanda JSON
       for (let kIndex = 0; kIndex < KANDAS.length; kIndex++) {
         try {
           const res = await fetch(KANDAS[kIndex].file);
@@ -282,11 +290,12 @@
 
           const found = kandaData.filter(item => 
             (item.shloka_text && item.shloka_text.toLowerCase().includes(query)) ||
-            (item.explanation && item.explanation.toLowerCase().includes(query))
+            (item.explanation && item.explanation.toLowerCase().includes(query)) ||
+            (item.explanation_en && item.explanation_en.toLowerCase().includes(query))
           );
 
           found.forEach(item => {
-            matches.push({ ...item, kandaIndex: kIndex, kandaName: KANDAS[kIndex].name });
+            matches.push({ ...item, kandaKey: KANDAS[kIndex].key, kandaName: KANDAS[kIndex].name });
           });
         } catch (e) {
           console.error(`Error loading ${KANDAS[kIndex].name}`, e);
@@ -298,7 +307,6 @@
         return;
       }
 
-      // Display top 50 matches for optimal page performance
       const displayMatches = matches.slice(0, 50);
 
       resultsDiv.innerHTML = `
@@ -306,19 +314,19 @@
           Found ${matches.length} matches ${matches.length > 50 ? '(showing top 50)' : ''}:
         </h3>
         ${displayMatches.map(item => {
-          let verseLabel = `${item.kandaName} • Sarga ${item.sarga}`;
-          if (item.shloka_start === 0) verseLabel += ` • Summary`;
-          else if (item.shloka_start === item.shloka_end) verseLabel += ` • Shloka ${item.shloka_start}`;
-          else verseLabel += ` • Shlokas ${item.shloka_start}–${item.shloka_end}`;
+          let verseLabel = `${item.kandaName} &bull; `;
+          verseLabel += item.shloka_start === item.shloka_end 
+            ? `Verse ${item.shloka_start}` 
+            : `Verses ${item.shloka_start}–${item.shloka_end}`;
 
-          // Link parameters jump directly to ram.html
-          const link = `ram.html?kanda=${item.kandaIndex}&sarga=${item.sarga}&shloka=${item.shloka_start}`;
+          const link = `ram.html?kanda=${item.kandaKey}`;
 
           return `
             <a href="${link}" class="result-card">
               <span class="result-badge">${verseLabel}</span>
-              ${item.shloka_text ? `<div class="sanskrit-preview">${item.shloka_text}</div>` : ''}
-              <div class="explanation-preview">${item.explanation}</div>
+              ${item.shloka_text ? `<div class="shloka-preview">${item.shloka_text}</div>` : ''}
+              ${item.explanation ? `<div class="explanation-preview"><strong>Hindi:</strong> ${item.explanation}</div>` : ''}
+              ${item.explanation_en ? `<div class="english-preview"><strong>English:</strong> ${item.explanation_en}</div>` : ''}
             </a>
           `;
         }).join('')}

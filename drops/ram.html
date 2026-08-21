@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +68,10 @@
       box-sizing: border-box;
     }
 
-    select, button, .home-btn, input[type="text"] {
+    select,
+    button,
+    .home-btn,
+    input[type="text"] {
       padding: 10px 14px;
       border: 1px solid var(--border-color);
       border-radius: 6px;
@@ -86,7 +90,8 @@
       font-weight: 500;
     }
 
-    button, .home-btn {
+    button,
+    .home-btn {
       background-color: var(--accent-color);
       color: white;
       border: none;
@@ -98,7 +103,8 @@
       justify-content: center;
     }
 
-    button:hover, .home-btn:hover {
+    button:hover,
+    .home-btn:hover {
       opacity: 0.9;
     }
 
@@ -115,10 +121,16 @@
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 12px;
       margin-bottom: 16px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
 
     .card-header {
@@ -162,34 +174,48 @@
 
     .card-body {
       display: none;
-      padding: 20px;
+      padding: 0;
     }
 
     .card.open .card-body {
       display: block;
     }
 
-    .shloka-text {
-      font-size: 1.25rem;
-      color: var(--sanskrit-color);
+    /* 1. Devanagari / Sanskrit Section - Deep Burgundy Accent */
+    .sanskrit-block {
+      background-color: #fdf2f2;
+      border-left: 5px solid #800020;
+      color: #4a0404;
+      padding: 1.2rem 1.25rem;
+      font-family: 'Martel', 'Siddhanta', serif;
+      font-size: 1.2rem;
+      line-height: 1.8;
       font-weight: 600;
       white-space: pre-line;
-      margin-bottom: 16px;
-      line-height: 1.8;
     }
 
-    .explanation {
-      font-size: 1rem;
-      color: #495057;
-      margin-bottom: 16px;
+    /* 2. English Translation Section - Green Background & Green Text */
+    .explanation-en-block {
+      background-color: #f0fdf4;
+      border-left: 5px solid #16a34a;
+      color: #15803d;
+      padding: 1rem 1.25rem;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .explanation-en-block strong {
+      color: #166534;
     }
 
     audio {
-      width: 100%;
+      width: calc(100% - 2.5rem);
+      margin: 1rem 1.25rem;
       height: 36px;
     }
 
-    .empty-state, .loading-state {
+    .empty-state,
+    .loading-state {
       text-align: center;
       color: #6c757d;
       padding: 40px;
@@ -212,14 +238,13 @@
       color: white;
       border: none;
       font-size: 1.2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       display: none;
       align-items: center;
       justify-content: center;
       z-index: 1000;
     }
 
-    /* Updated Custom Footer Styles */
     footer {
       margin-top: 40px;
       padding: 24px 0;
@@ -261,7 +286,7 @@
       background-color: #e9ecef;
       border: 1px solid #ced4da;
       border-radius: 4px;
-      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
       color: #495057;
       display: inline-block;
       font-size: 0.75rem;
@@ -272,19 +297,22 @@
     }
   </style>
 </head>
+
 <body id="top">
 
   <div class="container">
     <header>
-      <h1>श्रीमद्वॉल्मीकीय रामायणम्</h1>
+      <h1><a
+          href="https://gitapress.org/product/shrimad-valmiki-ramayan-english-set-part-1-and-2-complete-set-book-codes-452-453">श्रीमद्वॉल्मीकीय
+          रामायणम् (Gita Press)</a></h1>
       <p id="kandaSubtitle">Valmiki Ramayana Reader</p>
     </header>
 
     <div class="controls">
       <a href="gitabookpress_valmiki_ramayan.html" class="home-btn" title="Back to Home">🏠 Home</a>
-      
+
       <button id="prevSargaBtn" class="nav-btn" title="Previous Sarga">◄ Prev</button>
-      
+
       <select id="kandaSelect">
         <option value="../data/Valmiki_Ramayan_Balakanda.json">Bala Kanda</option>
         <option value="../data/Valmiki_Ramayan_Ayodhyakanda.json">Ayodhya Kanda</option>
@@ -295,11 +323,10 @@
         <option value="../data/Valmiki_Ramayan_Uttarakanda.json">Uttara Kanda</option>
       </select>
 
-      <!-- Sarga Dropdown Combo -->
       <select id="sargaSelect" class="sarga-select"></select>
 
       <button id="nextSargaBtn" class="nav-btn" title="Next Sarga">Next ►</button>
-      
+
       <button id="toggleAllBtn">Expand All</button>
     </div>
 
@@ -312,11 +339,11 @@
 
   <button id="scrollTopBtn" title="Go to top">▲</button>
 
-  <!-- Updated Custom Footer -->
   <footer>
     <div class="footer-dedication">🙏 Shri Krishnarpanam Asthu 🙏</div>
     <p>Source: <strong>Gita Press Edition</strong> (Sanskrit Ślokas & English Translations)</p>
-    <p>Dataset Source: <a href="https://github.com/satishsanthanam/gitabookpress_valmiki_ramayan" target="_blank" rel="noopener noreferrer">Gita Book Press Mistral OCR Dataset, Assisted by Gemini AI</a></p>
+    <p>Dataset Source: <a href="https://github.com/satishsanthanam/gitabookpress_valmiki_ramayan" target="_blank"
+        rel="noopener noreferrer">Gita Book Press Mistral OCR Dataset, Assisted by Gemini AI</a></p>
     <p class="footer-subtext">Press <kbd>/</kbd> to search anytime &bull; <a href="#top">Back to Top ↑</a></p>
   </footer>
 
@@ -335,7 +362,6 @@
     const scrollTopBtn = document.getElementById('scrollTopBtn');
     const contentDiv = document.getElementById('content');
 
-    // Populate Sarga Dropdown Options
     function populateSargaDropdown(targetSarga = 1) {
       const uniqueSargas = [...new Set(currentData.map(item => item.sarga))].sort((a, b) => a - b);
       maxSarga = uniqueSargas.length > 0 ? Math.max(...uniqueSargas) : 1;
@@ -355,7 +381,6 @@
       }
     }
 
-    // Load Kanda Data with Loading State
     async function loadKanda(filePath, initialSarga = 1) {
       contentDiv.innerHTML = `<div class="loading-state">⏳ Loading JSON, please wait...</div>`;
       
@@ -375,22 +400,22 @@
       }
     }
 
-    // Render Filtered Entries
     function render() {
       const selectedSarga = parseInt(sargaSelect.value) || 1;
       const query = searchInput.value.trim().toLowerCase();
 
-      // Navigation Buttons State
       prevSargaBtn.disabled = selectedSarga <= 1;
       nextSargaBtn.disabled = selectedSarga >= maxSarga;
 
       let filtered = currentData;
 
       if (query.length > 0) {
-        filtered = filtered.filter(item => 
-          (item.shloka_text && item.shloka_text.toLowerCase().includes(query)) ||
-          (item.explanation && item.explanation.toLowerCase().includes(query))
-        );
+        filtered = filtered.filter(item => {
+          const text = (item.sanskrit_shloka || item.shloka_text || '').toLowerCase();
+          const exp = (item.meaning || item.explanation || '').toLowerCase();
+          const expEn = (item.meaning_en || item.explanation_en || '').toLowerCase();
+          return text.includes(query) || exp.includes(query) || expEn.includes(query);
+        });
       } else {
         filtered = filtered.filter(item => item.sarga === selectedSarga);
       }
@@ -403,18 +428,24 @@
       contentDiv.innerHTML = filtered.map(item => {
         let verseLabel = `Sarga ${item.sarga}`;
         let badgeClass = "badge";
-        const isSummary = item.shloka_start === 0;
+        const vStart = item.verse_index || item.shloka_start;
+        const vEnd = item.shloka_end;
+        const isSummary = vStart === 0;
 
         if (isSummary) {
           verseLabel += ` • Summary`;
           badgeClass += " badge-summary";
-        } else if (item.shloka_start === item.shloka_end) {
-          verseLabel += ` • Shloka ${item.shloka_start}`;
+        } else if (!vEnd || vStart === vEnd) {
+          verseLabel += ` • Shloka ${vStart}`;
         } else {
-          verseLabel += ` • Shlokas ${item.shloka_start}–${item.shloka_end}`;
+          verseLabel += ` • Shlokas ${vStart}–${vEnd}`;
         }
 
         const isOpen = allExpanded || query.length > 0 || isSummary ? 'open' : '';
+
+        // Extract Sanskrit shloka and English translation
+        const shlokaText = item.sanskrit_shloka || item.shloka_text || '';
+        const englishText = item.meaning || item.explanation || item.meaning_en || item.explanation_en || '';
 
         return `
           <div class="card ${isOpen}">
@@ -424,8 +455,8 @@
             </div>
             
             <div class="card-body">
-              ${item.shloka_text ? `<div class="shloka-text">${item.shloka_text}</div>` : ''}
-              <div class="explanation">${item.explanation}</div>
+              ${shlokaText ? `<div class="sanskrit-block">${shlokaText}</div>` : ''}
+              ${englishText ? `<div class="explanation-en-block">${englishText}</div>` : ''}
               
               ${item.audio_file ? `
                 <audio controls preload="none">
@@ -479,7 +510,6 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // Keyboard shortcut: '/' focuses search input
     window.addEventListener('keydown', (e) => {
       if (e.key === '/' && document.activeElement !== searchInput) {
         e.preventDefault();
@@ -514,4 +544,5 @@
     initFromURL();
   </script>
 </body>
+
 </html>

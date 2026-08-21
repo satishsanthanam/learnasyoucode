@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="doc-title">Shri Ramcharitmanas Reader</title>
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-color: #212529;
+      --accent-color: #b33951;
+      --border-color: #e9ecef;
+      --shloka-color: #1a252c;
+      --highlight-bg: #fef08a;
+
+      /* 1. Awadhi / Sanskrit Section */
+      --awadhi-bg: #fffbf0;
+      --awadhi-border: #b33951;
+
+      /* 2. Hindi Commentary Section (Gita Press Style) */
+      --hindi-bg: #fffbeb;
+      --hindi-border: #d97706;
+      --hindi-text: #78350f;
+
+      /* 3. English Translation Section (PecsDocs Emerald Green) */
+      --eng-bg: #ecfdf5;
+      --eng-border: #10b981;
+      --eng-text: #065f46;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px 20px 0 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      flex: 1;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    header h1 {
+      margin: 0 0 6px 0;
+      font-size: 2rem;
+      font-family: 'Georgia', serif;
+    }
+
+    header h1 a {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+
+    header p {
+      color: #6c757d;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-bar {
+      margin-bottom: 24px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    select, button, .home-btn {
+      padding: 10px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 1rem;
+      text-decoration: none;
+      box-sizing: border-box;
+    }
+
+    select {
+      flex: 1;
+      min-width: 200px;
+      font-weight: 500;
+    }
+
+    button, .home-btn {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button:hover, .home-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* CARD STYLES */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+    }
+
+    .card-header {
+      padding: 14px 20px;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .card.open .card-header {
+      border-bottom-color: var(--border-color);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      font-weight: bold;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .toggle-icon {
+      font-size: 0.9rem;
+      color: #6c757d;
+      transition: transform 0.2s ease;
+    }
+
+    .card.open .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .card-body {
+      display: none;
+      padding: 20px;
+    }
+
+    .card.open .card-body {
+      display: block;
+    }
+
+    /* 1. AWADHI / SANSKRIT TEXT */
+    .sec-shloka {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: var(--shloka-color);
+      font-weight: 600;
+      margin-bottom: 14px;
+      white-space: pre-line;
+      font-family: 'Noto Sans Devanagari', 'Sanskrit Text', Georgia, serif;
+      background-color: var(--awadhi-bg);
+      border-left: 5px solid var(--awadhi-border);
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .content-box {
+      padding: 12px 18px;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 12px;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .content-title {
+      font-weight: bold;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    /* 2. HINDI COMMENTARY BOX (Saffron / Amber) */
+    .sec-hindi {
+      background-color: var(--hindi-bg);
+      border-left: 5px solid var(--hindi-border);
+      color: var(--hindi-text);
+      font-family: 'Noto Sans Devanagari', Georgia, serif;
+    }
+
+    .sec-hindi .content-title {
+      color: #b45309;
+    }
+
+    /* 3. ENGLISH TRANSLATION BOX (PecsDocs Emerald Green) */
+    .sec-english {
+      background-color: var(--eng-bg);
+      border-left: 5px solid var(--eng-border);
+      color: var(--eng-text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .sec-english .content-title {
+      color: #047857;
+    }
+
+    mark {
+      background-color: var(--highlight-bg);
+      color: #000;
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+
+    .empty-state, .loading-state {
+      text-align: center;
+      color: #6c757d;
+      padding: 40px;
+      font-size: 1.1rem;
+    }
+
+    .loading-state {
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 24px 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6c757d;
+      background-color: var(--bg-color);
+    }
+
+    footer p {
+      margin: 6px 0;
+    }
+
+    .footer-dedication {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 8px;
+    }
+
+    .footer-subtext {
+      font-size: 0.85rem;
+      color: #8c959e;
+      margin-top: 10px;
+    }
+
+    footer a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    kbd {
+      background-color: #e9ecef;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+      color: #495057;
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 2px 5px;
+    }
+  </style>
+</head>
+<body id="top">
+
+  <div class="container">
+    <header>
+      <h1><a href="index.html">श्रीमद्रामचरितमानस (Gita Press)</a></h1>
+      <p id="kandaSubtitle">Shri Ramcharitmanas Reader</p>
+    </header>
+
+    <div class="controls">
+      <a href="index.html" class="home-btn" title="Back to Home">🏠 Home</a>
+      
+      <!-- Kanda Dropdown Selector -->
+      <select id="kandaSelect">
+        <option value="balakanda">1. Bala Kanda</option>
+        <option value="ayodhyakanda">2. Ayodhya Kanda</option>
+        <option value="aranyakanda">3. Aranya Kanda</option>
+        <option value="kishkindhakanda">4. Kishkindha Kanda</option>
+        <option value="sundarakanda">5. Sundara Kanda</option>
+        <option value="lankakanda">6. Lanka Kanda</option>
+        <option value="uttarakanda">7. Uttara Kanda</option>
+      </select>
+
+      <button id="toggleAllBtn">Expand All</button>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="🔍 Search Awadhi text, Hindi commentary, or English translation... (Press '/' to focus)">
+    </div>
+
+    <div id="content"></div>
+  </div>
+
+  <button id="scrollTopBtn" title="Go to top">▲</button>
+
+  <footer>
+    <div class="footer-dedication">🙏 Shri Krishnarpanam Asthu 🙏</div>
+    <p>Source: <strong>Gita Press Edition</strong> (Awadhi, Hindi Commentary & English Translation)</p>
+    <p>Dataset Source: <a href="https://github.com/satishsanthanam/thulasidas_ramcharitramanas" target="_blank" rel="noopener noreferrer">Gita Press Mistral OCR Dataset, Assisted by Gemini AI & Microsoft Azure AI Foundry LLM Translation API (GPT-4o)</a></p>
+    <p class="footer-subtext">Press <kbd>/</kbd> to search anytime &bull; <a href="#top">Back to Top ↑</a></p>
+  </footer>
+
+  <script>
+    let currentData = [];
+    let allExpanded = false;
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentKandaKey = (urlParams.get('kanda') || 'balakanda').toLowerCase();
+
+    const kandaConfig = {
+      'balakanda': { json: 'data/01_balakanda_en.json', title: 'Bala Kanda - Shri Ramcharitmanas' },
+      'ayodhyakanda': { json: 'data/02_ayodhyakanda_en.json', title: 'Ayodhya Kanda - Shri Ramcharitmanas' },
+      'aranyakanda': { json: 'data/03_aranyakanda_en.json', title: 'Aranya Kanda - Shri Ramcharitmanas' },
+      'kishkindhakanda': { json: 'data/04_kishkindhakanda_en.json', title: 'Kishkindha Kanda - Shri Ramcharitmanas' },
+      'sundarakanda': { json: 'data/05_sundarakanda_en.json', title: 'Sundara Kanda - Shri Ramcharitmanas' },
+      'lankakanda': { json: 'data/06_lankakanda_en.json', title: 'Lanka Kanda - Shri Ramcharitmanas' },
+      'uttarakanda': { json: 'data/07_uttarakanda_en.json', title: 'Uttara Kanda - Shri Ramcharitmanas' }
+    };
+
+    const activeCfg = kandaConfig[currentKandaKey] || kandaConfig['balakanda'];
+
+    document.getElementById('doc-title').innerText = activeCfg.title;
+    
+    const kandaSelect = document.getElementById('kandaSelect');
+    kandaSelect.value = currentKandaKey in kandaConfig ? currentKandaKey : 'balakanda';
+
+    const kandaSubtitle = document.getElementById('kandaSubtitle');
+    const searchInput = document.getElementById('searchInput');
+    const toggleAllBtn = document.getElementById('toggleAllBtn');
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const contentDiv = document.getElementById('content');
+
+    async function loadKanda(key) {
+      const cfg = kandaConfig[key] || kandaConfig['balakanda'];
+      contentDiv.innerHTML = `<div class="loading-state">⏳ Loading ${cfg.title}, please wait...</div>`;
+      
+      try {
+        const response = await fetch(cfg.json);
+        if (!response.ok) throw new Error('File not found');
+        currentData = await response.json();
+
+        kandaSubtitle.textContent = `${cfg.title} (${currentData.length} entries)`;
+        render();
+      } catch (err) {
+        console.error(err);
+        contentDiv.innerHTML = `<div class="empty-state">Unable to load dataset. Please ensure JSON files exist in the /data directory.</div>`;
+      }
+    }
+
+    function highlightText(text, query) {
+      if (!text || !query) return text || '';
+      const regex = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+      return text.replace(regex, '<mark>$1</mark>');
+    }
+
+    function render() {
+      const query = searchInput.value.trim().toLowerCase();
+
+      let filtered = currentData;
+      if (query.length > 0) {
+        filtered = filtered.filter(item => 
+          (item.shloka_text && item.shloka_text.toLowerCase().includes(query)) ||
+          (item.explanation && item.explanation.toLowerCase().includes(query)) ||
+          (item.explanation_en && item.explanation_en.toLowerCase().includes(query))
+        );
+      }
+
+      if (filtered.length === 0) {
+        contentDiv.innerHTML = `<div class="empty-state">No matching verses found for "${query}".</div>`;
+        return;
+      }
+
+      contentDiv.innerHTML = filtered.map((item, idx) => {
+        let verseLabel = item.shloka_start === item.shloka_end 
+          ? `Verse ${item.shloka_start}` 
+          : `Verses ${item.shloka_start}–${item.shloka_end}`;
+
+        const isOpen = allExpanded || query.length > 0 ? 'open' : '';
+
+        return `
+          <div class="card ${isOpen}">
+            <div class="card-header" onclick="toggleCard(this)">
+              <span class="badge">${verseLabel} &bull; #${idx + 1}</span>
+              <span class="toggle-icon">▼</span>
+            </div>
+            
+            <div class="card-body">
+              ${item.shloka_text ? `<div class="sec-shloka">${highlightText(item.shloka_text, query)}</div>` : ''}
+              
+              ${item.explanation ? `
+                <div class="content-box sec-hindi">
+                  <span class="content-title">Hindi Commentary (भावार्थ)</span>
+                  ${highlightText(item.explanation, query)}
+                </div>` : ''}
+              
+              ${item.explanation_en ? `
+                <div class="content-box sec-english">
+                  <span class="content-title">English Translation</span>
+                  ${highlightText(item.explanation_en, query)}
+                </div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleCard(headerElem) {
+      headerElem.closest('.card').classList.toggle('open');
+    }
+
+    toggleAllBtn.addEventListener('click', () => {
+      allExpanded = !allExpanded;
+      toggleAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+      
+      document.querySelectorAll('.card').forEach(card => {
+        if (allExpanded) card.classList.add('open');
+        else card.classList.remove('open');
+      });
+    });
+
+    kandaSelect.addEventListener('change', (e) => {
+      window.location.href = `ram.html?kanda=${e.target.value}`;
+    });
+
+    searchInput.addEventListener('input', render);
+
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+
+    loadKanda(kandaSelect.value);
+  </script>
+</body>
+</html>
